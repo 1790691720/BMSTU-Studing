@@ -1,0 +1,144 @@
+    *-------------------------------------------------------------*
+    |                                                             |
+    |  W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M |
+    |                                                             |
+    *-------------------------------------------------------------*
+    ***************************************************************
+    *                  ANSYS 19.2 LEGAL NOTICES                   *
+    ***************************************************************
+    *                                                             *
+    * Copyright 1971-2017 SAS IP, Inc.  All rights reserved.      *
+    * Unauthorized use, distribution or duplication is            *
+    * prohibited.                                                 *
+    * ANSYS is a registered trademark of ANSYS, Inc or its        *
+    * subsidiaries in the United States or other countries.       *
+    *                                                             *
+    * ANSYS, Inc. is UL registered                                *
+    * ISO 9001:2008 Companies.                                    *
+    *                                                             *
+    ***************************************************************
+    *                                                             *
+    * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+    * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+    * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+    * The software products and documentation are furnished by    *
+    * ANSYS, Inc. or its subsidiaries under a software license    *
+    * agreement that contains provisions concerning               *
+    * non-disclosure, copying, length and nature of use,          *
+    * compliance with exporting laws, warranties, disclaimers,    *
+    * limitations of liability, and remedies, and other           *
+    * provisions.  The software products and documentation may be *
+    * used, disclosed, transferred, or copied only in accordance  *
+    * with the terms and conditions of that software license      *
+    * agreement.                                                  *
+    *                                                             *
+    * See the ANSYS, Inc. online documentation or the ANSYS, Inc. *
+    * documentation CD for the complete Legal Notice.             *
+    *                                                             *
+    ***************************************************************
+    *                                                             *
+    * This product is subject to US laws governing export and     *
+    * re-export.                                                  *
+    *                                                             *
+    * For U.S. Government users, except as specifically granted   *
+    * by the ANSYS, Inc. software license agreement, the use,     *
+    * duplication, or disclosure by the United States Government  *
+    * is subject to restrictions stated in the ANSYS, Inc.        *
+    * software license agreement and FAR 12.212 (for non-DOD      *
+    * licenses).                                                  *
+    *                                                             *
+    ***************************************************************
+    Version No 19,2018,220,1
+
+    Creating Internal Loads
+    Creating Flexible Bodies Internal Drivers
+    Updating Loads and Drivers Based On Internal Joint Representation
+    Updating Stops Based On Internal Joint Representation
+    Creating Stops Contact Points
+    Updating Relations Based On Internal Joint Representation
+    Initializing Transient Analysis
+
+    ___________________________________________________________________________________________________________________________________________________________________________
+    Starting assembly simulation
+
+    Some joint conditions have been combined to form 3D rotations joint conditions
+    Input Rotations will be considered as Euler angles
+    Convergence reached after 1 Iteration
+
+
+    Analysis of model redundancies:
+    No Redundancies detected in the model
+
+
+
+    _________________________________________________________________________
+    Starting transient simulation
+
+    Using Runge-Kutta 4 time integration
+
+    Model Summary:
+
+    Number of effective bodies: 6
+    Total Number of Joints: 8 (5 based on degrees of freedom, 3 based on constraint equations)
+        1 Joint of Type Free
+        6 Joints of Type Revolute
+        1 Joint of Type Translational
+
+    Number of Physical Degrees of Freedom: 5
+
+    _________________________________________________________________________
+
+    Current Time: 0 Current time step 0.0002
+    Current Time: 0.000925094 Current time step 8.67325e-05
+    Current Time: 0.00185358 Current time step 9.952e-05
+    Current Time: 0.00289545 Current time step 0.000109697
+    Current Time: 0.00403436 Current time step 0.000118582
+    Current Time: 0.00524343 Current time step 0.000122302
+    Current Time: 0.00645463 Current time step 0.000118601
+    Current Time: 0.00761219 Current time step 0.000112461
+    Current Time: 0.0087191 Current time step 0.000109322
+    Current Time: 0.00981441 Current time step 0.000110982
+    Current Time: 0.0109611 Current time step 0.000119615
+    Current Time: 0.012211 Current time step 0.00013353
+    Current Time: 0.0136676 Current time step 0.000164899
+    Current Time: 0.0155029 Current time step 0.000196898
+    Current Time: 0.017301 Current time step 0.000153345
+    Current Time: 0.0186848 Current time step 0.00012535
+    Current Time: 0.0198878 Current time step 0.000116045
+    Current Time: 0.0210335 Current time step 0.000113551
+    Current Time: 0.0221718 Current time step 0.000114884
+    Current Time: 0.0233409 Current time step 0.000119922
+    Current Time: 0.0245675 Current time step 0.000125554
+    Current Time: 0.0258295 Current time step 0.000125539
+    Current Time: 0.02706 Current time step 0.000119469
+    Current Time: 0.0282274 Current time step 0.000114075
+    Current Time: 0.0293603 Current time step 0.000113227
+    Current Time: 0.0305056 Current time step 0.000116932
+    Current Time: 0.0317115 Current time step 0.000126561
+    Current Time: 0.0330633 Current time step 0.0001492
+    Current Time: 0.0347371 Current time step 0.000190757
+    Current Time: 0.0366523 Current time step 0.000173752
+    Current Time: 0.0381811 Current time step 0.000133361
+    Current Time: 0.039435 Current time step 0.000118603
+
+    ___________________________________________________________________________________________________________________________________________________________________________
+
+    Total number of time steps: 316
+    Average time step: 0.000126582
+
+    Number of rejected time steps: 0
+    Number of discontinuities: 0
+    Number of saved transient configurations: 317
+    Maximum relative error: 0.0163915 (%)
+    Number of position correction iterations: 1894
+    Number of velocity correction steps: 317
+
+    End of Transient Simulation. CPU Time 0.953125 Elapsed Time 0.944
+
+
+    ___________________________________________________________________________________________________________________________________________________________________________
+
+    Analysis of model redundancies:
+    No Redundancies detected in the model
+
+

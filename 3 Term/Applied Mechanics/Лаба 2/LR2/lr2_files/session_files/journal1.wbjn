@@ -1,0 +1,84 @@
+# encoding: utf-8
+# Release 19.2
+SetScriptVersion(Version="19.2.120")
+Save(Overwrite=True)
+template1 = GetTemplate(TemplateName="Rigid Dynamics")
+system1 = template1.CreateSystem()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit(IsSpaceClaimGeometry=True)
+geometry1.Exit()
+geometry1.Edit()
+Save(Overwrite=True)
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+template2 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system2 = template2.CreateSystem(
+    Position="Right",
+    RelativeTo=system1)
+engineeringDataComponent1 = system2.GetComponent(Name="Engineering Data")
+engineeringDataComponent2 = system1.GetComponent(Name="Engineering Data")
+engineeringDataComponent1.ReplaceWithShare(
+    TargetSystem=system2,
+    ComponentToShare=engineeringDataComponent2,
+    SourceSystem=system1)
+solutionComponent1 = system1.GetComponent(Name="Solution")
+modelComponent2 = system2.GetComponent(Name="Model")
+solutionComponent1.TransferData(TargetComponent=modelComponent2)
+solution1 = system1.GetContainer(ComponentName="Solution")
+rBDUpdateOptionsForMechdbTransfer1 = solution1.GetRBDUpdateOptionsForMechdbTransfer(Name="RBDUpdateOptionsForMechdbTransfer")
+rBDUpdateOptionsForMechdbTransfer1.TimeOption = "UserDefined"
+rBDUpdateOptionsForMechdbTransfer1.Time = 0.0095
+system1.Update(AllDependencies=True)
+modelComponent2.Update(AllDependencies=True)
+model2 = system2.GetContainer(ComponentName="Model")
+model2.Edit()
+Save(Overwrite=True)
+model2.Exit()
+template3 = GetTemplate(TemplateName="Geometry")
+system3 = template3.CreateSystem(
+    Position="Right",
+    RelativeTo=system2)
+geometryComponent1 = system3.GetComponent(Name="Geometry")
+modelComponent2.TransferData(TargetComponent=geometryComponent1)
+system2.Update(AllDependencies=True)
+geometryComponent1.Update(AllDependencies=True)
+geometry2 = system3.GetContainer(ComponentName="Geometry")
+geometry2.Edit()
+Save(Overwrite=True)
+geometry2.Exit()
+system4 = template2.CreateSystem(
+    Position="Right",
+    RelativeTo=system3)
+geometryComponent2 = system4.GetComponent(Name="Geometry")
+geometryComponent2.ReplaceWithShare(
+    TargetSystem=system4,
+    ComponentToShare=geometryComponent1,
+    SourceSystem=system3)
+engineeringDataComponent3 = system4.GetComponent(Name="Engineering Data")
+engineeringDataComponent3.ReplaceWithShare(
+    TargetSystem=system4,
+    ComponentToShare=engineeringDataComponent1,
+    SourceSystem=system2)
+modelComponent3 = system4.GetComponent(Name="Model")
+modelComponent3.Refresh()
+model3 = system4.GetContainer(ComponentName="Model")
+model3.Edit()
+system1.Copy(KeepConnections=True)
+system5 = GetSystem(Name="SYS 3")
+solution2 = system5.GetContainer(ComponentName="Solution")
+solution2.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+model4 = system5.GetContainer(ComponentName="Model")
+model4.Exit()
+model3.Exit()
+model1.Exit()
+geometry1.Exit()
+Save(Overwrite=True)
+Save(Overwrite=True)

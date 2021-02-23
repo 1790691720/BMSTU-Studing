@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Плеер</title>
+	<script type="text/javascript" async="" src="player_data/top100.js"></script><script src="player_data/jquery.js"></script>
+	<script src="player_data/advideo.js"></script>
+</head>
+<body style="background: #000; margin: 0; padding: 0; text-decoration: none; font-size: 1em; outline: 0; display:block;">
+<div id="app" style="border:0px solid #000; width:100%; height:98vh;"><iframe src="player_data/169606181.htm" id="i1" scrolling="no" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" class="number1" width="100%" height="100%" frameborder="0"></iframe></div>
+
+
+<script>
+
+	var is_sticky_visible = "1";
+	if(is_sticky_visible == 1 && parent)
+	{
+		parent.postMessage('set_sticky_visible', "*");
+	}
+
+
+    var chain =
+        [
+ 
+											{
+												'frames': ['<iframe src="//bazr.ru/aplayer?playlistId=39914&chainId=2&vastChainId=17&isMainPage=0&2" width="100%" height="100%" frameborder="0"allow="autoplay"  webkitAllowFullScreen mozallowfullscreen allowfullscreen id="i1" scrolling="no" class="number1"></iframe>'],
+												'tracks': ['1'],
+												'cmid': 66
+											},
+											{
+												'frames': ['<iframe src="//dv4.iframe.tvzavr.ru/iframe/index.html?cid=35173&rolloutmute=1&autoplay=1&ref=https://bazr.ru" width="100%" height="100%" frameborder="0" allow="autoplay" id="i1" scrolling="no" class="number1"></iframe>'],
+												'tracks': ['35173'],
+												'cmid': 4
+											},
+											{
+												'frames': ['<iframe src="//embed.megogo.net/ev3/universal?id=23228&lang=ru&autoplay=1&muted=1&referer=https://bazr.ru" width="100%" height="100%" allow="autoplay"  id="i1" scrolling="no" frameborder="0"  webkitAllowFullScreen mozallowfullscreen allowfullscreen class="number1"></iframe>'],
+												'tracks': ['23228'],
+												'cmid': 5
+											},
+											{
+												'frames': ['<iframe width="100%" height="100%" src="//bazr.ru/embedPlayer/169606181?playlistId=39914&autostart=1&chainId=2&pre_cmid=5&vastChainId=17&ggg" id="i1" scrolling="no" frameborder="0"  webkitAllowFullScreen mozallowfullscreen allowfullscreen class="number1"></iframe>'],
+												'tracks': ['18051806'],
+												'cmid': 9
+											},
+											{
+												'frames': ['<iframe src="//out.pladform.ru/player?pl=106665"  id="i1" class="number1"  width="100%" height="100%" allow="autoplay"  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>'],
+												'tracks': ['1'],
+												'cmid': 54
+											},
+											{
+												'frames': ['<iframe src="//utraff.com/index.php?r=iframe/index&id=930" width="100%" height="100%" webkitAllowFullScreen mozallowfullscreen allowfullscreen allow="autoplay" frameborder="0" scrolling="no"></iframe>'],
+												'tracks': ['1'],
+												'cmid': 74
+											},
+											{
+												'frames': ['<iframe src="https://showjet.ru/promolanding?autoplay=true&sjuid5=170" width="100%" allow="autoplay" height="100%" id="i1" scrolling="no" frameborder="0"  webkitAllowFullScreen mozallowfullscreen allowfullscreen class="number1"></iframe>'],
+												'tracks': ['1'],
+												'cmid': 148
+											},
+											{
+												'frames': ['<iframe id="adv_kod_frame" src="https://vidtok.ru/kod.php?param=4a6f7459314b2f4675617545544c71463136442b2f735a594336416879394165722b327058446f754f63423141473549" allow="autoplay" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="true"></iframe><script type="text/javascript" src="//videopotok.pro/player_html5/iframeobrabotchik.js"></scr' + 'ipt>'],
+												'tracks': ['1'],
+												'cmid': 99
+											}
+        ];
+
+	var adLimit = 0;
+
+    var player = new AdPlayer('#app', chain, {
+        debug:		false,
+        adTimeout:	15000,
+		HTMLcode:	''
+    });
+    var trueReferer = "";
+
+    var statsSender = new AdStatsSender({
+			playlistId:		39914,
+			domainId:		3114,
+			chainId:		2,
+			vastChainId:	17,
+			visitorId:		getVisitorId(),
+			ref:			getTrueReferer()
+    });
+	
+	function getVisitorId()
+	{
+		var name = 'visitorid';
+		var matches = document.cookie.match(new RegExp(
+			"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+		  ));
+		if(matches)
+		{
+			return decodeURIComponent(matches[1]);
+		}else
+		{
+			var visitorid = guid();
+			if(navigator.cookieEnabled)
+			{
+				var date = new Date(new Date().getTime() + 315569261000);
+				document.cookie = "visitorid="+visitorid+"; path=/; expires=" + date.toUTCString();
+				matches = document.cookie.match(new RegExp(
+							"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+						  ));
+				if(!matches || decodeURIComponent(matches[1]) != visitorid)
+				{
+					visitorid = 'notset-' + visitorid;
+				}
+			}else
+			{
+				visitorid = 'notenabled-' + visitorid;
+			}
+			return visitorid;
+		}
+	}
+
+	function guid()
+	{
+	  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+			var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+				return v.toString(16);
+	  }).toUpperCase();
+	};
+
+
+	if (window.addEventListener) {
+		window.addEventListener("message", postMessageReceive);
+	} else {
+		window.attachEvent("onmessage", postMessageReceive);
+	}
+	var AdViewable = 1;
+	function postMessageReceive(messageEvent) {
+        if(messageEvent && messageEvent.data  && typeof messageEvent.data === "string"){
+			if(messageEvent.data == "AdViewable=true") {
+				AdViewable = 1;
+			}else if(messageEvent.data == "AdViewable=false") {
+				AdViewable = 0;
+			}
+			if(messageEvent.data == "visible=false" || messageEvent.data == "visible=true" || messageEvent.data == "AdViewable=false" || messageEvent.data == "AdViewable=true" || (typeof messageEvent.data == 'string' && messageEvent.data.indexOf("BlockVastPlayer")>-1))
+			{
+				if(player.currentFrameIndex)
+				{
+					if(player.frames[player.currentFrameIndex-1].node.contentWindow)
+					{
+						player.frames[player.currentFrameIndex-1].node.contentWindow.postMessage(messageEvent.data, "*");
+					}
+				}
+			}
+			if(messageEvent.data.indexOf('srezAdvPlayer')>-1 && parent)
+			{
+				parent.postMessage(messageEvent.data, "*");
+			}
+		}
+	}
+
+    player.events.addListener('ad_player.ad_frame.init', function(frame) {
+        statsSender.send('init', frame.track, frame.cmid, frame.firstTime);
+        statsSender.send2('init', frame.track, frame.cmid, frame.prevcmid, AdViewable, frame.firstTime);
+    });
+
+    player.events.addListener('ad_player.ad_frame.done', function(frame) {
+        statsSender.send('adv_done', frame.track, frame.cmid, frame.firstTime);
+        statsSender.send2('adv_done', frame.track, frame.cmid, frame.prevcmid, AdViewable, frame.firstTime);
+		frame.firstTime = 0;
+    });
+
+    player.events.addListener('ad_player.ad_frame.onNoAdv', function(frame) {
+        statsSender.send('onNoAd', frame.track, frame.cmid, frame.firstTime);
+        statsSender.send2('onNoAd', frame.track, frame.cmid, frame.prevcmid, AdViewable, frame.firstTime);
+    });
+
+    player.events.addListener('ad_player.ad_frame.start6', function(frame) {
+        return statsSender.send2('start6', frame.track, frame.cmid, frame.prevcmid, AdViewable, frame.firstTime);
+    });
+
+    player.events.addListener('ad_player.ad_frame.next', function(frame) {
+        return statsSender.send2('next', frame.track, frame.cmid, frame.prevcmid, AdViewable, frame.firstTime);
+    });
+
+    player.events.addListener('ad_player.ad_frame.timeout', function(frame) {
+        return statsSender.send2('timeout', frame.track, frame.cmid, frame.prevcmid, AdViewable, frame.firstTime);
+    });
+
+    player.events.addListener('ad_player.ad_frame.request', function(frame) {
+        return statsSender.send2('request', frame.track, frame.cmid, frame.prevcmid, AdViewable, frame.firstTime);
+    });
+
+/*
+    player.events.addListener('ad_player.ad_frame.check', function() {
+        var frame = player.frames[player.currentFrameIndex - 1];
+        return statsSender.send2('check', frame.track, frame.cmid, frame.prevcmid);
+    });
+*/
+
+	player.registerFrameAdapter(
+        new AdFrameAdapter('bazr_embed_player', ['bazr.ru/embedplayer'], function (messageEvent) {
+            if(messageEvent && messageEvent.data  && typeof messageEvent.data === "string"){
+				console.log('---' + messageEvent.data);
+				adapter = this;
+				clearTimeout(player.currentFrame().timer);
+				player.currentFrame().timer = setTimeout(function () {
+					adapter.onAdNext();
+				}, 30000);
+				switch (messageEvent.data) {
+					case 'nextvideo':
+						this.onAdNext();
+						break;
+				}
+			}
+        })
+    );
+
+
+    player.registerFrameAdapter(
+        new AdFrameAdapter('videomore', ['videomore.ru'], function (messageEvent) {
+             if(messageEvent && messageEvent.data){
+				   if (typeof messageEvent.data === 'object') {
+						if (messageEvent.data.hasOwnProperty('event')) {
+							console.log(messageEvent.data.event);
+							
+							switch (messageEvent.data.event) {
+								case 'inited':
+								case 'init':
+									this.onAdInit();
+									break;
+								case 'adShown': 
+								case 'pre_adv_start':
+									if (player.currentFrame().timer != undefined) {
+										clearTimeout(player.currentFrame().timer);
+									}
+									adapter = this;
+									frame = player.currentFrame();
+									if(frame.firstTime)
+									{
+										player.currentFrame().timer = setTimeout(function () {
+											adapter.onAdStart6sec();
+											player.currentFrame().timer = setTimeout(function () {
+												adapter.onAdNext();
+											}, 20000);
+										}, 8000);
+									}else
+									{
+										player.currentFrame().timer = setTimeout(function () {
+											adapter.onAdNext();
+										}, 30000);
+									}
+									this.onAdDone();
+									break;
+								case 'video-started':
+								case 'started':
+								case 'pre_adv_end':
+									adapter = this;
+									player.currentFrame().timer = setTimeout(function () {
+										adapter.onAdNext();
+									}, 3000);
+									break;
+						   }
+						}
+					}
+				}
+        })
+    );
+
+
+    player.registerFrameAdapter(
+        new AdFrameAdapter('pladform', ['out.pladform.ru'], function (messageEvent) {
+             if(messageEvent && messageEvent.data  && typeof messageEvent.data === "string"){
+					var message = '';
+					try {
+						var message = JSON.parse(messageEvent.data);
+					} catch (e) {
+					}
+					if(message)
+					{
+						switch (message.type) {
+
+							case 'player:noad':
+								this.onAdNext();
+								break;
+
+							case 'player:ready':
+								this.onAdInit();
+								break;
+							case 'player:rollState':
+								if (message.data.state == 'play') {
+									sendevent('adv_start');
+								}
+								if (message.data.state == 'complete') {
+									this.onAdDone();
+									this.onAdNext();
+								}
+								break;
+						}
+					}
+				}
+        })
+    );
+
+
+    player.registerFrameAdapter(
+        new AdFrameAdapter('tvzavr', ['iframe.tvzavr.ru'], function (messageEvent) {
+            if(messageEvent && messageEvent.data  && typeof messageEvent.data === "string"){
+				console.log(messageEvent.data);
+				switch (messageEvent.data) {
+					case 'tvzp_has_ad_2':
+						if(!player.currentFrame().hasAdv)
+						{
+							this.onAdInit();
+							this.onAdDone();
+							adapter = this;
+							player.currentFrame().timer = setTimeout(function () {
+								adapter.onAdNext();
+							}, 20000);
+						}
+						break;
+					case 'tvzp_has_movie_start':
+					case 'tvzp_has_ad_0':
+						this.onAdNext();
+				}
+				if(messageEvent.data && messageEvent.data.event && messageEvent.data.event == 'error')
+				{
+					this.onAdNext();
+				}
+			}
+		})
+    );
+
+    player.registerFrameAdapter(
+        new AdFrameAdapter('megogo', ['megogo.net'], function (messageEvent) {
+             if(messageEvent && messageEvent.data  && typeof messageEvent.data === "string"){
+			   console.warn(messageEvent.data);
+				switch (messageEvent.data) {
+					case 'mgg_start_ad':
+						if (player.currentFrame().timer != undefined) {
+							clearTimeout(player.currentFrame().timer);
+						}
+						this.onAdDone();
+						adapter = this;
+						player.currentFrame().timer = setTimeout(function () {
+							adapter.onAdNext();
+						}, 20000);
+					   break;
+					case 'mgg_start_content':
+						this.onAdNext();
+						break;
+					case 'mgg_ask_ad':
+						if(!this.adInited){
+							this.onAdInit();
+							this.adInited = true
+						}
+						break;
+				}
+			}
+        })
+    );
+
+    player.registerFrameAdapter(
+        new AdFrameAdapter('bazr_japlayer', ['bazr.ru/japlayer'], function (messageEvent) {
+            if(messageEvent && messageEvent.data  && typeof messageEvent.data === "string"){
+				switch (messageEvent.data) {
+					case 'avideo_oncomplete':
+						this.onAdDone();
+						this.onAdNext();
+						break;
+					case 'avideo_onAdError':
+						this.onAdNext();
+						break;
+					case 'avideo_init':
+						this.onAdInit()
+				}
+			}
+        })
+    );
+
+    player.registerFrameAdapter(
+        new AdFrameAdapter('utraff', ['utraff.com'], function (messageEvent) {
+            if(messageEvent && messageEvent.data  && typeof messageEvent.data === "string"){
+			   console.warn(messageEvent);
+			   switch (messageEvent.data) {
+					case 'ipa-init':
+						this.onAdInit();
+						break;
+					case 'show_ad':
+					case 'ipa-adv-start':
+						this.onAdDone();
+						adapter = this;
+						player.currentFrame().timer = setTimeout(function () {
+							adapter.onAdNext();
+						}, 20000);
+						break;
+					case 'ipa-adv-stop':
+					case 'ipa-start':
+					case 'no_ads':
+						this.onAdNext();
+				}
+			}
+        })
+    );
+
+    player.registerFrameAdapter(
+        new AdFrameAdapter('bazr_aplayer', ['bazr.ru/aplayer'], function (messageEvent) {
+             if(messageEvent && messageEvent.data  && typeof messageEvent.data === "string"){
+			    console.warn(messageEvent);
+				switch (messageEvent.data) {
+					case 'waitForViewability':
+						if (player.currentFrame().timer != undefined) {
+							clearTimeout(player.currentFrame().timer);
+							console.log('cleartimer');
+						}	
+						break;
+					case 'advPlayerLoadedAndStarted':
+						//player.currentFrame().__initTimer();
+						//console.log('starttimer');
+						break;
+					case 'srezAdvPlayerAdVideoStart':
+						if (player.currentFrame().timer != undefined) {
+							clearTimeout(player.currentFrame().timer);
+							console.log('cleartimer');
+						}
+						break;
+					case 'srezAdvPlayerComplete':
+						this.onAdDone();
+						this.onAdNext();
+						break;
+					case 'srezAdvPlayerInit':
+						if (player.currentFrame().timer != undefined) {
+							clearTimeout(player.currentFrame().timer);
+							console.log('cleartimer');
+						}	
+						this.onAdInit()
+				}
+			}
+        })
+    );
+
+    player.registerFrameAdapter(
+        new AdFrameAdapter('bazr_pp', ['bazr.ru/pp'], function (messageEvent) {
+              if(messageEvent && messageEvent.data  && typeof messageEvent.data === "string"){
+				  switch (messageEvent.data) {
+						case 'plus_done':
+							this.onAdDone();
+							this.onAdNext();
+							break;
+						case 'plus_init':
+							this.onAdInit()
+					}
+				}
+        })
+    );
+
+    player.registerFrameAdapter(
+        new AdFrameAdapter('zugr.ru', ['zugr.ru'], function (messageEvent) {
+			
+		})
+    );
+
+    player.registerFrameAdapter(
+        new AdFrameAdapter('videopotok', ['videopotok.pro', 'vidtok.ru'], function (messageEvent) {
+             if(messageEvent && messageEvent.data  && typeof messageEvent.data === "string"){
+			   console.warn(messageEvent.data);
+				switch (messageEvent.data) {
+					case 'start_vidtok':
+						this.onAdInit();
+						break;
+					case 'vid_has_advert':
+						this.onAdDone();
+						break;
+					case 'vid_end_rekl':
+					case 'end_reklam_videoroll':
+						this.onAdNext();
+						break;
+				}
+			}
+        })
+    );
+
+    player.registerFrameAdapter(
+        new AdFrameAdapter('showjet', ['showjet.ru'], function (messageEvent) {
+             if(messageEvent && messageEvent.data  && typeof messageEvent.data === "string"){
+				   console.warn(messageEvent.data);
+					switch (messageEvent.data) {
+						case 'sj_code_load':
+							this.onAdInit();
+							break;
+						case 'sj_impression':
+							this.onAdDone();
+							break;
+						case 'sj_adStarted':
+							this.onAdStart6sec();
+							break;
+						case 'sj_start_content':
+						case 'sj_ads_finished':
+						case 'sj_no_ads':
+							this.onAdNext();
+							break;
+					}
+			}
+        })
+    );
+    player.registerFrameAdapter(
+        new AdFrameAdapter('tvigle', ['tvigle.ru'], function (messageEvent) {
+            if(messageEvent && messageEvent.data  && typeof messageEvent.data === "string"){
+				console.warn(messageEvent.data);
+				if (typeof messageEvent.data === 'string' && messageEvent.origin && typeof messageEvent.origin  === 'string' && messageEvent.origin.indexOf('tvigle')>0) {
+					if(messageEvent.data.indexOf('initializeBridge')>0)
+					{
+						this.onAdInit();
+					}else if(messageEvent.data.indexOf('advert_impression')>0)
+					{
+						this.onAdDone();
+					}else if(messageEvent.data.indexOf('"start"')>0)
+					{
+						this.onAdNext();
+					}
+				}
+			}
+        })
+    );
+
+//tvigle
+//5vision
+//movieads
+
+
+    player.playNext();
+	window.addEventListener("message", listener);
+	function listener(event)
+	{
+		if(typeof event.data === 'string')
+		{
+			if(event.data.indexOf('yesiam') != -1)
+			{
+				console.log('hasadvjs');
+				trueReferer = (event.data.indexOf('yesiam | ') != -1)? event.data.replace("yesiam | ", "") : "";
+			}else if(event.data.indexOf('nextavideo') != -1)
+			{
+			    player.playNext();
+			}
+		}
+	}
+
+	parent.postMessage('areyouhere', "*");
+	function isInFrame()
+	{
+		var isInFrame = 0;
+		var dls = window.location.ancestorOrigins;
+		var dl = '';
+		for(var i = 0; i < dls.length; i++){dl = dl + (dl!=''?',':'') + dls.item(i);}
+		if(dls.length>1)
+		{
+			isInFrame = 1;
+		}
+		return isInFrame;
+	}
+
+	function getTrueReferer()
+	{
+		try {
+			if(trueReferer){
+				return trueReferer;
+			} else if (parent && parent.document) {
+				return parent.document.referrer;
+			}
+		} catch(e) {
+			return (window.location != window.parent.location) ? document.referrer : document.location.href;
+		}
+		return "noparent";
+	}
+
+</script>
+<!--LiveInternet counter--><script type="text/javascript">
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t44.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,150))+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='1' height='1' style='display: block'><\/a>")
+</script><a href="https://www.liveinternet.ru/click" target="_blank"><img src="player_data/hit.gif" alt="" title="LiveInternet" style="display: block" width="1" height="1" border="0"></a><!--/LiveInternet-->
+
+<!-- Top100 (Kraken) Counter -->
+<script>
+    (function (w, d, c) {
+    (w[c] = w[c] || []).push(function() {
+        var options = {
+            project: 6579761,
+            trackHashes: true,
+            user_id: null,
+        };
+        try {
+            w.top100Counter = new top100(options);
+        } catch(e) { }
+    });
+    var n = d.getElementsByTagName("script")[0],
+    s = d.createElement("script"),
+    f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src =
+    (d.location.protocol == "https:" ? "https:" : "http:") +
+    "//st.top100.ru/top100/top100.js";
+
+    if (w.opera == "[object Opera]") {
+    d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(window, document, "_top100q");
+</script>
+<noscript>
+  <img src="//counter.rambler.ru/top100.cnt?pid=6579761" alt="Топ-100" />
+</noscript>
+<!-- END Top100 (Kraken) Counter -->
+
+</body></html>

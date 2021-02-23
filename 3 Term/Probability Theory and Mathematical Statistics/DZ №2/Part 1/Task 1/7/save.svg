@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="2396px" height="1303px" viewBox="0 0 2396 1303" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <polyline stroke="#000000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="bevel" fill="none" points="2351,20 2391,20 " />
+    <circle stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#000000" cx="2371" cy="20" r="3" />
+    <text x="2351" y="16" font-family="Times New Roman" font-size="11" fill="#000000">Ряд 1</text>
+    <rect stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none" x="2346.5" y="0.5" width="49" height="29" />
+  </g>
+  <clipPath id="clippath1">
+    <path d="M-1,-1 H2396 V1302H-1 z M2345,-1 H2397 V31 H2345 z" clip-rule="evenodd" />
+  </clipPath>
+  <g clip-path="url(#clippath1)">
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="218.5" y1="0.5" x2="218.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="327.5" y1="0.5" x2="327.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="436.5" y1="0.5" x2="436.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="545.5" y1="0.5" x2="545.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="653.5" y1="0.5" x2="653.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="762.5" y1="0.5" x2="762.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="871.5" y1="0.5" x2="871.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="980.5" y1="0.5" x2="980.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="1089.5" y1="0.5" x2="1089.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="1198.5" y1="0.5" x2="1198.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="1307.5" y1="0.5" x2="1307.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="1416.5" y1="0.5" x2="1416.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="1525.5" y1="0.5" x2="1525.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="1634.5" y1="0.5" x2="1634.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="1743.5" y1="0.5" x2="1743.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="1851.5" y1="0.5" x2="1851.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="1960.5" y1="0.5" x2="1960.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="2069.5" y1="0.5" x2="2069.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="2178.5" y1="0.5" x2="2178.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="2287.5" y1="0.5" x2="2287.5" y2="1302.5" />
+    <text x="208" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.05</text>
+    <text x="320" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.1</text>
+    <text x="426" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.15</text>
+    <text x="538" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.2</text>
+    <text x="643" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.25</text>
+    <text x="755" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.3</text>
+    <text x="861" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.35</text>
+    <text x="973" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.4</text>
+    <text x="1079" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.45</text>
+    <text x="1191" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.5</text>
+    <text x="1297" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.55</text>
+    <text x="1409" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.6</text>
+    <text x="1515" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.65</text>
+    <text x="1627" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.7</text>
+    <text x="1733" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.75</text>
+    <text x="1844" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.8</text>
+    <text x="1950" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.85</text>
+    <text x="2062" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.9</text>
+    <text x="2168" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">0.95</text>
+    <text x="2284" y="1272" font-family="Times New Roman" font-size="13" fill="#000000">1</text>
+    <text x="96" y="1212" font-family="Times New Roman" font-size="13" fill="#000000">5</text>
+    <text x="90" y="1164" font-family="Times New Roman" font-size="13" fill="#000000">10</text>
+    <text x="90" y="1116" font-family="Times New Roman" font-size="13" fill="#000000">15</text>
+    <text x="90" y="1068" font-family="Times New Roman" font-size="13" fill="#000000">20</text>
+    <text x="90" y="1019" font-family="Times New Roman" font-size="13" fill="#000000">25</text>
+    <text x="90" y="971" font-family="Times New Roman" font-size="13" fill="#000000">30</text>
+    <text x="90" y="923" font-family="Times New Roman" font-size="13" fill="#000000">35</text>
+    <text x="90" y="875" font-family="Times New Roman" font-size="13" fill="#000000">40</text>
+    <text x="90" y="826" font-family="Times New Roman" font-size="13" fill="#000000">45</text>
+    <text x="90" y="778" font-family="Times New Roman" font-size="13" fill="#000000">50</text>
+    <text x="90" y="730" font-family="Times New Roman" font-size="13" fill="#000000">55</text>
+    <text x="90" y="682" font-family="Times New Roman" font-size="13" fill="#000000">60</text>
+    <text x="90" y="633" font-family="Times New Roman" font-size="13" fill="#000000">65</text>
+    <text x="90" y="585" font-family="Times New Roman" font-size="13" fill="#000000">70</text>
+    <text x="90" y="537" font-family="Times New Roman" font-size="13" fill="#000000">75</text>
+    <text x="90" y="489" font-family="Times New Roman" font-size="13" fill="#000000">80</text>
+    <text x="90" y="440" font-family="Times New Roman" font-size="13" fill="#000000">85</text>
+    <text x="90" y="392" font-family="Times New Roman" font-size="13" fill="#000000">90</text>
+    <text x="90" y="344" font-family="Times New Roman" font-size="13" fill="#000000">95</text>
+    <text x="84" y="296" font-family="Times New Roman" font-size="13" fill="#000000">100</text>
+    <text x="84" y="247" font-family="Times New Roman" font-size="13" fill="#000000">105</text>
+    <text x="84" y="199" font-family="Times New Roman" font-size="13" fill="#000000">110</text>
+    <text x="84" y="151" font-family="Times New Roman" font-size="13" fill="#000000">115</text>
+    <text x="84" y="103" font-family="Times New Roman" font-size="13" fill="#000000">120</text>
+    <text x="84" y="54" font-family="Times New Roman" font-size="13" fill="#000000">125</text>
+    <text x="2385" y="1245" font-family="Times New Roman" font-size="16" font-weight="700" fill="#000000">x</text>
+    <text x="121" y="13" font-family="Times New Roman" font-size="16" font-weight="700" fill="#000000">y</text>
+    <line stroke="#0000ff" stroke-width="2" stroke-linecap="butt" stroke-linejoin="bevel" x1="0" y1="1255" x2="2391" y2="1255" />
+    <polygon stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#0000ff" points="2390.5,1249.5 2395.5,1254.5 2395.5,1255.5 2390.5,1260.5 " />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="218.5" y1="1260.5" x2="218.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="327.5" y1="1260.5" x2="327.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="436.5" y1="1260.5" x2="436.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="545.5" y1="1260.5" x2="545.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="653.5" y1="1260.5" x2="653.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="762.5" y1="1260.5" x2="762.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="871.5" y1="1260.5" x2="871.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="980.5" y1="1260.5" x2="980.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="1089.5" y1="1260.5" x2="1089.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="1198.5" y1="1260.5" x2="1198.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="1307.5" y1="1260.5" x2="1307.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="1416.5" y1="1260.5" x2="1416.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="1525.5" y1="1260.5" x2="1525.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="1634.5" y1="1260.5" x2="1634.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="1743.5" y1="1260.5" x2="1743.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="1851.5" y1="1260.5" x2="1851.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="1960.5" y1="1260.5" x2="1960.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="2069.5" y1="1260.5" x2="2069.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="2178.5" y1="1260.5" x2="2178.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="2287.5" y1="1260.5" x2="2287.5" y2="1249.5" />
+    <line stroke="#0000ff" stroke-width="2" stroke-linecap="butt" stroke-linejoin="bevel" x1="109" y1="3" x2="109" y2="1302" />
+    <polygon stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#0000ff" points="103.5,5.5 108.5,0.5 109.5,0.5 114.5,5.5 " />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="1206.5" x2="114.5" y2="1206.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="1158.5" x2="114.5" y2="1158.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="1110.5" x2="114.5" y2="1110.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="1062.5" x2="114.5" y2="1062.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="1013.5" x2="114.5" y2="1013.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="965.5" x2="114.5" y2="965.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="917.5" x2="114.5" y2="917.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="869.5" x2="114.5" y2="869.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="820.5" x2="114.5" y2="820.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="772.5" x2="114.5" y2="772.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="724.5" x2="114.5" y2="724.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="676.5" x2="114.5" y2="676.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="627.5" x2="114.5" y2="627.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="579.5" x2="114.5" y2="579.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="531.5" x2="114.5" y2="531.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="483.5" x2="114.5" y2="483.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="434.5" x2="114.5" y2="434.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="386.5" x2="114.5" y2="386.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="338.5" x2="114.5" y2="338.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="290.5" x2="114.5" y2="290.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="241.5" x2="114.5" y2="241.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="193.5" x2="114.5" y2="193.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="145.5" x2="114.5" y2="145.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="97.5" x2="114.5" y2="97.5" />
+    <line stroke="#0000ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="103.5" y1="48.5" x2="114.5" y2="48.5" />
+  </g>
+  <clipPath id="clippath2">
+    <path d="M-1,-1 H2396 V1302H-1 z M2345,-1 H2397 V31 H2345 z" clip-rule="evenodd" />
+  </clipPath>
+  <g clip-path="url(#clippath2)">
+    <polyline stroke="#000000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="bevel" fill="none" points="1634,290 1635,290 1636,290 1637,289 1638,289 1639,289 1640,289 1641,288 1642,288 1643,288 1644,288 1645,288 1646,287 1647,287 1648,287 1649,287 1650,286 1651,286 1652,286 1653,286 1654,286 1655,285 1656,285 1657,285 1658,285 1659,284 1660,284 1661,284 1662,284 1663,284 1664,283 1665,283 1666,283 1667,283 1668,282 1669,282 1670,282 1671,282 1672,281 1673,281 1674,281 1675,281 1676,281 1677,280 1678,280 1679,280 1680,280 1681,279 1682,279 1683,279 1684,279 1685,279 1686,278 1687,278 1688,278 1689,278 1690,277 1691,277 1692,277 1693,277 1694,277 1695,276 1696,276 1697,276 1698,276 1699,275 1700,275 1701,275 1702,275 1703,275 1704,274 1705,274 1706,274 1707,274 1708,273 1709,273 1710,273 1711,273 1712,273 1713,272 1714,272 1715,272 1716,272 1717,271 1718,271 1719,271 1720,271 1721,270 1722,270 1723,270 1724,270 1725,270 1726,269 1727,269 1728,269 1729,269 1730,268 1731,268 1732,268 1733,268 1734,268 1735,267 1736,267 1737,267 1738,267 1739,266 1740,266 1741,266 1742,266 1743,266 1744,265 1745,265 1746,265 1747,265 1748,264 1749,264 1750,264 1751,264 1752,264 1753,263 1754,263 1755,263 1756,263 1757,262 1758,262 1759,262 1760,262 1761,261 1762,261 1763,261 1764,261 1765,261 1766,260 1767,260 1768,260 1769,260 1770,259 1771,259 1772,259 1773,259 1774,259 1775,258 1776,258 1777,258 1778,258 1779,257 1780,257 1781,257 1782,257 1783,256 1784,256 1785,256 1786,256 1787,256 1788,255 1789,255 1790,255 1791,255 1792,254 1793,254 1794,254 1795,254 1796,254 1797,253 1798,253 1799,253 1800,253 1801,252 1802,252 1803,252 1804,252 1805,252 1806,251 1807,251 1808,251 1809,251 1810,250 1811,250 1812,250 1813,250 1814,249 1815,249 1816,249 1817,249 1818,249 1819,248 1820,248 1821,248 1822,248 1823,247 1824,247 1825,247 1826,247 1827,246 1828,246 1829,246 1830,246 1831,246 1832,245 1833,245 1834,245 1835,245 1836,244 1837,244 1838,244 1839,244 1840,244 1841,243 1842,243 1843,243 1844,243 1845,242 1846,242 1847,242 1848,242 1849,241 1850,241 1851,241 1852,241 1853,241 1854,240 1855,240 1856,240 1857,240 1858,239 1859,239 1860,239 1861,239 1862,238 1863,238 1864,238 1865,238 1866,238 1867,237 1868,237 1869,237 1870,237 1871,236 1872,236 1873,236 1874,236 1875,235 1876,235 1877,235 1878,235 1879,235 1880,234 1881,234 1882,234 1883,234 1884,233 1885,233 1886,233 1887,233 1888,232 1889,232 1890,232 1891,232 1892,231 1893,231 1894,231 1895,231 1896,230 1897,230 1898,230 1899,230 1900,230 1901,229 1902,229 1903,229 1904,229 1905,228 1906,228 1907,228 1908,228 1909,227 1910,227 1911,227 1912,227 1913,226 1914,226 1915,226 1916,226 1917,225 1918,225 1919,225 1920,225 1921,224 1922,224 1923,224 1924,224 1925,223 1926,223 1927,223 1928,222 1929,222 1930,222 1931,222 1932,221 1933,221 1934,221 1935,221 1936,220 1937,220 1938,220 1939,220 1940,219 1941,219 1942,219 1943,218 1944,218 1945,218 1946,218 1947,217 1948,217 1949,217 1950,217 1951,216 1952,216 1953,216 1954,215 1955,215 1956,215 1957,215 1958,214 1959,214 1960,214 1961,213 1962,213 1963,213 1964,213 1965,212 1966,212 1967,212 1968,211 1969,211 1970,211 1971,210 1972,210 1973,210 1974,210 1975,209 1976,209 1977,209 1978,208 1979,208 1980,208 1981,207 1982,207 1983,207 1984,206 1985,206 1986,206 1987,206 1988,205 1989,205 1990,205 1991,204 1992,204 1993,204 1994,203 1995,203 1996,203 1997,202 1998,202 1999,202 2000,201 2001,201 2002,201 2003,200 2004,200 2005,200 2006,199 2007,199 2008,198 2009,198 2010,198 2011,197 2012,197 2013,197 2014,196 2015,196 2016,196 2017,195 2018,195 2019,195 2020,194 2021,194 2022,193 2023,193 2024,193 2025,192 2026,192 2027,192 2028,191 2029,191 2030,190 2031,190 2032,190 2033,189 2034,189 2035,188 2036,188 2037,188 2038,187 2039,187 2040,186 2041,186 2042,186 2043,185 2044,185 2045,184 2046,184 2047,184 2048,183 2049,183 2050,182 2051,182 2052,181 2053,181 2054,181 2055,180 2056,180 2057,179 2058,179 2059,178 2060,178 2061,178 2062,177 2063,177 2064,176 2065,176 2066,175 2067,175 2068,174 2069,174 2070,174 2071,173 2072,173 2073,172 2074,172 2075,171 2076,171 2077,170 2078,170 2079,169 2080,169 2081,168 2082,168 2083,167 2084,167 2085,166 2086,166 2087,165 2088,165 2089,164 2090,164 2091,163 2092,163 2093,162 2094,162 2095,161 2096,161 2097,160 2098,160 2099,159 2100,159 2101,158 2102,158 2103,157 2104,157 2105,156 2106,156 2107,155 2108,155 2109,154 2110,154 2111,153 2112,153 2113,152 2114,152 2115,151 2116,151 2117,150 2118,149 2119,149 2120,148 2121,148 2122,147 2123,147 2124,146 2125,146 2126,145 2127,145 2128,144 2129,144 2130,143 2131,142 2132,142 2133,141 2134,141 2135,140 2136,140 2137,139 2138,139 2139,138 2140,137 2141,137 2142,136 2143,136 2144,135 2145,135 2146,134 2147,134 2148,133 2149,132 2150,132 2151,131 2152,131 2153,130 2154,130 2155,129 2156,128 2157,128 2158,127 2159,127 2160,126 2161,126 2162,125 2163,125 2164,124 2165,123 2166,123 2167,122 2168,122 2169,121 2170,121 2171,120 2172,119 2173,119 2174,118 2175,118 2176,117 2177,117 2178,116 " />
+    <text x="1585" y="285" font-family="Tahoma" font-size="11" fill="#000000">(0.7,100)</text>
+    <text x="1802" y="236" font-family="Tahoma" font-size="11" fill="#000000">(0.8,105)</text>
+    <text x="2020" y="169" font-family="Tahoma" font-size="11" fill="#000000">(0.9,112)</text>
+    <text x="2123" y="111" font-family="Tahoma" font-size="11" fill="#000000">(0.95,118)</text>
+    <circle stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#000000" cx="1634" cy="290" r="3" />
+    <circle stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#000000" cx="1851" cy="241" r="3" />
+    <circle stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#000000" cx="2069" cy="174" r="3" />
+    <circle stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#000000" cx="2178" cy="116" r="3" />
+  </g>
+</svg>

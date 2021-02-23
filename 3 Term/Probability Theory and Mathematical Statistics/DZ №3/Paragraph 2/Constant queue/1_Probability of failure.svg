@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="2325px" height="1303px" viewBox="0 0 2325 1303" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <text x="1445" y="482" font-family="Calibri" font-size="37" fill="#000000">Зависит от числа каналов</text>
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="754.5" y1="0.5" x2="754.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="1382.5" y1="0.5" x2="1382.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="2011.5" y1="0.5" x2="2011.5" y2="1302.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="1249.5" x2="2324.5" y2="1249.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="1194.5" x2="2324.5" y2="1194.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="1140.5" x2="2324.5" y2="1140.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="1032.5" x2="2324.5" y2="1032.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="977.5" x2="2324.5" y2="977.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="923.5" x2="2324.5" y2="923.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="869.5" x2="2324.5" y2="869.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="814.5" x2="2324.5" y2="814.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="760.5" x2="2324.5" y2="760.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="706.5" x2="2324.5" y2="706.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="651.5" x2="2324.5" y2="651.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="597.5" x2="2324.5" y2="597.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="543.5" x2="2324.5" y2="543.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="489.5" x2="2324.5" y2="489.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="434.5" x2="2324.5" y2="434.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="380.5" x2="2324.5" y2="380.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="326.5" x2="2324.5" y2="326.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="271.5" x2="2324.5" y2="271.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="217.5" x2="2324.5" y2="217.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="163.5" x2="2324.5" y2="163.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="109.5" x2="2324.5" y2="109.5" />
+    <line stroke="#9999ff" stroke-width="1" stroke-dasharray="1,10" stroke-linecap="round" stroke-linejoin="round" x1="0.5" y1="54.5" x2="2324.5" y2="54.5" />
+    <text x="749" y="1119" font-family="Calibri" font-size="37" fill="#000000">1</text>
+    <text x="1377" y="1119" font-family="Calibri" font-size="37" fill="#000000">2</text>
+    <text x="2006" y="1119" font-family="Calibri" font-size="37" fill="#000000">3</text>
+    <text x="63" y="1267" font-family="Calibri" font-size="37" fill="#000000">-0.015</text>
+    <text x="74" y="1212" font-family="Calibri" font-size="37" fill="#000000">-0.01</text>
+    <text x="63" y="1158" font-family="Calibri" font-size="37" fill="#000000">-0.005</text>
+    <text x="70" y="1050" font-family="Calibri" font-size="37" fill="#000000">0.005</text>
+    <text x="81" y="995" font-family="Calibri" font-size="37" fill="#000000">0.01</text>
+    <text x="70" y="941" font-family="Calibri" font-size="37" fill="#000000">0.015</text>
+    <text x="81" y="887" font-family="Calibri" font-size="37" fill="#000000">0.02</text>
+    <text x="70" y="832" font-family="Calibri" font-size="37" fill="#000000">0.025</text>
+    <text x="81" y="778" font-family="Calibri" font-size="37" fill="#000000">0.03</text>
+    <text x="70" y="724" font-family="Calibri" font-size="37" fill="#000000">0.035</text>
+    <text x="81" y="669" font-family="Calibri" font-size="37" fill="#000000">0.04</text>
+    <text x="70" y="615" font-family="Calibri" font-size="37" fill="#000000">0.045</text>
+    <text x="81" y="561" font-family="Calibri" font-size="37" fill="#000000">0.05</text>
+    <text x="70" y="507" font-family="Calibri" font-size="37" fill="#000000">0.055</text>
+    <text x="81" y="452" font-family="Calibri" font-size="37" fill="#000000">0.06</text>
+    <text x="70" y="398" font-family="Calibri" font-size="37" fill="#000000">0.065</text>
+    <text x="81" y="344" font-family="Calibri" font-size="37" fill="#000000">0.07</text>
+    <text x="70" y="289" font-family="Calibri" font-size="37" fill="#000000">0.075</text>
+    <text x="81" y="235" font-family="Calibri" font-size="37" fill="#000000">0.08</text>
+    <text x="70" y="181" font-family="Calibri" font-size="37" fill="#000000">0.085</text>
+    <text x="81" y="127" font-family="Calibri" font-size="37" fill="#000000">0.09</text>
+    <text x="70" y="72" font-family="Calibri" font-size="37" fill="#000000">0.095</text>
+    <text x="2312" y="1074" font-family="Times New Roman" font-size="21" font-weight="700" fill="#000000">x</text>
+    <text x="138" y="15" font-family="Times New Roman" font-size="21" font-weight="700" fill="#000000">y</text>
+    <line stroke="#000000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="bevel" x1="0" y1="1086" x2="2320" y2="1086" />
+    <polygon stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#000000" points="2318.5,1079.5 2324.5,1085.5 2324.5,1086.5 2318.5,1092.5 " />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="754.5" y1="1091.5" x2="754.5" y2="1080.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="1382.5" y1="1091.5" x2="1382.5" y2="1080.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="2011.5" y1="1091.5" x2="2011.5" y2="1080.5" />
+    <line stroke="#000000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="bevel" x1="126" y1="3" x2="126" y2="1302" />
+    <polygon stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#000000" points="119.5,6.5 125.5,0.5 126.5,0.5 132.5,6.5 " />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="1249.5" x2="131.5" y2="1249.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="1194.5" x2="131.5" y2="1194.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="1140.5" x2="131.5" y2="1140.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="1032.5" x2="131.5" y2="1032.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="977.5" x2="131.5" y2="977.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="923.5" x2="131.5" y2="923.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="869.5" x2="131.5" y2="869.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="814.5" x2="131.5" y2="814.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="760.5" x2="131.5" y2="760.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="706.5" x2="131.5" y2="706.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="651.5" x2="131.5" y2="651.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="597.5" x2="131.5" y2="597.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="543.5" x2="131.5" y2="543.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="489.5" x2="131.5" y2="489.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="434.5" x2="131.5" y2="434.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="380.5" x2="131.5" y2="380.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="326.5" x2="131.5" y2="326.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="271.5" x2="131.5" y2="271.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="217.5" x2="131.5" y2="217.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="163.5" x2="131.5" y2="163.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="109.5" x2="131.5" y2="109.5" />
+    <line stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="120.5" y1="54.5" x2="131.5" y2="54.5" />
+    <polyline stroke="#ff0000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="bevel" fill="none" points="754,334 1382,1025 2011,1082 " />
+    <text x="648" y="327" font-family="Tahoma" font-size="16" fill="#ff0000">(1,0.0692521)</text>
+    <text x="1276" y="1018" font-family="Tahoma" font-size="16" fill="#ff0000">(2,0.0055731)</text>
+    <text x="1905" y="1075" font-family="Tahoma" font-size="16" fill="#ff0000">(3,0.0003876)</text>
+    <circle stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#ff0000" cx="754" cy="334" r="3" />
+    <circle stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#ff0000" cx="1382" cy="1025" r="3" />
+    <circle stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#ff0000" cx="2011" cy="1082" r="3" />
+    <polyline stroke="#00ff00" stroke-width="2" stroke-linecap="butt" stroke-linejoin="bevel" fill="none" points="754,856 1382,1076 2011,1085 " />
+    <text x="760" y="849" font-family="Tahoma" font-size="16" fill="#00ff00">(1,0.0211829)</text>
+    <text x="1388" y="1069" font-family="Tahoma" font-size="16" fill="#00ff00">(2,0.0008702)</text>
+    <text x="2017" y="1078" font-family="Tahoma" font-size="16" fill="#00ff00">(3,0.0000404)</text>
+    <circle stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#00ff00" cx="754" cy="856" r="3" />
+    <circle stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#00ff00" cx="1382" cy="1076" r="3" />
+    <circle stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#00ff00" cx="2011" cy="1085" r="3" />
+    <polyline stroke="#0000ff" stroke-width="2" stroke-linecap="butt" stroke-linejoin="bevel" fill="none" points="754,1014 1382,1084 2011,1086 " />
+    <text x="760" y="1032" font-family="Tahoma" font-size="16" fill="#0000ff">(1,0.0065761)</text>
+    <text x="1388" y="1102" font-family="Tahoma" font-size="16" fill="#0000ff">(2,0.0001359)</text>
+    <text x="2017" y="1104" font-family="Tahoma" font-size="16" fill="#0000ff">(3,0.0000042)</text>
+    <circle stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#0000ff" cx="754" cy="1014" r="3" />
+    <circle stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#0000ff" cx="1382" cy="1084" r="3" />
+    <circle stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#0000ff" cx="2011" cy="1086" r="3" />
+  </g>
+</svg>

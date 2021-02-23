@@ -1,0 +1,108 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.4.2.543
+MinVersion = 2.5
+OS = Windows NT 6.2 
+
+[Axes]
+xMin = -1
+xMax = 43
+xTickUnit = 1
+xGridUnit = 1
+xShowGrid = 1
+xAutoTick = 0
+yMin = -30
+yMax = 310
+yTickUnit = 20
+yGridUnit = 20
+yShowGrid = 1
+yLabel = f(x)
+AxesColor = clBlue
+GridColor = 0x00FF9999
+ShowLegend = 0
+Radian = 1
+
+[Func1]
+FuncType = 0
+y = (x-24)^2-25
+From = 11
+To = 21
+Color = clBlack
+Size = 3
+StartPoint = 2
+EndPoint = 2
+
+[Func2]
+FuncType = 0
+y = (x-24)^2-25
+From = 21
+To = 24
+Color = clBlack
+Size = 3
+StartPoint = 2
+EndPoint = 2
+
+[Func3]
+FuncType = 0
+y = (x-24)^2-25
+From = 24
+To = 32
+Color = clBlack
+Size = 3
+StartPoint = 2
+EndPoint = 2
+
+[Func4]
+FuncType = 0
+y = (x-24)^2-25
+From = 32
+To = 42
+Color = clBlack
+Size = 3
+StartPoint = 2
+EndPoint = 2
+
+[Label1]
+Placement = 0
+Pos = 18.7779632721202;-14.3438219493476
+Text = {\\rtf1\\ansi\\ansicpg1251\\deff0\\deflang1049{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs48 (21; -16)\\par\n}\n
+BackgroundColor = clNone
+ShowInLegend = 0
+
+[Label2]
+Placement = 0
+Pos = 22.9649415692821;-13.561013046815
+Text = {\\rtf1\\ansi\\ansicpg1251\\deff0\\deflang1049{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs48 (24; -25)\\par\n}\n
+BackgroundColor = clNone
+ShowInLegend = 0
+
+[Label3]
+Placement = 0
+Pos = 29.906510851419;47.4980813507291
+Text = {\\rtf1\\ansi\\ansicpg1251\\deff0\\deflang1049{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs48 (32; 39)\\par\n}\n
+BackgroundColor = clNone
+ShowInLegend = 0
+
+[Label4]
+Placement = 0
+Pos = 39.6026711185309;305.825019186493
+Text = {\\rtf1\\ansi\\ansicpg1251\\deff0\\deflang1049{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs48 (42; 299)\\par\n}\n
+BackgroundColor = clNone
+ShowInLegend = 0
+
+[Label5]
+Placement = 0
+Pos = 11.212020033389;152.916346891788
+Text = {\\rtf1\\ansi\\ansicpg1251\\deff0\\deflang1049{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\n{\\colortbl ;\\red0\\green0\\blue0;}\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs48 (11; 144)\\par\n}\n
+BackgroundColor = clNone
+ShowInLegend = 0
+
+[Data]
+TextLabelCount = 5
+FuncCount = 4
+PointSeriesCount = 0
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+

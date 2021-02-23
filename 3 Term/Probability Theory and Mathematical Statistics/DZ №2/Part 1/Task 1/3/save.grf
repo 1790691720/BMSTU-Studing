@@ -1,0 +1,123 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.4.2.543
+MinVersion = 2.5
+OS = Windows NT 6.2 
+
+[Axes]
+xMin = 362.412622916313
+xMax = 389.767370199191
+xTickUnit = 25
+xGridUnit = 1
+xAutoTick = 0
+xAutoGrid = 0
+xLabel = k
+yMin = -0.0179884872710439
+yMax = 0.127903498237639
+yTickUnit = 0.1
+yGridUnit = 0.1
+yAutoTick = 0
+yAutoGrid = 0
+yLabel = P(k)
+yAxisCross = 275
+AxesColor = clBlue
+GridColor = 0x00FF9999
+NumberFont = Times New Roman,16,clBlack
+LabelFont = Times New Roman,16,clBlack,B
+ShowLegend = 0
+Radian = 1
+LegendPlacement = 0
+LegendPos = 4.37924318196995,7.81529803052955
+
+[PointSeries1]
+FillColor = clBlack
+LineColor = clBlack
+Size = 3
+Style = 0
+LineStyle = 0
+Interpolation = 3
+Font = Tahoma,12,clBlack
+LabelPosition = 5
+PointCount = 7
+Points = 0,0.000253;3,0.010359;5,0.053731;10,0.141149;13,0.029771;15,0.004379;17,0.000337;
+Visible = 0
+LegendText = n=25
+
+[PointSeries2]
+FillColor = clBlack
+LineColor = clBlack
+Size = 3
+Style = 0
+LineStyle = 0
+Interpolation = 3
+Font = Tahoma,12,clBlack
+LabelPosition = 5
+PointCount = 7
+Points = 6,0.000476;12,0.036296;18,0.11541;25,0.007861;31,0.000030;38,0.000030;45,0.000030;
+Visible = 0
+LegendText = n=50
+
+[PointSeries3]
+FillColor = clBlack
+LineColor = clBlack
+Size = 3
+Style = 0
+LineStyle = 0
+Interpolation = 3
+Font = Tahoma,12,clBlack
+LabelPosition = 5
+PointCount = 7
+Points = 13,0.000021;25,0.012064;38,0.062932;50,0.000379;62,0.000021;75,0.000021;88,0.000021;
+Visible = 0
+LegendText = n=100
+
+[PointSeries4]
+FillColor = clBlack
+LineColor = clBlack
+Size = 3
+Style = 0
+LineStyle = 0
+Interpolation = 3
+Font = Tahoma,12,clBlack
+LabelPosition = 5
+PointCount = 7
+Points = 25,0.000015;50,0.001206;75,0.038544;100,0.000015;125,0.000015;150,0.000015;175,0.000015;
+Visible = 0
+LegendText = n=200
+
+[PointSeries5]
+FillColor = clBlack
+LineColor = clBlack
+Size = 3
+Style = 0
+LineStyle = 0
+Interpolation = 3
+Font = Tahoma,12,clBlack
+LabelPosition = 5
+PointCount = 7
+Points = 50,0.000011;100,0.000021;150,0.017570;200,0.000011;250,0.000011;300,0.000011;350,0.000011;
+Visible = 0
+LegendText = n=400
+
+[PointSeries6]
+FillColor = clBlack
+LineColor = clBlack
+Size = 3
+Style = 0
+LineStyle = 0
+Interpolation = 3
+Font = Tahoma,12,clBlack
+LabelPosition = 5
+PointCount = 7
+Points = 125,0.000007;250,0.000007;375,0.003056;500,0.000007;625,0.000007;750,0.000007;875,0.000007;
+LegendText = n=1000
+
+[Data]
+TextLabelCount = 0
+FuncCount = 0
+PointSeriesCount = 6
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+

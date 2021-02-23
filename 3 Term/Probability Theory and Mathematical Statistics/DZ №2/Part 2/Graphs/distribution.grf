@@ -1,0 +1,56 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.4.2.543
+MinVersion = 2.5
+OS = Windows NT 6.2 
+
+[Axes]
+xMin = -1
+xMax = 43
+xTickUnit = 1
+xGridUnit = 1
+xShowGrid = 1
+yMin = -0.05
+yMax = 1.05
+yTickUnit = 0.05
+yGridUnit = 0.05
+yShowGrid = 1
+yLabel = F(x)
+AxesColor = clBlue
+GridColor = 0x00FF9999
+ShowLegend = 0
+Radian = 1
+
+[Func1]
+FuncType = 0
+y = x*x/420-11*x/210+121/420
+From = 11
+To = 21
+Color = clBlack
+Size = 3
+
+[Func2]
+FuncType = 0
+y = x/21-16/21
+From = 21
+To = 32
+Color = clRed
+Size = 3
+
+[Func3]
+FuncType = 0
+y = -(x^2)/420+x/5-16/5
+From = 32
+To = 42
+Color = clBlack
+Size = 3
+
+[Data]
+TextLabelCount = 0
+FuncCount = 3
+PointSeriesCount = 0
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+

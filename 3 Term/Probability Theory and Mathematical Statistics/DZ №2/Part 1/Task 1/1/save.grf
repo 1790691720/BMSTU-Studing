@@ -1,0 +1,83 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.4.2.543
+MinVersion = 2.5
+OS = Windows NT 6.2 
+
+[Axes]
+xMin = -0.3
+xMax = 13
+xTickUnit = 1
+xGridUnit = 1
+xAutoTick = 0
+xAutoGrid = 0
+xLabel = k
+yMin = -0.1
+yMax = 1.1
+yTickUnit = 0.1
+yGridUnit = 0.1
+yAutoTick = 0
+yAutoGrid = 0
+yLabel = P(k)
+AxesColor = clBlue
+GridColor = 0x00FF9999
+NumberFont = Times New Roman,16,clBlack
+LabelFont = Times New Roman,16,clBlack,B
+ShowLegend = 0
+Radian = 1
+LegendPlacement = 0
+LegendPos = 4.37924318196995,7.81529803052955
+
+[PointSeries1]
+FillColor = clBlack
+LineColor = clBlack
+Size = 3
+Style = 0
+LineStyle = 0
+Interpolation = 3
+ShowLabels = 1
+Font = Tahoma,12,clBlack
+LabelPosition = 5
+PointCount = 7
+Points = 0,0.0798759246;1,0.2510386202;2,0.3287410503;3,0.2295969240;4,0.0901987916;5,0.0188987944;6,0.0016498948;
+Visible = 0
+LegendText = n=6
+
+[PointSeries2]
+FillColor = clBlack
+LineColor = clBlack
+Size = 3
+Style = 0
+LineStyle = 0
+Interpolation = 3
+ShowLabels = 1
+Font = Tahoma,12,clBlack
+LabelPosition = 5
+PointCount = 10
+Points = 0,0.0225747967;1,0.1064240415;2,0.2229837061;3,0.2725356408;4,0.2141351463;5,0.1121660290;6,0.0391690895;7,0.0087930609;8,0.0011514723;9,0.0000670169;
+Visible = 0
+LegendText = n=9
+
+[PointSeries3]
+FillColor = clBlack
+LineColor = clBlack
+Size = 3
+Style = 0
+LineStyle = 0
+Interpolation = 3
+ShowLabels = 1
+Font = Tahoma,12,clBlack
+LabelPosition = 5
+PointCount = 13
+Points = 0,0.0063801633;1,0.0401038838;2,0.1155373796;3,0.2017319326;4,0.2377554920;5,0.1992617457;6,0.1217710668;7,0.0546727239;8,0.0178988084;9,0.0041669184;10,0.0006548015;11,0.0000623620;12,0.0000027222;
+LegendText = n=12
+
+[Data]
+TextLabelCount = 0
+FuncCount = 0
+PointSeriesCount = 3
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+
