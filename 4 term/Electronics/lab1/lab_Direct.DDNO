@@ -1,0 +1,80 @@
+********************************************************************************
+***                       Micro-Cap 11.0.1.9 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                         Dynamic DC of lab_Direct                         ***
+***                            28.02.2021 0:21:37                            ***
+********************************************************************************
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage 
+1             1.865   2             2.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:               D1
+Using model:       D2C522B
+
+Capacitance Terms:
+CAP               516.053p
+
+Current Terms:
+ID                134.534m
+
+Resistance Terms:
+REQ               192.697m
+
+Voltage Terms:
+VD                  1.865 
+
+Power DC Terms:
+PD                250.918m
+PS                  0.000 
+
+DC Pin Currents:
+Id                134.534m
+
+Condition:
+State                   ON
+
+Device Variables:
+area                1.000 
+ic                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                RV            RA
+V                    1.865       134.907m
+Power DC Terms:
+PD                 695.715u       18.200m
+
+DC Pin Currents:
+Ir                 373.019u      134.907m
+
+Device Variables:
+tc1                  0.000         0.000 
+tc2                  0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1
+V                   2.000 
+Power DC Terms:
+PG                269.813m
+
+DC Pin Currents:
+ISource          -134.907m
+
+

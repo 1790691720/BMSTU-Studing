@@ -55,7 +55,7 @@ Name=Diode
 Definition=Diode
 Shape=Diode
 Mask=5633
-Used=483
+Used=481
 memo=Diode
 Label Offset=17,10,12,12
 PinCnt=2
@@ -67,7 +67,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor_Euro
 Mask=6401
-Used=1873
+Used=1869
 memo=Resistor
 Label Offset=11,-36,10,10
 PinCnt=2
@@ -79,7 +79,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=4865
-Used=51
+Used=48
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -91,14 +91,14 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=769
-Used=732
+Used=730
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
 Pin="PinA",0,0,-3,-7
 
 [Circuit]
-Window Placement=2,3, -1,-1, -9,-38, 0,0,1409,588
+Window Placement=2,3, -1,-1, -8,-31, 0,0,1409,588
 Default Object=Color=#000080
 Default Object Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -107,7 +107,7 @@ NodeVoltageFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in DC Analysis=2,3, -1,-1, -9,-38, 0,0,1455,588
+Window Placement in DC Analysis=2,3, -1,-1, -8,-31, 0,0,1455,588
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
@@ -153,7 +153,7 @@ Style=8192
 
 [Attr]
 ON=14,-23,RESISTANCE
-V=20k
+V=5k
 Style=8192
 
 [Attr]
@@ -172,7 +172,7 @@ Style=8192
 
 [Attr]
 ON=-47,-34,RESISTANCE
-V=2
+V=1
 Style=8192
 
 [Attr]
@@ -393,8 +393,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
+SB 3=0,144
 Scale 3=0.5
-Px=424,282
+Px=661,364
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -502,7 +503,7 @@ ComponentCounts=True
 
 [DC]
 WinID=3
-Window Placement=2,3, -1,-1, -9,-38, 0,0,1455,588
+Window Placement=2,3, -1,-1, -8,-31, 0,0,1455,588
 Font=Height=-23,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -588,7 +589,7 @@ Num Out Allow Dup Y Expr=False
 Num Out Low="DCMIN"
 Num Out High="DCMAX"
 Num Out Font=Height=-23,FStyle=0,Color=#000000,Name=Courier New
-Num Out Window Placement=2,3, -1,-1, -9,-38, 64,64,1719,633
+Num Out Window Placement=2,3, -1,-1, -8,-31, 64,64,1719,633
 Num Out Format=3
 Num Out HideNonSelected=False
 AutoSaveWave=False
@@ -715,7 +716,7 @@ Seed=0
 
 [Limits]
 Analysis=DC
-I1Range=2,0,.0005
+I1Range=1,0,.0005
 I1=V1
 NPts=51
 Temp=27
@@ -732,13 +733,11 @@ Sweep2 type=None
 Analysis=DC
 Plt=1
 AliasID=1
-XExp=DCINPUT1 - I(Ra)*2
+XExp=DCINPUT1 - I(Ra)*1
 YExp=I(Ra) - I(Rv)
-XRng=2.5
-YRng=0.2,-0.05
+XRng=AutoAlways
+YRng=AutoAlways
 Options=OUTPUT,LINEARX,LINEARY
-Range Grid X=0.5
-Range Grid Y=0.05
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -757,8 +756,8 @@ NOFmtY=10F
 [WaveForm]
 Analysis=DC
 AliasID=-1
-XRng=Auto
-YRng=Auto
+XRng=AutoAlways
+YRng=AutoAlways
 Options=LINEARX,LINEARY
 Enable=Enable
 Line Color=#FF0000
@@ -778,8 +777,8 @@ NOFmtY=3E
 [WaveForm]
 Analysis=DC
 AliasID=-1
-XRng=Auto
-YRng=Auto
+XRng=AutoAlways
+YRng=AutoAlways
 Options=LINEARX,LINEARY
 Enable=Enable
 Line Color=#008000
