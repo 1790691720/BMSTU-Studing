@@ -7,8 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=11.0.1.9
 Key ID=0
-NLCnt=17
-TXCnt=0
+NLCnt=35
+TXCnt=3
 
 [shapedef]
 Name=Battery
@@ -17,6 +17,16 @@ Line=22,-3,22,3
 Line=26,-7,26,7
 Line=26,0,48,0
 Current=32,8,16,8
+
+[shapedef]
+Name=Capacitor
+Line=0,0,22,0
+Line=22,-8,22,8
+Line=26,-8,26,8
+Line=26,0,48,0
+Current=32,12,16,12
+Ellipse=29,-7,31,-5
+FColor=#0000FF
 
 [shapedef]
 Name=Diode
@@ -41,6 +51,41 @@ Line=18,-4,18,4
 Line=24,0,24,0
 
 [shapedef]
+Name=Inductor
+Line=42,0,48,0
+Line=0,0,5,0
+Arc=5,-7,17,7 , 11,-7,5,0
+Arc=13,-7,25,7 , 19,-7,13,0
+Arc=29,-7,41,7 , 35,-7,29,0
+Arc=21,-7,33,7 , 27,-7,21,0
+Arc=6,-7,18,7 , 18,0,12,-7
+Arc=14,-7,26,7 , 26,0,20,-7
+Arc=22,-7,34,7 , 34,0,28,-7
+Arc=30,-7,42,7 , 42,0,36,-7
+Line=11,-7,12,-7
+Line=19,-7,20,-7
+Line=27,-7,28,-7
+Line=35,-7,36,-7
+Arc=13,-4,17,2 , 13,-1,15,2
+Arc=29,-4,33,2 , 29,-1,31,2
+Arc=21,-4,25,2 , 21,-1,23,2
+Arc=14,-4,18,2 , 16,2,18,-1
+Arc=30,-4,34,2 , 32,2,34,-1
+Arc=22,-4,26,2 , 24,2,26,-1
+Line=15,2,16,2
+Line=23,2,24,2
+Line=31,2,32,2
+Line=5,5,9,5
+Line=41,5,41,9
+Line=39,7,43,7
+Current=32,8,16,8
+
+[shapedef]
+Name=Plus.root
+Line=-2,0,2,0
+Line=0,-2,0,2
+
+[shapedef]
 Name=Resistor_Euro
 Rectangle=12,-4,36,4
 FColor=None
@@ -50,24 +95,43 @@ Current=32,8,16,8
 Ellipse=31,-1,33,1
 FColor=#0000FF
 
+[shapedef]
+Name=Sine_Source
+Root="Vsource.root",0,0,0
+Line=24,-6,26,-4
+Line=26,-4,26,-2
+Line=26,-2,22,2
+Line=22,2,22,4
+Line=22,4,24,6
+
+[shapedef]
+Name=Vsource.root
+Line=0,0,12,0
+Line=36,0,48,0
+Ellipse=12,-12,36,12
+FColor=None
+Line=7,5,7,9
+Root="Plus.root",41,7,0
+Current=32,16,16,16
+
 [compdef]
-Name=Diode
-Definition=Diode
-Shape=Diode
-Mask=5633
-Used=483
-memo=Diode
-Label Offset=17,10,12,12
+Name=Sine Source
+Definition=Sine source
+Shape=Sine_Source
+Mask=4865
+Used=6
+memo=Sine Source
+Label Offset=18,12,15,12
 PinCnt=2
-Pin="Anode",6,0,-9,-8
-Pin="Cathode",0,0,-20,-8
+Pin="Plus",6,0,-6,-6
+Pin="Minus",0,0,-19,-6
 
 [compdef]
 Name=Resistor
 Definition=Resistor
 Shape=Resistor_Euro
 Mask=6401
-Used=1873
+Used=1876
 memo=Resistor
 Label Offset=11,-36,10,10
 PinCnt=2
@@ -75,11 +139,35 @@ Pin="Plus",6,0,-10,-4
 Pin="Minus",0,0,-14,-4
 
 [compdef]
+Name=Capacitor
+Definition=Capacitor
+Shape=Capacitor
+Mask=6913
+Used=1005
+memo=Capacitor
+Label Offset=4,-38,12,12
+PinCnt=2
+Pin="Plus",6,0,-3,-5
+Pin="Minus",0,0,-14,-5
+
+[compdef]
+Name=Inductor
+Definition=Inductor
+Shape=Inductor
+Mask=6145
+Used=86
+memo=Inductor
+Label Offset=18,9,11,12
+PinCnt=2
+Pin="Plus",6,0,-5,-9
+Pin="Minus",0,0,-3,-9
+
+[compdef]
 Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=769
-Used=732
+Used=733
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -90,15 +178,27 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=4865
-Used=51
+Used=53
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
 Pin="Plus",6,0,-4,-5
 Pin="Minus",0,0,-10,-5
 
+[compdef]
+Name=Diode
+Definition=Diode
+Shape=Diode
+Mask=5633
+Used=485
+memo=Diode
+Label Offset=17,10,12,12
+PinCnt=2
+Pin="Anode",6,0,-9,-8
+Pin="Cathode",0,0,-20,-8
+
 [Circuit]
-Window Placement=2,3, -1,-1, -9,-38, 0,0,1409,588
+Window Placement=2,3, -1,-1, -9,-38, 0,128,951,716
 Default Object=Color=#000080
 Default Object Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -107,11 +207,11 @@ NodeVoltageFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in DC Analysis=2,3, -1,-1, -9,-38, 0,0,1455,588
+Window Placement in AC Analysis=2,3, -1,-1, -9,-38, 160,160,1815,729
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
-Show Nodes=False
+Show Nodes=True
 Show Voltages=False
 Show Current=False
 Show Power=False
@@ -123,37 +223,18 @@ Show Attribute Text=True
 Show Grid Text=True
 
 [Comp]
-Name=Diode
-Px=616,320
-Rot=7
-
-[Attr]
-ON=-41,-7,PART
-V=D1
-Style=8192
-
-[Attr]
-ON=-107,25,MODEL
-V=D2C522B
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Resistor
-Px=392,376
+Name=Sine Source
+Px=504,336
 Rot=3
 
 [Attr]
-ON=16,-56,PART
-V=Rv
+ON=-44,-24,PART
+V=V1
 Style=8192
 
 [Attr]
-ON=14,-23,RESISTANCE
-V=5000
+ON=-76,-49,MODEL
+V=1MHZ
 Style=8192
 
 [Attr]
@@ -162,16 +243,15 @@ V
 
 [Comp]
 Name=Resistor
-Px=528,304
-Rot=2
+Px=560,256
 
 [Attr]
-ON=-46,-58,PART
+ON=7,-60,PART
 V=Ra
 Style=8192
 
 [Attr]
-ON=-47,-34,RESISTANCE
+ON=7,-35,RESISTANCE
 V=1
 Style=8192
 
@@ -180,64 +260,256 @@ ON=0,0,PACKAGE
 V
 
 [Comp]
-Name=Ground
-Px=616,416
-Rot=1
-
-[Wire]
-Pxs=328,304,328,328
-
-[Wire]
-Pxs=328,304,392,304
-
-[Wire]
-Pxs=392,304,392,328
-
-[Wire]
-Pxs=392,304,480,304
-
-[Wire]
-Pxs=528,304,616,304
-
-[Wire]
-Pxs=616,304,616,320
-
-[Wire]
-Pxs=328,376,328,400
-
-[Wire]
-Pxs=328,400,392,400
-
-[Wire]
-Pxs=616,368,616,400
-
-[Wire]
-Pxs=392,376,392,400
-
-[Wire]
-Pxs=392,400,616,400
-
-[Wire]
-Pxs=616,400,616,416
-
-[Comp]
-Name=Battery
-Px=328,376
-Rot=3
+Name=Resistor
+Px=664,256
 
 [Attr]
-ON=-37,-38,PART
-V=V1
+ON=7,-60,PART
+V=R2
 Style=8192
 
 [Attr]
-ON=-35,-63,VALUE
-V=50
+ON=7,-35,RESISTANCE
+V=100k
 Style=8192
 
 [Attr]
 ON=0,0,PACKAGE
 V
+
+[Comp]
+Name=Resistor
+Px=832,280
+Rot=1
+
+[Attr]
+ON=-39,9,PART
+V=R3
+Style=8192
+
+[Attr]
+ON=-39,34,RESISTANCE
+V=0.1
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=1104,256
+Rot=2
+
+[Attr]
+ON=-39,-37,PART
+V=C1
+Style=8192
+
+[Attr]
+ON=-59,-62,CAPACITANCE
+V=1e-6
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Inductor
+Px=1288,256
+Rot=2
+
+[Attr]
+ON=-51,-66,PART
+V=L1
+Style=8192
+
+[Attr]
+ON=-51,-41,INDUCTANCE
+V=100e-3
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Inductor
+Px=832,416
+Rot=3
+
+[Attr]
+ON=-57,-46,PART
+V=L2
+Style=8192
+
+[Attr]
+ON=-57,-21,INDUCTANCE
+V=1e-3
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=976,368
+Rot=3
+
+[Attr]
+ON=-39,-24,PART
+V=C2
+Style=8192
+
+[Attr]
+ON=-98,-50,CAPACITANCE
+V=100e-12
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Ground
+Px=832,472
+Rot=1
+
+[Comp]
+Name=Battery
+Px=1384,320
+Rot=1
+
+[Attr]
+ON=12,25,PART
+V=Vvar
+Style=8192
+
+[Attr]
+ON=47,0,VALUE
+V=30
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=504,256,504,288
+
+[Wire]
+Pxs=504,256,560,256
+
+[Wire]
+Pxs=608,256,664,256
+
+[Comp]
+Name=Diode
+Px=1168,368
+Rot=5
+
+[Attr]
+ON=-45,10,PART
+V=D1
+Style=8192
+
+[Attr]
+ON=-112,35,MODEL
+V=D2C522B
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=712,256,832,256
+
+[Wire]
+Pxs=1104,256,1168,256
+
+[Wire]
+Pxs=1288,256,1384,256
+
+[Wire]
+Pxs=1384,256,1384,320
+
+[Wire]
+Pxs=1384,368,1384,472
+
+[Wire]
+Pxs=832,472,976,472
+
+[Wire]
+Pxs=504,472,832,472
+
+[Wire]
+Pxs=504,336,504,472
+
+[Wire]
+Pxs=832,256,832,280
+
+[Wire]
+Pxs=832,256,904,256
+
+[Wire]
+Pxs=832,328,832,368
+
+[Wire]
+Pxs=832,416,832,472
+
+[Wire]
+Pxs=976,368,976,472
+
+[Wire]
+Pxs=976,472,1168,472
+
+[Wire]
+Pxs=976,256,976,320
+
+[Wire]
+Pxs=976,256,1056,256
+
+[Wire]
+Pxs=1168,256,1168,320
+
+[Wire]
+Pxs=1168,256,1240,256
+
+[Wire]
+Pxs=1168,368,1168,472
+
+[Wire]
+Pxs=1168,472,1384,472
+
+[Wire]
+Pxs=904,256,976,256
+
+[Grid Text]
+Text="OUT"
+Px=904,256
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Esm"
+Px=1384,256
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="IN"
+Px=504,256
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
 
 [Schematic]
 CurrentSection 0=0
@@ -247,7 +519,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=0.5
+Scale=0.66666666666666663
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main2","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -371,7 +643,7 @@ ALIGNBOTTOM=Yes
 
 [Section]
 Index=0
-Name="lab_Reverse"
+Name="lab"
 Type=Main
 Enable=True
 CurrentPage 0=0
@@ -393,9 +665,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=0,240
-Scale 3=0.5
-Px=383,365
+SB 3=387,104
+Scale 3=0.66666666666666663
+Px=641,528
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -482,8 +754,8 @@ Search Color=#FFFF00
 [Text Area]
 Section=0
 Page=1
-Text=.MODEL D2C522B D (BV=22 CJO=220p FC=.5 IBV=5m IBVL=1m IS=99.47f ISR=2.035n
-Text=+ M=.5959 NBV=25 NBVL=200 RS=8.494 TBV1=1m VJ=.75)
+Text=.MODEL D2C522B D (BV=22 CJO=220p FC=.5 IBV=5m IS=99.47f ISR=2.035n M=.5959
+Text=+ RS=8.494 TBV1=1m VJ=.75)
 
 [Text Area]
 Section=0
@@ -501,15 +773,15 @@ MacroSubckt=True
 NotUsed=True
 ComponentCounts=True
 
-[DC]
-WinID=3
-Window Placement=2,3, -1,-1, -9,-38, 0,0,1455,588
+[AC]
+WinID=2
+Window Placement=2,3, -1,-1, -9,-38, 160,160,1815,729
 Font=Height=-23,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
 Select Box Color=#000080
-Title=lab_Reverse.cir
+Title=lab.cir VVAR=1...30
 AutoTitle=Yes
 Grid Color=#808080
 Grid Weight=1
@@ -534,9 +806,9 @@ MinorLogGrids=True
 BaseLine=False
 AlignZ=True
 Align Cursors=True
-TagFormatX=3
-TagFormatY=3
-FormulaFormat=2
+TagFormatX=3F
+TagFormatY=3F
+FormulaFormat=2F
 EndMode=SCALE
 Graph Background=#FFFFFF
 Tracker Intercept=False
@@ -554,7 +826,11 @@ Cursor Select Color Primary=#C0C0C0
 Cursor Select Color Secondary=#FF0000
 Data Point Labels Color Fore=Height=-23,FStyle=0,Color=#000000,Name=Arial
 Data Point Labels Color Back=#FFFF00
-AutoScaleRanges=False
+OperPoint=True
+AutoScaleRanges=True
+FFT_NPts="8192"
+FFT_IncludeDCHarmonic=False
+FFT_AutoScale_Harmonics="10"
 PrinterAutoTile=No
 PrinterBlackBorder=No
 MonMaxShow=3
@@ -582,16 +858,19 @@ Num Out Write Branch Header=False
 Num Out Write Models=False
 Num Out Write Zero Models=True
 Num Out Write Undefined Models=True
+Num Out Write Operating Point=True
 Num Out Write Measurement Values=False
-Num Out Write Values=True
+Num Out Write Noise=False
+Num Out Write Values=False
 Num Out Write Waveform Header=False
 Num Out Allow Dup Y Expr=False
-Num Out Low="DCMIN"
-Num Out High="DCMAX"
+Num Out Low="FMIN"
+Num Out High="FMAX"
 Num Out Font=Height=-23,FStyle=0,Color=#000000,Name=Courier New
-Num Out Window Placement=2,3, -1,-1, -9,-38, 0,0,1455,588
-Num Out Format=3
+Num Out Window Placement=2,3, -1,-1, -9,-38, 160,160,1815,729
+Num Out Format=3F
 Num Out HideNonSelected=False
+UserFileName="D:\BMSTU-Studing\4 term\Electronics\lab2\lab.USR"
 AutoSaveWave=False
 Wave Format=16E
 State Variables Format=5E
@@ -702,11 +981,137 @@ ALIGNTOP=Yes
 ALIGNBOTTOM=Yes
 
 [APage]
-Analysis=DC
+Analysis=AC
 Name="Main"
 
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=282763.80286083976,0.87964290350986674,285593.30486375006,0.95576923076923093
+Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
+Format=3F
+FormatY=3F
+Branch=0
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=282763.80286083976,0.87964290350986674,285593.30486375006,0.95576923076923093
+Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
+Format=3F
+FormatY=3F
+Branch=0
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=441375.51935525337,0.99230423885897556,444678.27179891104,1.0447761194029852
+Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
+Format=3
+FormatY=3
+Branch=6
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=436046.27935247327,0.99108545082353938,439593.19619665714,1.0970149253731345
+Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
+Format=3
+FormatY=3
+Branch=5
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=429219.22126412613,0.98935388920693201,432862.95826800418,1.1399253731343286
+Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
+Format=3
+FormatY=3
+Branch=4
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=420036.00728832104,0.98669968639303318,421361.58324654645,1.1902985074626868
+Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
+Format=3
+FormatY=3
+Branch=3
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=406662.88695299259,0.98213512351225274,409590.91140645539,1.238805970149254
+Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
+Format=3
+FormatY=3
+Branch=2
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=384287.18049087346,0.97242983827644769,386484.35628478491,1.0500000000000003
+Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
+Format=3
+FormatY=3
+Branch=1
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=331520.07436886313,0.93686796349984014,333371.58109278051,1.0134615384615386
+Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
 [Monte Carlo Options]
-Analysis=DC
+Analysis=AC
 Status=Off
 Zero Tolerance=False
 Eliminate Outliers=False
@@ -715,50 +1120,56 @@ Number of Runs=10
 Seed=0
 
 [Limits]
-Analysis=DC
-I1Range=5,0,.0005
-I1=V1
-NPts=510
+Analysis=AC
+FRange=500e3,200e3
+NPts=9000
 Temp=27
 MaxChng=5
+NInput=NONE
+NOutput=2
+Sweep type=Log
 StateVar=Zero
 RunOption=Normal
 Temperature Type=Linear
 Accumulate Plots=False
 IgnoreExprErrors=False
-Sweep1 type=Linear
-Sweep2 type=None
 
 [WaveForm]
-Analysis=DC
+Analysis=AC
 Plt=1
 AliasID=1
-XExp=DCINPUT1 - I(Ra)*1
-YExp=I(D1)
+XExp=F
+YExp=V(OUT)
 XRng=AutoAlways
 YRng=AutoAlways
-Options=OUTPUT,LINEARX,LINEARY
+Options=LINEARY
+WSP Title="V(OUT) vs F"
+WSP Checked=False
+WSP NOP=9000
+WSP Save Actual Data=True
+WSP Wav Order=0
 Enable=Enable
+CS=Normal
 Line Color=#0000FF
 Text Color=#0000FF
 Rainbow=False
-VFmtX=3
-VFmtY=3
+VFmtX=3F
+VFmtY=3F
 ScaleFactorX="None"
 ScaleFactorY="None"
 ScaleUnitsX="Auto"
 ScaleUnitsY="Auto"
-SFmtX=2
-SFmtY=2
-NOFmtX=10F
-NOFmtY=10F
+SFmtX=2F
+SFmtY=2F
+NOFmtX=3F
+NOFmtY=3F
 
 [WaveForm]
-Analysis=DC
-AliasID=-1
+Analysis=AC
+AliasID=2
 XRng=AutoAlways
 YRng=AutoAlways
-Options=LINEARX,LINEARY
+Options=LINEARY
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -775,11 +1186,11 @@ NOFmtX=3E
 NOFmtY=3E
 
 [WaveForm]
-Analysis=DC
+Analysis=AC
 AliasID=-1
 XRng=AutoAlways
 YRng=AutoAlways
-Options=LINEARX,LINEARY
+Options=LINEARY
 Enable=Enable
 Line Color=#008000
 Text Color=#008000
@@ -810,10 +1221,10 @@ Analysis=Transient
 
 [Pane]
 Analysis=AC
+CurrentPage 0="Main"
 
 [Pane]
 Analysis=DC
-CurrentPage 0="Main"
 
 [Pane]
 Analysis=HmDistortion
@@ -824,8 +1235,47 @@ Analysis=ImDistortion
 [Pane]
 Analysis=Stability
 
+[Stepping]
+Analysis=AC
+Index=1
+Simultaneous=Yes
+Status=On
+Parameter Type=Component
+Name=VVAR
+Param=dc.value
+From=0
+To=30
+Value=3
+
+[Optimize]
+Analysis=AC
+Format=6
+ThatCnt=4
+POWELL_TOL=1e-4
+POWELL_RelPercentTol=.1
+POWELL_PercentTol=1m
+HOOKE_TOL=1e-4
+HOOKE_PercentTol=1m
+HOOKE_RHO=.3
+HOOKE_EPSILON=1e-9
+HOOKE_ITERMAX=1000
+DE_MAXITER=200
+DE_IPRINT=50
+DE_PCROS=.9
+DE_FACT=.5
+DE_MULTIPLIER=5
+InitialRangeFactor=2
+InitializeEach=False
+Method=Powell
+Method=Hooke
+Method=LM
+Method=DE
+Update_Plot=False
+Minimize_Plot=False
+UseInitialValue=False
+
 [Watch]
-Analysis=DC
+Analysis=AC
 Format=3
 ExprPercentWidth=80
 

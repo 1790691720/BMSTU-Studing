@@ -1,0 +1,1356 @@
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+IN             0.000  2              0.000  3              0.000 
+4              0.000  5              0.000  ESM            0.000 
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+L1             0.000  L2             0.000 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                  D1
+Using model:          D2C522B
+
+Capacitance Terms:
+CAP                     0.000
+
+Current Terms:
+ID                      0.000
+
+Resistance Terms:
+REQ              25377836.241
+
+Voltage Terms:
+VD                      0.000
+
+Power DC Terms:
+PD                      0.000
+PS                      0.000
+
+DC Pin Currents:
+Id                      0.000
+
+Condition:
+State                     OFF
+
+Device Variables:
+area                    1.000
+ic                      0.000
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                V1.RS               RA               R2               R3
+V                        0.000            0.000            0.000            0.000
+Power DC Terms:
+PD                       0.000            0.000            0.000            0.000
+
+DC Pin Currents:
+Ir                       0.000            0.000            0.000            0.000
+
+Device Variables:
+tc1                      0.000            0.000            0.000            0.000
+tc2                      0.000            0.000            0.000            0.000
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                   L1               L2
+V                        0.000            0.000
+Power DC Terms:
+PS                       0.000            0.000
+
+DC Pin Currents:
+Il                       0.000            0.000
+
+Device Variables:
+ic                       0.000            0.000
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                   C1               C2
+V                        0.000            0.000
+Power DC Terms:
+PS                       0.000            0.000
+
+DC Pin Currents:
+Ic                       0.000            0.000
+
+Device Variables:
+ic                       0.000            0.000
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                   V1
+Using model:              1MHZ
+V                        0.000
+Power DC Terms:
+PG                       0.000
+
+DC Pin Currents:
+ISource                  0.000
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                VVAR
+V                       0.000
+Power DC Terms:
+PG                      0.000
+
+DC Pin Currents:
+ISource                -0.000
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+IN             0.000  2              0.000  3              0.000 
+4              0.000  5             -3.000  ESM           -3.000 
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+L1             0.000  L2             0.000 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                    D1
+Using model:            D2C522B
+
+Capacitance Terms:
+CAP                       0.000
+
+Current Terms:
+ID                       -0.000
+
+Resistance Terms:
+REQ              1182523746.466
+
+Voltage Terms:
+VD                       -3.000
+
+Power DC Terms:
+PD                        0.000
+PS                        0.000
+
+DC Pin Currents:
+Id                       -0.000
+
+Condition:
+State                       OFF
+
+Device Variables:
+area                      1.000
+ic                        0.000
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                  V1.RS                 RA                 R2
+V                          0.000              0.000              0.000
+Power DC Terms:
+PD                         0.000              0.000              0.000
+
+DC Pin Currents:
+Ir                         0.000              0.000              0.000
+
+Device Variables:
+tc1                        0.000              0.000              0.000
+tc2                        0.000              0.000              0.000
+
+
+Instance:                     R3
+V                          0.000
+Power DC Terms:
+PD                         0.000
+
+DC Pin Currents:
+Ir                         0.000
+
+Device Variables:
+tc1                        0.000
+tc2                        0.000
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                     L1                 L2
+V                         -0.000              0.000
+Power DC Terms:
+PS                        -0.000              0.000
+
+DC Pin Currents:
+Il                         0.000              0.000
+
+Device Variables:
+ic                         0.000              0.000
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                     C1                 C2
+V                          3.000              0.000
+Power DC Terms:
+PS                         0.000              0.000
+
+DC Pin Currents:
+Ic                         0.000              0.000
+
+Device Variables:
+ic                         0.000              0.000
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                     V1
+Using model:                1MHZ
+V                          0.000
+Power DC Terms:
+PG                         0.000
+
+DC Pin Currents:
+ISource                    0.000
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                  VVAR
+V                         3.000
+Power DC Terms:
+PG                        0.000
+
+DC Pin Currents:
+ISource                  -0.000
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+IN             0.000  2              0.000  3              0.000 
+4              0.000  5             -6.000  ESM           -6.000 
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+L1             0.000  L2             0.000 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                    D1
+Using model:            D2C522B
+
+Capacitance Terms:
+CAP                       0.000
+
+Current Terms:
+ID                       -0.000
+
+Resistance Terms:
+REQ              1498470411.527
+
+Voltage Terms:
+VD                       -6.000
+
+Power DC Terms:
+PD                        0.000
+PS                        0.000
+
+DC Pin Currents:
+Id                       -0.000
+
+Condition:
+State                       OFF
+
+Device Variables:
+area                      1.000
+ic                        0.000
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                  V1.RS                 RA                 R2
+V                          0.000              0.000              0.000
+Power DC Terms:
+PD                         0.000              0.000              0.000
+
+DC Pin Currents:
+Ir                         0.000              0.000              0.000
+
+Device Variables:
+tc1                        0.000              0.000              0.000
+tc2                        0.000              0.000              0.000
+
+
+Instance:                     R3
+V                          0.000
+Power DC Terms:
+PD                         0.000
+
+DC Pin Currents:
+Ir                         0.000
+
+Device Variables:
+tc1                        0.000
+tc2                        0.000
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                     L1                 L2
+V                          0.000              0.000
+Power DC Terms:
+PS                         0.000              0.000
+
+DC Pin Currents:
+Il                         0.000              0.000
+
+Device Variables:
+ic                         0.000              0.000
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                     C1                 C2
+V                          6.000              0.000
+Power DC Terms:
+PS                         0.000              0.000
+
+DC Pin Currents:
+Ic                         0.000              0.000
+
+Device Variables:
+ic                         0.000              0.000
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                     V1
+Using model:                1MHZ
+V                          0.000
+Power DC Terms:
+PG                         0.000
+
+DC Pin Currents:
+ISource                    0.000
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                  VVAR
+V                         6.000
+Power DC Terms:
+PG                        0.000
+
+DC Pin Currents:
+ISource                  -0.000
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+IN             0.000  2              0.000  3              0.000 
+4              0.000  5             -9.000  ESM           -9.000 
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+L1             0.000  L2             0.000 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                    D1
+Using model:            D2C522B
+
+Capacitance Terms:
+CAP                       0.000
+
+Current Terms:
+ID                       -0.000
+
+Resistance Terms:
+REQ              1737660984.991
+
+Voltage Terms:
+VD                       -9.000
+
+Power DC Terms:
+PD                        0.000
+PS                        0.000
+
+DC Pin Currents:
+Id                       -0.000
+
+Condition:
+State                       OFF
+
+Device Variables:
+area                      1.000
+ic                        0.000
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                  V1.RS                 RA                 R2
+V                          0.000              0.000              0.000
+Power DC Terms:
+PD                         0.000              0.000              0.000
+
+DC Pin Currents:
+Ir                         0.000              0.000              0.000
+
+Device Variables:
+tc1                        0.000              0.000              0.000
+tc2                        0.000              0.000              0.000
+
+
+Instance:                     R3
+V                          0.000
+Power DC Terms:
+PD                         0.000
+
+DC Pin Currents:
+Ir                         0.000
+
+Device Variables:
+tc1                        0.000
+tc2                        0.000
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                     L1                 L2
+V                         -0.000              0.000
+Power DC Terms:
+PS                        -0.000              0.000
+
+DC Pin Currents:
+Il                         0.000              0.000
+
+Device Variables:
+ic                         0.000              0.000
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                     C1                 C2
+V                          9.000              0.000
+Power DC Terms:
+PS                         0.000              0.000
+
+DC Pin Currents:
+Ic                         0.000              0.000
+
+Device Variables:
+ic                         0.000              0.000
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                     V1
+Using model:                1MHZ
+V                          0.000
+Power DC Terms:
+PG                         0.000
+
+DC Pin Currents:
+ISource                    0.000
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                  VVAR
+V                         9.000
+Power DC Terms:
+PG                        0.000
+
+DC Pin Currents:
+ISource                  -0.000
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+IN             0.000  2              0.000  3              0.000 
+4              0.000  5            -12.000  ESM          -12.000 
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+L1             0.000  L2             0.000 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                    D1
+Using model:            D2C522B
+
+Capacitance Terms:
+CAP                       0.000
+
+Current Terms:
+ID                       -0.000
+
+Resistance Terms:
+REQ              1935835449.436
+
+Voltage Terms:
+VD                      -12.000
+
+Power DC Terms:
+PD                        0.000
+PS                        0.000
+
+DC Pin Currents:
+Id                       -0.000
+
+Condition:
+State                       OFF
+
+Device Variables:
+area                      1.000
+ic                        0.000
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                  V1.RS                 RA                 R2
+V                          0.000              0.000              0.000
+Power DC Terms:
+PD                         0.000              0.000              0.000
+
+DC Pin Currents:
+Ir                         0.000              0.000              0.000
+
+Device Variables:
+tc1                        0.000              0.000              0.000
+tc2                        0.000              0.000              0.000
+
+
+Instance:                     R3
+V                          0.000
+Power DC Terms:
+PD                         0.000
+
+DC Pin Currents:
+Ir                         0.000
+
+Device Variables:
+tc1                        0.000
+tc2                        0.000
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                     L1                 L2
+V                          0.000              0.000
+Power DC Terms:
+PS                         0.000              0.000
+
+DC Pin Currents:
+Il                         0.000              0.000
+
+Device Variables:
+ic                         0.000              0.000
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                     C1                 C2
+V                         12.000              0.000
+Power DC Terms:
+PS                         0.000              0.000
+
+DC Pin Currents:
+Ic                         0.000              0.000
+
+Device Variables:
+ic                         0.000              0.000
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                     V1
+Using model:                1MHZ
+V                          0.000
+Power DC Terms:
+PG                         0.000
+
+DC Pin Currents:
+ISource                    0.000
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                  VVAR
+V                        12.000
+Power DC Terms:
+PG                        0.000
+
+DC Pin Currents:
+ISource                  -0.000
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+IN             0.000  2              0.000  3              0.000 
+4              0.000  5            -15.000  ESM          -15.000 
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+L1             0.000  L2             0.000 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                    D1
+Using model:            D2C522B
+
+Capacitance Terms:
+CAP                       0.000
+
+Current Terms:
+ID                       -0.000
+
+Resistance Terms:
+REQ              2107663016.129
+
+Voltage Terms:
+VD                      -15.000
+
+Power DC Terms:
+PD                        0.000
+PS                        0.000
+
+DC Pin Currents:
+Id                       -0.000
+
+Condition:
+State                       OFF
+
+Device Variables:
+area                      1.000
+ic                        0.000
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                  V1.RS                 RA                 R2
+V                          0.000              0.000              0.000
+Power DC Terms:
+PD                         0.000              0.000              0.000
+
+DC Pin Currents:
+Ir                         0.000              0.000              0.000
+
+Device Variables:
+tc1                        0.000              0.000              0.000
+tc2                        0.000              0.000              0.000
+
+
+Instance:                     R3
+V                          0.000
+Power DC Terms:
+PD                         0.000
+
+DC Pin Currents:
+Ir                         0.000
+
+Device Variables:
+tc1                        0.000
+tc2                        0.000
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                     L1                 L2
+V                         -0.000              0.000
+Power DC Terms:
+PS                        -0.000              0.000
+
+DC Pin Currents:
+Il                         0.000              0.000
+
+Device Variables:
+ic                         0.000              0.000
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                     C1                 C2
+V                         15.000              0.000
+Power DC Terms:
+PS                         0.000              0.000
+
+DC Pin Currents:
+Ic                         0.000              0.000
+
+Device Variables:
+ic                         0.000              0.000
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                     V1
+Using model:                1MHZ
+V                          0.000
+Power DC Terms:
+PG                         0.000
+
+DC Pin Currents:
+ISource                    0.000
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                  VVAR
+V                        15.000
+Power DC Terms:
+PG                        0.000
+
+DC Pin Currents:
+ISource                  -0.000
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+IN             0.000  2              0.000  3              0.000 
+4              0.000  5            -18.000  ESM          -18.000 
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+L1             0.000  L2             0.000 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                    D1
+Using model:            D2C522B
+
+Capacitance Terms:
+CAP                       0.000
+
+Current Terms:
+ID                       -0.000
+
+Resistance Terms:
+REQ              2260816357.810
+
+Voltage Terms:
+VD                      -18.000
+
+Power DC Terms:
+PD                        0.000
+PS                        0.000
+
+DC Pin Currents:
+Id                       -0.000
+
+Condition:
+State                       OFF
+
+Device Variables:
+area                      1.000
+ic                        0.000
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                  V1.RS                 RA                 R2
+V                          0.000              0.000              0.000
+Power DC Terms:
+PD                         0.000              0.000              0.000
+
+DC Pin Currents:
+Ir                         0.000              0.000              0.000
+
+Device Variables:
+tc1                        0.000              0.000              0.000
+tc2                        0.000              0.000              0.000
+
+
+Instance:                     R3
+V                          0.000
+Power DC Terms:
+PD                         0.000
+
+DC Pin Currents:
+Ir                         0.000
+
+Device Variables:
+tc1                        0.000
+tc2                        0.000
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                     L1                 L2
+V                         -0.000              0.000
+Power DC Terms:
+PS                        -0.000              0.000
+
+DC Pin Currents:
+Il                         0.000              0.000
+
+Device Variables:
+ic                         0.000              0.000
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                     C1                 C2
+V                         18.000              0.000
+Power DC Terms:
+PS                         0.000              0.000
+
+DC Pin Currents:
+Ic                         0.000              0.000
+
+Device Variables:
+ic                         0.000              0.000
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                     V1
+Using model:                1MHZ
+V                          0.000
+Power DC Terms:
+PG                         0.000
+
+DC Pin Currents:
+ISource                    0.000
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                  VVAR
+V                        18.000
+Power DC Terms:
+PG                        0.000
+
+DC Pin Currents:
+ISource                  -0.000
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+IN             0.000  2              0.000  3              0.000 
+4              0.000  5            -21.000  ESM          -21.000 
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+L1             0.000  L2             0.000 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                    D1
+Using model:            D2C522B
+
+Capacitance Terms:
+CAP                       0.000
+
+Current Terms:
+ID                       -0.000
+
+Resistance Terms:
+REQ              2399886870.829
+
+Voltage Terms:
+VD                      -21.000
+
+Power DC Terms:
+PD                        0.000
+PS                        0.000
+
+DC Pin Currents:
+Id                       -0.000
+
+Condition:
+State                       OFF
+
+Device Variables:
+area                      1.000
+ic                        0.000
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                  V1.RS                 RA                 R2
+V                          0.000              0.000              0.000
+Power DC Terms:
+PD                         0.000              0.000              0.000
+
+DC Pin Currents:
+Ir                         0.000              0.000              0.000
+
+Device Variables:
+tc1                        0.000              0.000              0.000
+tc2                        0.000              0.000              0.000
+
+
+Instance:                     R3
+V                          0.000
+Power DC Terms:
+PD                         0.000
+
+DC Pin Currents:
+Ir                         0.000
+
+Device Variables:
+tc1                        0.000
+tc2                        0.000
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                     L1                 L2
+V                          0.000              0.000
+Power DC Terms:
+PS                         0.000              0.000
+
+DC Pin Currents:
+Il                         0.000              0.000
+
+Device Variables:
+ic                         0.000              0.000
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                     C1                 C2
+V                         21.000              0.000
+Power DC Terms:
+PS                         0.000              0.000
+
+DC Pin Currents:
+Ic                         0.000              0.000
+
+Device Variables:
+ic                         0.000              0.000
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                     V1
+Using model:                1MHZ
+V                          0.000
+Power DC Terms:
+PG                         0.000
+
+DC Pin Currents:
+ISource                    0.000
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                  VVAR
+V                        21.000
+Power DC Terms:
+PG                        0.000
+
+DC Pin Currents:
+ISource                  -0.000
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+IN             0.000  2              0.000  3              0.000 
+4              0.000  5            -24.000  ESM          -24.000 
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+L1             0.224  L2             0.000 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:               D1
+Using model:       D2C522B
+
+Capacitance Terms:
+CAP                  0.000
+
+Current Terms:
+ID                  -0.224
+
+Resistance Terms:
+REQ                  0.116
+
+Voltage Terms:
+VD                 -24.000
+
+Power DC Terms:
+PD                   5.373
+PS                   0.000
+
+DC Pin Currents:
+Id                  -0.224
+
+Condition:
+State                  HOT
+
+Device Variables:
+area                 1.000
+ic                   0.000
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:             V1.RS            RA            R2            R3
+V                     0.000         0.000         0.000         0.000
+Power DC Terms:
+PD                    0.000         0.000         0.000         0.000
+
+DC Pin Currents:
+Ir                    0.000         0.000         0.000         0.000
+
+Device Variables:
+tc1                   0.000         0.000         0.000         0.000
+tc2                   0.000         0.000         0.000         0.000
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1            L2
+V                     0.000         0.000
+Power DC Terms:
+PS                    0.000         0.000
+
+DC Pin Currents:
+Il                    0.224         0.000
+
+Device Variables:
+ic                    0.000         0.000
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1            C2
+V                    24.000         0.000
+Power DC Terms:
+PS                    0.000         0.000
+
+DC Pin Currents:
+Ic                    0.000         0.000
+
+Device Variables:
+ic                    0.000         0.000
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                V1
+Using model:           1MHZ
+V                     0.000
+Power DC Terms:
+PG                    0.000
+
+DC Pin Currents:
+ISource               0.000
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:             VVAR
+V                   24.000
+Power DC Terms:
+PG                   5.373
+
+DC Pin Currents:
+ISource             -0.224
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+IN             0.000  2              0.000  3              0.000 
+4              0.000  5            -27.000  ESM          -27.000 
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+L1             0.574  L2             0.000 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:               D1
+Using model:       D2C522B
+
+Capacitance Terms:
+CAP                  0.000
+
+Current Terms:
+ID                  -0.574
+
+Resistance Terms:
+REQ                  0.045
+
+Voltage Terms:
+VD                 -27.000
+
+Power DC Terms:
+PD                  15.504
+PS                   0.000
+
+DC Pin Currents:
+Id                  -0.574
+
+Condition:
+State                  HOT
+
+Device Variables:
+area                 1.000
+ic                   0.000
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:             V1.RS            RA            R2            R3
+V                     0.000         0.000         0.000         0.000
+Power DC Terms:
+PD                    0.000         0.000         0.000         0.000
+
+DC Pin Currents:
+Ir                    0.000         0.000         0.000         0.000
+
+Device Variables:
+tc1                   0.000         0.000         0.000         0.000
+tc2                   0.000         0.000         0.000         0.000
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1            L2
+V                     0.000         0.000
+Power DC Terms:
+PS                    0.000         0.000
+
+DC Pin Currents:
+Il                    0.574         0.000
+
+Device Variables:
+ic                    0.000         0.000
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1            C2
+V                    27.000         0.000
+Power DC Terms:
+PS                    0.000         0.000
+
+DC Pin Currents:
+Ic                    0.000         0.000
+
+Device Variables:
+ic                    0.000         0.000
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                V1
+Using model:           1MHZ
+V                     0.000
+Power DC Terms:
+PG                    0.000
+
+DC Pin Currents:
+ISource               0.000
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:             VVAR
+V                   27.000
+Power DC Terms:
+PG                  15.504
+
+DC Pin Currents:
+ISource             -0.574
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+IN             0.000  2              0.000  3              0.000 
+4              0.000  5            -30.000  ESM          -30.000 
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+L1             0.926  L2             0.000 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:               D1
+Using model:       D2C522B
+
+Capacitance Terms:
+CAP                  0.000
+
+Current Terms:
+ID                  -0.926
+
+Resistance Terms:
+REQ                  0.028
+
+Voltage Terms:
+VD                 -30.000
+
+Power DC Terms:
+PD                  27.778
+PS                   0.000
+
+DC Pin Currents:
+Id                  -0.926
+
+Condition:
+State                  HOT
+
+Device Variables:
+area                 1.000
+ic                   0.000
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:             V1.RS            RA            R2            R3
+V                     0.000         0.000         0.000         0.000
+Power DC Terms:
+PD                    0.000         0.000         0.000         0.000
+
+DC Pin Currents:
+Ir                    0.000         0.000         0.000         0.000
+
+Device Variables:
+tc1                   0.000         0.000         0.000         0.000
+tc2                   0.000         0.000         0.000         0.000
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1            L2
+V                     0.000         0.000
+Power DC Terms:
+PS                    0.000         0.000
+
+DC Pin Currents:
+Il                    0.926         0.000
+
+Device Variables:
+ic                    0.000         0.000
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1            C2
+V                    30.000         0.000
+Power DC Terms:
+PS                    0.000         0.000
+
+DC Pin Currents:
+Ic                    0.000         0.000
+
+Device Variables:
+ic                    0.000         0.000
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                V1
+Using model:           1MHZ
+V                     0.000
+Power DC Terms:
+PG                    0.000
+
+DC Pin Currents:
+ISource               0.000
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:             VVAR
+V                   30.000
+Power DC Terms:
+PG                  27.778
+
+DC Pin Currents:
+ISource             -0.926
+
+

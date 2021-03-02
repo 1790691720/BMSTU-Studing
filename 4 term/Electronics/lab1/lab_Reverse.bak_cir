@@ -162,7 +162,8 @@ V
 
 [Comp]
 Name=Resistor
-Px=480,304
+Px=528,304
+Rot=2
 
 [Attr]
 ON=-46,-58,PART
@@ -230,8 +231,8 @@ V=V1
 Style=8192
 
 [Attr]
-ON=-23,-63,VALUE
-V=2
+ON=-35,-63,VALUE
+V=50
 Style=8192
 
 [Attr]
@@ -392,8 +393,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
+SB 3=0,144
 Scale 3=0.5
-Px=326,374
+Px=187,412
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -587,7 +589,7 @@ Num Out Allow Dup Y Expr=False
 Num Out Low="DCMIN"
 Num Out High="DCMAX"
 Num Out Font=Height=-23,FStyle=0,Color=#000000,Name=Courier New
-Num Out Window Placement=2,3, -1,-1, -9,-38, 64,64,1719,633
+Num Out Window Placement=2,3, -1,-1, -9,-38, 0,0,1455,588
 Num Out Format=3
 Num Out HideNonSelected=False
 AutoSaveWave=False
@@ -714,9 +716,9 @@ Seed=0
 
 [Limits]
 Analysis=DC
-I1Range=2,0,.0005
+I1Range=50,0,.0005
 I1=V1
-NPts=51
+NPts=510
 Temp=27
 MaxChng=5
 StateVar=Zero
@@ -733,11 +735,9 @@ Plt=1
 AliasID=1
 XExp=DCINPUT1 - I(Ra)*1
 YExp=I(D1)
-XRng=3
-YRng=-1.2e-5,-2.2e-5
+XRng=AutoAlways
+YRng=AutoAlways
 Options=OUTPUT,LINEARX,LINEARY
-Range Grid X=0.6
-Range Grid Y=2e-6
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -756,8 +756,8 @@ NOFmtY=10F
 [WaveForm]
 Analysis=DC
 AliasID=-1
-XRng=Auto
-YRng=Auto
+XRng=AutoAlways
+YRng=AutoAlways
 Options=LINEARX,LINEARY
 Enable=Enable
 Line Color=#FF0000
@@ -777,8 +777,8 @@ NOFmtY=3E
 [WaveForm]
 Analysis=DC
 AliasID=-1
-XRng=Auto
-YRng=Auto
+XRng=AutoAlways
+YRng=AutoAlways
 Options=LINEARX,LINEARY
 Enable=Enable
 Line Color=#008000
