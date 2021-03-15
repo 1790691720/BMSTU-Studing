@@ -12,10 +12,14 @@ int rekey(XEvent* ev) {
 	if (ks == XK_F10)             
 		return(10);         
 	FillFace = (ev->xkey.state & Mod1Mask) ? NFACE : 0;
+	if (ks == XK_l && (ev->xkey.state & ControlMask))
+	{
+		reset(dpy, win, NFACE);
+		putchar('d');
+	}
 	if (ks == XK_Escape)    
 		reset(dpy, win, FillFace);
-	if (ks == XK_l && (ev->xkey.state & ControlMask))
-		reset(dpy, win, FillFace);
+
 	return(0);     
 }
 
@@ -38,8 +42,7 @@ int dispatch(Display* dpy, Window win, GC gc) {
 				event.xconfigure.height);
 			break;
 		case ButtonPress:
-			reface(dpy, win, gc,
-				zotone(event.xbutton.x, event.xbutton.y));
+			reface(dpy, win, gc, zotone(event.xbutton.x, event.xbutton.y));
 			break;
 		case FocusIn:
 			NoFillFace = 0;
