@@ -1,7 +1,7 @@
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <stdio.h>
-#include "pyramid.h"
+#include "lab2.h"
 
 int rekey(XEvent* ev) {
 	Display* dpy = ev->xkey.display;

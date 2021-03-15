@@ -1,6 +1,6 @@
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
-#include "pyramid.h"
+#include "lab2.h"
 
 static XVertex vertex[NVERT];
 static XFace face[(NFACE + 1)];

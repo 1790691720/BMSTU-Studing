@@ -1,7 +1,7 @@
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <X11/keysymdef.h>
-#include "pyramid.h"
+#include "lab2.h"
 
 static XVertex* vertex; 
 static XFace* face;     
