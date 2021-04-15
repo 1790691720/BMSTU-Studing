@@ -373,8 +373,17 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 *.ANO
-*.inx
 *.bak_cir
 *.TNO
+*.inx
 *.inx1
 *.inx2
+*.inx3
+*.inx4
+*.inx5
+*.inx6
+*.DNO
+*.bak_cir
+*.DDNO
+*.DNO
+
