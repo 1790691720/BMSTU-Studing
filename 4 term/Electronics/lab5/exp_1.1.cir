@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=11.0.1.9
 Key ID=0
-NLCnt=15
+NLCnt=12
 TXCnt=0
 
 [shapedef]
@@ -68,25 +68,11 @@ Name=SPICE_I
 Root="Isource.Root",0,0,0
 
 [compdef]
-Name=2N3467
-Definition=PNP
-Shape=PNP
-Mask=4224
-Used=1
-memo=PNP Switching Transistor Vceo=-40V Ic=-1A Pd=1W
-Label Offset=29,-11,-3,25
-PinCnt=3
-Pin="Collector",3,3,6,5
-Pin="Base",0,0,-19,-3
-Pin="Emitter",3,-3,6,8
-Power=1
-
-[compdef]
 Name=Current Source
 Definition=ISpice
 Shape=SPICE_I
 Mask=5632
-Used=3
+Used=4
 memo=Current Source
 Label Offset=15,12,-29,12
 PinCnt=2
@@ -98,7 +84,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=4865
-Used=49
+Used=50
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -106,18 +92,31 @@ Pin="Plus",6,0,-4,-5
 Pin="Minus",0,0,-10,-5
 
 [compdef]
+Name=PNP
+Definition=PNP
+Shape=PNP
+Mask=4097
+Used=169
+memo=PNP Transistor
+Label Offset=37,-13,-8,35
+PinCnt=3
+Pin="Collector",3,3,6,3
+Pin="Base",0,0,-19,-3
+Pin="Emitter",3,-3,6,15
+
+[compdef]
 Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=769
-Used=731
+Used=732
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
 Pin="PinA",0,0,-3,-7
 
 [Circuit]
-Window Placement=2,3, -1,-1, -9,-38, 0,0,1455,588
+Window Placement=2,3, -1,-1, -9,-38, 0,0,1437,540
 Default Object=Color=#000080
 Default Object Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -126,11 +125,11 @@ NodeVoltageFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in DC Analysis=2,3, -1,-1, -9,-38, 0,0,1455,588
+Window Placement in DC Analysis=0,1, -1,-1, -9,-38, 0,0,946,582
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
-Show Nodes=True
+Show Nodes=False
 Show Voltages=False
 Show Current=False
 Show Power=False
@@ -142,31 +141,8 @@ Show Attribute Text=True
 Show Grid Text=True
 
 [Comp]
-Name=2N3467
-Px=600,296
-Rot=4
-
-[Attr]
-ON=29,-14,PART
-V=Q1
-Style=8192
-
-[Attr]
-ON=29,-39,MODEL
-V=2N3467
-Style=8192
-
-[Attr]
-ON=29,-39,POWER
-V=1
-
-[Attr]
-ON=29,-89,PACKAGE
-V=TO-39
-
-[Comp]
 Name=Current Source
-Px=488,312
+Px=184,192
 Rot=6
 
 [Attr]
@@ -175,8 +151,9 @@ V=I1
 Style=8192
 
 [Attr]
-ON=-464,37,VALUE
-V=DC 0  AC 1 0 Pulse 0 5 100n 10n 10n 400n 1u
+ON=-62,37,VALUE
+V=1e-3
+Style=8192
 
 [Attr]
 ON=0,0,PACKAGE
@@ -189,58 +166,69 @@ Style=256
 
 [Comp]
 Name=Battery
-Px=784,280
+Px=408,192
 Rot=1
 
 [Attr]
-ON=-34,-38,PART
-V=Vc
+ON=14,27,PART
+V=V1
 Style=8192
 
 [Attr]
-ON=0,0,VALUE
-V=2
+ON=15,2,VALUE
+V=10
+Style=8192
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
-[Wire]
-Pxs=600,296,608,296
+[Comp]
+Name=PNP
+Px=256,160
+Rot=4
+
+[Attr]
+ON=37,-12,PART
+V=Q1
+Style=8192
+
+[Attr]
+ON=37,-37,MODEL
+V=2N3467
+Style=8192
+
+[Attr]
+ON=37,-62,PACKAGE
+V=TO-39
 
 [Wire]
-Pxs=488,296,600,296
+Pxs=184,160,184,192
 
 [Wire]
-Pxs=488,296,488,312
+Pxs=184,160,256,160
 
 [Wire]
-Pxs=624,320,624,400
+Pxs=280,112,280,136
 
 [Wire]
-Pxs=488,400,624,400
+Pxs=280,112,408,112
 
 [Wire]
-Pxs=488,360,488,400
+Pxs=408,112,408,192
 
 [Wire]
-Pxs=624,400,784,400
+Pxs=184,240,280,240
 
 [Wire]
-Pxs=784,328,784,400
+Pxs=280,184,280,240
 
 [Wire]
-Pxs=784,192,784,280
-
-[Wire]
-Pxs=624,192,784,192
-
-[Wire]
-Pxs=624,192,624,272
+Pxs=280,240,408,240
 
 [Comp]
 Name=Ground
-Px=784,400
+Px=280,240
 Rot=1
 
 [Schematic]
@@ -375,7 +363,7 @@ ALIGNBOTTOM=Yes
 
 [Section]
 Index=0
-Name="circuit1"
+Name="exp_1.1"
 Type=Main
 Enable=True
 CurrentPage 0=0
@@ -397,9 +385,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=258,172
+SB 3=95,0
 Scale 3=0.5
-Px=490,331
+Px=266,153
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -460,6 +448,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
+SB 0=20,1
 Font=Height=-23,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -490,6 +479,8 @@ Page=1
 [Text Area]
 Section=0
 Page=2
+Text=
+Text=.MODEL 2N3467 NPN ()
 
 [InfoPage]
 InfoPage=True
@@ -505,7 +496,7 @@ ComponentCounts=True
 
 [DC]
 WinID=3
-Window Placement=2,3, -1,-1, -9,-38, 0,0,1455,588
+Window Placement=0,1, -1,-1, -9,-38, 946,0,1892,777
 Font=Height=-23,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -720,8 +711,8 @@ Analysis=DC
 I2Range=100u,250u,500u
 I2=I1
 I1Range=10,0,10m
-I1=VC
-NPts=51
+I1=V1
+NPts=5100
 Temp=27
 MaxChng=5
 StateVar=Zero
@@ -738,9 +729,11 @@ Plt=1
 AliasID=1
 XExp=DCINPUT1
 YExp=IC(Q1)
-XRng=AutoAlways
-YRng=AutoAlways
+XRng=10
+YRng=0.024,-0.036
 Options=LINEARX,LINEARY
+Range Grid X=2
+Range Grid Y=0.012
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -759,8 +752,6 @@ NOFmtY=3E
 [WaveForm]
 Analysis=DC
 AliasID=-1
-XRng=AutoAlways
-YRng=AutoAlways
 Options=LINEARX,LINEARY
 Enable=Enable
 Line Color=#FF0000
@@ -780,8 +771,6 @@ NOFmtY=3E
 [WaveForm]
 Analysis=DC
 AliasID=-1
-XRng=AutoAlways
-YRng=AutoAlways
 Options=LINEARX,LINEARY
 Enable=Enable
 Line Color=#008000
