@@ -362,7 +362,7 @@ ALIGNBOTTOM=Yes
 
 [Section]
 Index=0
-Name="exp_1.1"
+Name="exp_1.2"
 Type=Main
 Enable=True
 CurrentPage 0=0
@@ -716,10 +716,10 @@ Seed=0
 
 [Limits]
 Analysis=DC
-I2Range=250u,500u,750u
-I2=Ib
-I1Range=10,0,10m
-I1=Vc
+I2Range=0,5,10
+I2=VC
+I1Range=500u,1u,10u
+I1=IB
 NPts=51000
 Temp=27
 MaxChng=5
@@ -735,8 +735,8 @@ Sweep2 type=List
 Analysis=DC
 Plt=1
 AliasID=1
-XExp=DCINPUT1
-YExp=IC(Q1)
+XExp=-VB(Q1)
+YExp=DCINPUT1
 XRng=AutoAlways
 YRng=AutoAlways
 Options=OUTPUT,LINEARX,LINEARY
