@@ -204,7 +204,7 @@ Style=8192
 
 [Attr]
 ON=10,24,RESISTANCE
-V=168.1
+V=132.31
 Style=8192
 
 [Attr]
@@ -542,7 +542,7 @@ Scale 0=1
 Scale 1=1
 Scale 2=1
 Scale 3=0.66666666666666663
-Px=245,250
+Px=569,285
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
