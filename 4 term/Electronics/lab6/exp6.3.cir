@@ -4,7 +4,7 @@ Version=11.01
 Program=Micro-Cap
 Component Version=10.00
 Shape Version=11.00
-Screen=1920,1080
+Screen=2560,1440
 MCAPVersion=11.0.1.9
 Key ID=0
 NLCnt=36
@@ -76,7 +76,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor_Euro
 Mask=6401
-Used=1880
+Used=1874
 memo=Resistor
 Label Offset=11,-36,10,10
 PinCnt=2
@@ -88,7 +88,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=6913
-Used=1012
+Used=1004
 memo=Capacitor
 Label Offset=4,-38,12,12
 PinCnt=2
@@ -100,7 +100,7 @@ Name=PNP
 Definition=PNP
 Shape=PNP
 Mask=4097
-Used=172
+Used=170
 memo=PNP Transistor
 Label Offset=37,-13,-8,35
 PinCnt=3
@@ -113,7 +113,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=4865
-Used=53
+Used=49
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -125,14 +125,14 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=769
-Used=736
+Used=731
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
 Pin="PinA",0,0,-3,-7
 
 [Circuit]
-Window Placement=2,3, -1,-1, -9,-38, 0,0,949,540
+Window Placement=2,3, -1,-1, -9,-36, 0,0,949,540
 Default Object=Color=#000080
 Default Object Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -141,7 +141,7 @@ NodeVoltageFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in Transient Analysis=2,3, -1,-1, -9,-38, 0,0,949,540
+Window Placement in Transient Analysis=2,3, -1,-1, -9,-36, 0,0,949,540
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
@@ -168,7 +168,7 @@ Style=8192
 
 [Attr]
 ON=10,35,RESISTANCE
-V=100
+V=1k
 Style=8192
 
 [Attr]
@@ -187,7 +187,7 @@ Style=8192
 
 [Attr]
 ON=10,35,RESISTANCE
-V=10k
+V=51k
 Style=8192
 
 [Attr]
@@ -225,7 +225,7 @@ Style=8192
 
 [Attr]
 ON=10,35,RESISTANCE
-V=10k
+V=51k
 Style=8192
 
 [Attr]
@@ -244,7 +244,7 @@ Style=8192
 
 [Attr]
 ON=10,35,RESISTANCE
-V=100
+V=1k
 Style=8192
 
 [Attr]
@@ -281,7 +281,7 @@ Style=8192
 
 [Attr]
 ON=-111,-4,MODEL
-V=2N3467
+V=2N3307
 Style=8192
 
 [Attr]
@@ -300,7 +300,7 @@ Style=8192
 
 [Attr]
 ON=42,-27,MODEL
-V=2N3467
+V=2N3307
 Style=8192
 
 [Attr]
@@ -419,7 +419,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=1
+Scale=0.5
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main2","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -543,7 +543,7 @@ ALIGNBOTTOM=Yes
 
 [Section]
 Index=0
-Name="exp6"
+Name="exp6.3"
 Type=Main
 Enable=True
 CurrentPage 0=0
@@ -565,9 +565,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=48,48
-Scale 3=1
-Px=351,222
+SB 3=122,135
+Scale 3=0.5
+Px=621,283
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -673,7 +673,7 @@ ComponentCounts=True
 
 [Transient]
 WinID=1
-Window Placement=2,3, -1,-1, -9,-38, 0,0,949,540
+Window Placement=2,3, -1,-1, -9,-36, 0,0,949,540
 Font=Height=-23,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -897,7 +897,7 @@ Seed=0
 
 [Limits]
 Analysis=Transient
-TRange=5m
+TRange=10m
 TStep=1u
 NPts=51
 Temp=30
@@ -914,10 +914,9 @@ Plt=1
 AliasID=1
 XExp=T
 YExp=v(5)
-XRng=0.005,3m
+XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARX,LINEARY
-Range Grid X=0.001
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -939,10 +938,9 @@ Plt=2
 AliasID=2
 XExp=T
 YExp=v(3)
-XRng=0.005
+XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARX,LINEARY
-Range Grid X=0.001
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -964,10 +962,9 @@ Plt=3
 AliasID=3
 XExp=T
 YExp=v(1)
-XRng=0.005
+XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARX,LINEARY
-Range Grid X=0.001
 Enable=Enable
 Line Color=#008000
 Text Color=#008000
