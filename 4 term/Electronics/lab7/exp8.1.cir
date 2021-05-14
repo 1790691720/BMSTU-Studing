@@ -7,16 +7,23 @@ Shape Version=11.00
 Screen=2560,1440
 MCAPVersion=11.0.1.9
 Key ID=0
-NLCnt=14
+NLCnt=29
 TXCnt=0
 
 [shapedef]
-Name=Battery
-Line=0,0,22,0
-Line=22,-3,22,3
-Line=26,-7,26,7
-Line=26,0,48,0
-Current=32,8,16,8
+Name=Diode
+Root="Diode.root",0,0,0
+
+[shapedef]
+Name=Diode.root
+Line=0,0,20,0
+Line=28,0,48,0
+Rectangle=18,-8,20,8
+PolyClosed=3
+PolyLine=20,0
+PolyLine=28,-8
+PolyLine=28,8
+Current=32,16,16,16
 
 [shapedef]
 Name=Ground
@@ -48,30 +55,82 @@ PolyLine=6,0
 PolyLine=10,4
 PolyLine=10,-4
 
-[compdef]
-Name=PJFET
-Definition=PJFET
-Shape=PJFET
-Mask=4096
-Used=2
-memo=PJFET
-Label Offset=27,-12,-5,24
-PinCnt=3
-Pin="Drain",3,-3,6,15
-Pin="Gate",0,0,-19,-3
-Pin="Source",3,3,6,3
+[shapedef]
+Name=Plus.root
+Line=-2,0,2,0
+Line=0,-2,0,2
+
+[shapedef]
+Name=Pulse_Source
+Root="Vsource.root",0,0,0
+Line=20,-4,20,0
+Line=20,0,26,0
+Line=26,0,26,4
+
+[shapedef]
+Name=Resistor_Euro
+Rectangle=12,-4,36,4
+FColor=None
+Line=0,0,12,0
+Line=48,0,36,0
+Current=32,8,16,8
+Ellipse=31,-1,33,1
+FColor=#0000FF
+
+[shapedef]
+Name=Sine_Source
+Root="Vsource.root",0,0,0
+Line=24,-6,26,-4
+Line=26,-4,26,-2
+Line=26,-2,22,2
+Line=22,2,22,4
+Line=22,4,24,6
+
+[shapedef]
+Name=Vsource.root
+Line=0,0,12,0
+Line=36,0,48,0
+Ellipse=12,-12,36,12
+FColor=None
+Line=7,5,7,9
+Root="Plus.root",41,7,0
+Current=32,16,16,16
 
 [compdef]
-Name=Battery
-Definition=Battery
-Shape=Battery
+Name=Pulse Source
+Definition=Pulse source
+Shape=Pulse_Source
 Mask=4865
-Used=51
-memo=Battery
-Label Offset=19,7,10,13
+Used=10
+memo=Pulse Source
+Label Offset=18,13,15,9
 PinCnt=2
-Pin="Plus",6,0,-4,-5
-Pin="Minus",0,0,-10,-5
+Pin="Plus",6,0,-5,-4
+Pin="Minus",0,0,-19,-4
+
+[compdef]
+Name=Sine Source
+Definition=Sine source
+Shape=Sine_Source
+Mask=4865
+Used=6
+memo=Sine Source
+Label Offset=18,12,15,12
+PinCnt=2
+Pin="Plus",6,0,-6,-6
+Pin="Minus",0,0,-19,-6
+
+[compdef]
+Name=Resistor
+Definition=Resistor
+Shape=Resistor_Euro
+Mask=6401
+Used=1874
+memo=Resistor
+Label Offset=11,-36,10,10
+PinCnt=2
+Pin="Plus",6,0,-10,-4
+Pin="Minus",0,0,-14,-4
 
 [compdef]
 Name=Ground
@@ -84,22 +143,47 @@ Label Offset=0,0,0,0
 PinCnt=1
 Pin="PinA",0,0,-3,-7
 
+[compdef]
+Name=Diode
+Definition=Diode
+Shape=Diode
+Mask=5633
+Used=481
+memo=Diode
+Label Offset=17,10,12,12
+PinCnt=2
+Pin="Anode",6,0,-9,-8
+Pin="Cathode",0,0,-20,-8
+
+[compdef]
+Name=PJFET
+Definition=PJFET
+Shape=PJFET
+Mask=4096
+Used=4
+memo=PJFET
+Label Offset=27,-12,-5,24
+PinCnt=3
+Pin="Drain",3,-3,6,15
+Pin="Gate",0,0,-19,-3
+Pin="Source",3,3,6,3
+
 [Circuit]
-Window Placement=2,3, -1,-1, -9,-36, 0,0,1437,540
+Window Placement=2,3, -1,-1, -9,-36, 260,260,1696,837
 Default Object=Color=#000080
-Default Object Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
+Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
 Default Object Apply Fill To Text=No
 NodeVoltageFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in DC Analysis=2,3, -1,-1, -9,-36, 32,32,1669,553
+Window Placement in Transient Analysis=2,3, -1,-1, -9,-36, 52,0,715,468
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
 Show Nodes=True
-Show Voltages=False
+Show Voltages=True
 Show Current=False
 Show Power=False
 Show Condition=False
@@ -110,95 +194,205 @@ Show Attribute Text=True
 Show Grid Text=True
 
 [Comp]
-Name=PJFET
-Px=280,240
+Name=Pulse Source
+Px=184,264
+Rot=7
+COff=8,153,273,59,-1
 
 [Attr]
-ON=37,-26,PART
+ON=-31,9,PART
+V=V1
+Style=8192
+
+[Attr]
+ON=-55,23,MODEL
+V=PULSE
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Sine Source
+Px=184,208
+Rot=3
+
+[Attr]
+ON=-31,-26,PART
+V=V2
+Style=8192
+
+[Attr]
+ON=-50,-40,MODEL
+V=1MHZ
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=312,208
+Rot=3
+
+[Attr]
+ON=13,-47,PART
+V=R1
+Style=8192
+
+[Attr]
+ON=9,-33,RESISTANCE
+V=10M
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=520,208
+Rot=5
+
+[Attr]
+ON=10,-24,PART
+V=R2
+Style=8192
+
+[Attr]
+ON=10,-38,RESISTANCE
+V=1M
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=664,208
+Rot=5
+
+[Attr]
+ON=10,-24,PART
+V=R3
+Style=8192
+
+[Attr]
+ON=10,-38,RESISTANCE
+V=510k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Ground
+Px=520,256
+Rot=7
+
+[Comp]
+Name=Diode
+Px=352,336
+Rot=2
+
+[Attr]
+ON=17,10,PART
+V=D1
+Style=8192
+
+[Attr]
+ON=17,24,MODEL
+V=2N1711
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V=DO-204AH
+
+[Wire]
+Pxs=184,336,304,336
+
+[Wire]
+Pxs=184,312,184,336
+
+[Wire]
+Pxs=184,208,184,240
+
+[Wire]
+Pxs=184,120,184,160
+
+[Wire]
+Pxs=184,120,312,120
+
+[Wire]
+Pxs=312,120,312,160
+
+[Wire]
+Pxs=312,120,360,120
+
+[Wire]
+Pxs=408,120,520,120
+
+[Wire]
+Pxs=664,120,664,160
+
+[Wire]
+Pxs=664,208,664,240
+
+[Wire]
+Pxs=184,240,520,240
+
+[Wire]
+Pxs=184,240,184,264
+
+[Wire]
+Pxs=520,208,520,240
+
+[Wire]
+Pxs=520,240,664,240
+
+[Wire]
+Pxs=520,240,520,256
+
+[Wire]
+Pxs=520,120,520,160
+
+[Wire]
+Pxs=520,120,664,120
+
+[Wire]
+Pxs=384,144,384,208
+
+[Wire]
+Pxs=352,336,384,336
+
+[Wire]
+Pxs=312,208,384,208
+
+[Wire]
+Pxs=384,208,384,336
+
+[Comp]
+Name=PJFET
+Px=384,144
+Rot=3
+
+[Attr]
+ON=27,-12,PART
 V=J1
 Style=8192
 
 [Attr]
-ON=37,-1,MODEL
+ON=27,2,MODEL
 V=2SJ72_GR
 Style=8192
 
 [Attr]
 ON=0,0,PACKAGE
 V
-
-[Comp]
-Name=Battery
-Px=168,312
-Rot=3
-
-[Attr]
-ON=-37,-38,PART
-V=V2
-Style=8192
-
-[Attr]
-ON=-23,-63,VALUE
-V=5
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Battery
-Px=472,216
-Rot=1
-
-[Attr]
-ON=14,31,PART
-V=V1
-Style=8192
-
-[Attr]
-ON=15,6,VALUE
-V=10
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=304,168,304,216
-
-[Wire]
-Pxs=304,168,472,168
-
-[Wire]
-Pxs=472,168,472,216
-
-[Wire]
-Pxs=472,264,472,320
-
-[Wire]
-Pxs=168,320,304,320
-
-[Wire]
-Pxs=168,312,168,320
-
-[Wire]
-Pxs=168,240,168,264
-
-[Wire]
-Pxs=168,240,280,240
-
-[Wire]
-Pxs=304,264,304,320
-
-[Wire]
-Pxs=304,320,472,320
-
-[Comp]
-Name=Ground
-Px=304,320
-Rot=1
 
 [Schematic]
 CurrentSection 0=0
@@ -332,17 +526,17 @@ ALIGNBOTTOM=Yes
 
 [Section]
 Index=0
-Name="exp7.1"
+Name="exp8.1"
 Type=Main
 Enable=True
 CurrentPage 0=0
 CurrentPage 1=0
 CurrentPage 2=0
 CurrentPage 3=0
-TabSize 0=525
-TabSize 1=525
-TabSize 2=525
-TabSize 3=525
+TabSize 0=425
+TabSize 1=425
+TabSize 2=425
+TabSize 3=425
 
 [Page]
 Index=0
@@ -355,12 +549,12 @@ Scale 0=1
 Scale 1=1
 Scale 2=1
 Scale 3=0.5
-Px=378,112
+Px=192,186
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
 Select Box Color=#000080
-Grid Text Color=Height=-20,FStyle=0,Color=#0000FF,Name=Verdana
+Grid Text Color=Height=-12,FStyle=0,Color=#0000FF,Name=Verdana
 Grid Text RTF=False
 Grid Text Angle=0
 Grid Text GridSnap=True
@@ -368,18 +562,18 @@ Grid Text PinIt=False
 Grid Text JustifyH=Left
 Grid Text JustifyV=Bottom
 Component Color=#0000FF
-Attribute Text=Height=-20,FStyle=0,Color=#008000,Name=Verdana
+Attribute Text=Height=-12,FStyle=0,Color=#008000,Name=Verdana
 Wire Color=#008000
 Bus Color=#008000
-Pin Connection=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Pin Connection=Height=-10,FStyle=0,Color=#FF0000,Name=Arial
 Pin Marker Color=#008000
-Node Number=Height=-17,FStyle=0,Color=#FF00FF,Name=Arial
-Node Voltage Color=Height=-17,FStyle=0,Color=#000000,Name=Arial
+Node Number=Height=-11,FStyle=0,Color=#FF00FF,Name=Arial
+Node Voltage Color=Height=-11,FStyle=0,Color=#000000,Name=Arial
 Dynamic AC Voltage Color=#E4E4E4
-Text Banner Text=Height=-23,FStyle=0,Color=#800000,Name=Arial
+Text Banner Text=Height=-15,FStyle=0,Color=#800000,Name=Arial
 Title Block Background=#C0C0C0
-Current=Height=-17,FStyle=0,Color=#0000FF,Name=Arial
-Power/Condition=Height=-17,FStyle=0,Color=#FF0000,Name=Arial
+Current=Height=-11,FStyle=0,Color=#0000FF,Name=Arial
+Power/Condition=Height=-11,FStyle=0,Color=#FF0000,Name=Arial
 Digital Path Color=#FF0000
 Title Block Border=#000000
 Disabled	Color=#C0C0C0
@@ -401,7 +595,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Text
-Font=Height=-23,FStyle=0,Color=#000000,Name=Courier New
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
 Disabled	Color=#C0C0C0
@@ -416,7 +610,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-Font=Height=-23,FStyle=0,Color=#000000,Name=Courier New
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
 Disabled	Color=#C0C0C0
@@ -431,7 +625,7 @@ Type=Info
 Print=False
 Enable=True
 Name=Info
-Font=Height=-23,FStyle=0,Color=#000000,Name=Courier New
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
 Disabled	Color=#C0C0C0
@@ -446,6 +640,18 @@ Page=1
 [Text Area]
 Section=0
 Page=2
+Text=*** From file D:\MC11\library\UTILITY.LBR
+Text=*** 5V Pulse Source
+Text=.MODEL PULSE PUL (P1=0 P2=0 P3={3/2000} P4={3/2000} P5={6/2000} VONE=10)
+Text=*** From file D:\MC11\library\UTILITY.LBR
+Text=*** 1MHz Sinusoidal Source
+Text=.MODEL 1MHZ SIN (A=5 F=2000)
+Text=.MODEL 2N1711 D ()
+Text=.MODEL 2N706 D ()
+Text=*** From file D:\MC11\library\MZENER.LBR
+Text=*** 3.6V 500mW Zener Diode
+Text=.MODEL 1N747 D (BV=3.6 CJO=273.85p IBV=20m IS=5.72393f M=495.248m RL=1G RS=24
+Text=+ VJ=750m)
 
 [InfoPage]
 InfoPage=True
@@ -459,10 +665,10 @@ MacroSubckt=True
 NotUsed=True
 ComponentCounts=True
 
-[DC]
-WinID=3
-Window Placement=2,3, -1,-1, -9,-36, 32,32,1669,553
-Font=Height=-23,FStyle=0,Color=#0000FF,Name=Arial
+[Transient]
+WinID=1
+Window Placement=2,3, -1,-1, -9,-36, 52,0,715,468
+Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -472,7 +678,7 @@ AutoTitle=Yes
 Grid Color=#808080
 Grid Weight=1
 Grid Pattern=Dot6
-Tracker Foreground=Height=-23,FStyle=0,Color=#000000,Name=Arial
+Tracker Foreground=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Tracker Background=#FFFF00
 Baseline color=#0000FF
 BaseLine Weight=1
@@ -510,18 +716,29 @@ Number of Grids X=5
 Number of Grids Y=5
 Cursor Select Color Primary=#C0C0C0
 Cursor Select Color Secondary=#FF0000
-Data Point Labels Color Fore=Height=-23,FStyle=0,Color=#000000,Name=Arial
+Data Point Labels Color Fore=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Data Point Labels Color Back=#FFFF00
+OperPoint=True
+OperPointOnly=False
 AutoScaleRanges=False
+FixedTimeStep=False
+DoPSS=False
+PSS_Periods="1"
+PSS_Iterations="5"
+PSS_Error="1u"
+PSS_ShowPlots=True
+FFT_NPts="8192"
+FFT_IncludeDCHarmonic=False
+FFT_AutoScale_Harmonics="10"
 PrinterAutoTile=No
 PrinterBlackBorder=No
 MonMaxShow=3
-MonPageWidth=81
-MonPlotWidth=25
-MonExprXWidth=159
-MonExprYWidth=289
-MonRangeXWidth=111
-MonRangeYWidth=111
+MonPageWidth=66
+MonPlotWidth=21
+MonExprXWidth=142
+MonExprYWidth=306
+MonRangeXWidth=90
+MonRangeYWidth=90
 AnimateWait=None
 AnimateWaitTime=500
 AnimatePressAfter=0
@@ -540,13 +757,14 @@ Num Out Write Branch Header=True
 Num Out Write Models=False
 Num Out Write Zero Models=True
 Num Out Write Undefined Models=True
+Num Out Write Operating Point=True
 Num Out Write Measurement Values=True
 Num Out Write Values=True
 Num Out Write Waveform Header=True
 Num Out Allow Dup Y Expr=False
-Num Out Low="DCMIN"
-Num Out High="DCMAX"
-Num Out Font=Height=-23,FStyle=0,Color=#000000,Name=Courier New
+Num Out Low="TSTART"
+Num Out High="TMAX"
+Num Out Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Num Out Format=3
 Num Out HideNonSelected=False
 AutoSaveWave=False
@@ -659,11 +877,11 @@ ALIGNTOP=Yes
 ALIGNBOTTOM=Yes
 
 [APage]
-Analysis=DC
+Analysis=Transient
 Name="Main"
 
 [Monte Carlo Options]
-Analysis=DC
+Analysis=Transient
 Status=Off
 Zero Tolerance=False
 Eliminate Outliers=False
@@ -672,32 +890,27 @@ Number of Runs=10
 Seed=0
 
 [Limits]
-Analysis=DC
-I2Range=0.05,2,0.1,1
-I2=V1
-I1Range=0.4,0,0.001
-I1=V2
-NPts=51
+Analysis=Transient
+TRange=18/2000
+TStep=0
+NPts=100
 Temp=27
-MaxChng=5
+RetraceRuns=1
 StateVar=Zero
 RunOption=Normal
 Temperature Type=Linear
 Accumulate Plots=False
 IgnoreExprErrors=False
-Sweep1 type=Linear
-Sweep2 type=List
 
 [WaveForm]
-Analysis=DC
+Analysis=Transient
 Plt=1
 AliasID=1
-XExp=DCINPUT1
-YExp=ID(J1)
+XExp=T
+YExp=v(4)
 XRng=AutoAlways
-YRng=0.0016,-0.0064
+YRng=AutoAlways
 Options=LINEARX,LINEARY
-Range Grid Y=0.0016
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -714,10 +927,13 @@ NOFmtX=3E
 NOFmtY=3E
 
 [WaveForm]
-Analysis=DC
-AliasID=-1
+Analysis=Transient
+Plt=2
+AliasID=2
+XExp=T
+YExp=v(2)
 XRng=AutoAlways
-YRng=Auto
+YRng=AutoAlways
 Options=LINEARX,LINEARY
 Enable=Enable
 Line Color=#FF0000
@@ -735,10 +951,13 @@ NOFmtX=3E
 NOFmtY=3E
 
 [WaveForm]
-Analysis=DC
-AliasID=-1
+Analysis=Transient
+Plt=3
+AliasID=3
+XExp=T
+YExp=v(1)
 XRng=AutoAlways
-YRng=Auto
+YRng=AutoAlways
 Options=LINEARX,LINEARY
 Enable=Enable
 Line Color=#008000
@@ -767,13 +986,13 @@ PlaceText=True
 
 [Pane]
 Analysis=Transient
+CurrentPage 0="Main"
 
 [Pane]
 Analysis=AC
 
 [Pane]
 Analysis=DC
-CurrentPage 0="Main"
 
 [Pane]
 Analysis=HmDistortion
@@ -785,14 +1004,14 @@ Analysis=ImDistortion
 Analysis=Stability
 
 [Watch]
-Analysis=DC
+Analysis=Transient
 Format=3
 ExprPercentWidth=80
 
 [WCTolerance]
-Var Width=125
-Nominal Width=90
-Tol Width=190
+Var Width=100
+Nominal Width=72
+Tol Width=152
 
 [OPMethods]
 Analysis=Transient
