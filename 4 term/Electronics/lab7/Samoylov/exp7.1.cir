@@ -53,7 +53,7 @@ Name=PJFET
 Definition=PJFET
 Shape=PJFET
 Mask=4096
-Used=2
+Used=4
 memo=PJFET
 Label Offset=27,-12,-5,24
 PinCnt=3
@@ -120,12 +120,12 @@ Style=8192
 
 [Attr]
 ON=37,-1,MODEL
-V=2SJ72_GR
+V=2N5114
 Style=8192
 
 [Attr]
 ON=0,0,PACKAGE
-V
+V=TO-18
 
 [Comp]
 Name=Battery
@@ -355,7 +355,7 @@ Scale 0=1
 Scale 1=1
 Scale 2=1
 Scale 3=0.5
-Px=378,112
+Px=785,219
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -675,7 +675,7 @@ Seed=0
 Analysis=DC
 I2Range=0.05,2,0.1,1
 I2=V1
-I1Range=0.4,0,0.001
+I1Range=10,0,0.001
 I1=V2
 NPts=51
 Temp=27
@@ -695,9 +695,8 @@ AliasID=1
 XExp=DCINPUT1
 YExp=ID(J1)
 XRng=AutoAlways
-YRng=0.0016,-0.0064
+YRng=AutoAlways
 Options=LINEARX,LINEARY
-Range Grid Y=0.0016
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -717,7 +716,7 @@ NOFmtY=3E
 Analysis=DC
 AliasID=-1
 XRng=AutoAlways
-YRng=Auto
+YRng=AutoAlways
 Options=LINEARX,LINEARY
 Enable=Enable
 Line Color=#FF0000
@@ -738,7 +737,7 @@ NOFmtY=3E
 Analysis=DC
 AliasID=-1
 XRng=AutoAlways
-YRng=Auto
+YRng=AutoAlways
 Options=LINEARX,LINEARY
 Enable=Enable
 Line Color=#008000
