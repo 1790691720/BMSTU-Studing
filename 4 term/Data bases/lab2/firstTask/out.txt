@@ -1,0 +1,6 @@
+idCustomer	Name	Surname	City	Telephone	TotalSum	ContractDate	
+1	Ivan	Ivanov	Moscow	79151234567	17235	2012-07-25	
+2	Petr	Petrov	Tomsk	74651234567	4401	2013-03-12	
+3	Diana	Sergeeva	Moscow	79171234567	1242	2013-03-17	
+4	Polina	Petrova	Kazan	74651234534	0	2013-04-17	
+5	Arseniy	Samoylov	Khabarovsk	79999999999	0	2021-09-04	
