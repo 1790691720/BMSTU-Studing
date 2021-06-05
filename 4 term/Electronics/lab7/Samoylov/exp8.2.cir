@@ -4,10 +4,10 @@ Version=11.01
 Program=Micro-Cap
 Component Version=10.00
 Shape Version=11.00
-Screen=2560,1440
+Screen=1920,1080
 MCAPVersion=11.0.1.9
 Key ID=0
-NLCnt=38
+NLCnt=33
 TXCnt=0
 
 [shapedef]
@@ -105,7 +105,7 @@ Name=Pulse Source
 Definition=Pulse source
 Shape=Pulse_Source
 Mask=4865
-Used=10
+Used=14
 memo=Pulse Source
 Label Offset=18,13,15,9
 PinCnt=2
@@ -117,7 +117,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=6913
-Used=1004
+Used=1015
 memo=Capacitor
 Label Offset=4,-38,12,12
 PinCnt=2
@@ -129,7 +129,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor_Euro
 Mask=6401
-Used=1874
+Used=1885
 memo=Resistor
 Label Offset=11,-36,10,10
 PinCnt=2
@@ -141,7 +141,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=769
-Used=732
+Used=743
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -152,6 +152,7 @@ Name=PMOS
 Definition=PMOS
 Shape=PMOS
 Mask=4096
+Used=2
 memo=PMOS
 Label Offset=29,0,-18,26
 PinCnt=4
@@ -165,7 +166,7 @@ Name=NMOS
 Definition=NMOS
 Shape=NMOS
 Mask=4096
-Used=9
+Used=10
 memo=NMOS
 Label Offset=29,1,7,25
 PinCnt=4
@@ -179,7 +180,7 @@ Name=Voltage Source
 Definition=VSpice
 Shape=SPICE_V
 Mask=4864
-Used=13
+Used=15
 memo=Voltage Source
 Label Offset=19,13,15,13
 PinCnt=2
@@ -187,7 +188,7 @@ Pin="Plus",6,0,-5,-6
 Pin="Minus",0,0,-20,-6
 
 [Circuit]
-Window Placement=2,3, -1,-1, -9,-36, 260,260,1696,837
+Window Placement=2,3, -1,-1, -9,-38, 0,0,949,465
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -196,8 +197,7 @@ NodeVoltageFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in Transient Analysis=2,3, -1,-1, -9,-36, 26,0,900,468
-Window Placement in DC Analysis=2,3, -1,-1, -9,-36, 60,60,2221,856
+Window Placement in Transient Analysis=2,3, -1,-1, -9,-38, 32,32,725,561
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
@@ -298,10 +298,10 @@ Pxs=688,376,688,432
 Pxs=264,432,264,456
 
 [Wire]
-Pxs=264,432,312,432
+Pxs=264,432,440,432
 
 [Wire]
-Pxs=264,376,264,384
+Pxs=264,360,264,384
 
 [Wire]
 Pxs=264,296,264,336
@@ -337,7 +337,7 @@ Pxs=264,216,264,296
 Pxs=688,128,688,328
 
 [Wire]
-Pxs=264,128,304,128
+Pxs=264,128,688,128
 
 [Wire]
 Pxs=264,128,264,168
@@ -382,25 +382,10 @@ V=TO-220AB
 Pxs=264,384,264,432
 
 [Wire]
-Pxs=264,360,312,360
-
-[Wire]
-Pxs=312,360,312,432
-
-[Wire]
-Pxs=312,432,440,432
-
-[Wire]
 Pxs=264,168,264,176
 
 [Wire]
-Pxs=264,192,304,192
-
-[Wire]
-Pxs=304,128,304,192
-
-[Wire]
-Pxs=304,128,688,128
+Pxs=264,184,264,192
 
 [Comp]
 Name=Voltage Source
@@ -413,8 +398,8 @@ V=V2
 Style=8192
 
 [Attr]
-ON=-300,-41,VALUE
-V=DC 0 AC 1 0 Pulse 0 5 0 10n 10n 1u 2u
+ON=-53,-41,VALUE
+V=DC 5
 
 [Attr]
 ON=0,0,PACKAGE
@@ -422,7 +407,7 @@ V
 
 [Attr]
 ON=0,0,Saved_Pulse
-V=DC 0 AC 1 0 Pulse 0 5 0 10n 10n 1u 2u
+V=DC 0 AC 1 0 Pulse 0 5 100n 10n 10n 400n 1u
 Style=256
 
 [Schematic]
@@ -433,7 +418,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=0.5
+Scale=1
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main2","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -579,8 +564,8 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-Scale 3=0.5
-Px=874,267
+Scale 3=1
+Px=693,349
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -641,6 +626,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
+SB 0=0,9
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -667,7 +653,7 @@ Search Color=#FFFF00
 [Text Area]
 Section=0
 Page=1
-Text=.OPTIONS ITL4=50
+Text=.OPTIONS ITL4=50            
 
 [Text Area]
 Section=0
@@ -697,7 +683,7 @@ ComponentCounts=True
 
 [Transient]
 WinID=1
-Window Placement=2,3, -1,-1, -9,-36, 26,0,900,468
+Window Placement=2,3, -1,-1, -9,-38, 32,32,725,561
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -748,7 +734,7 @@ Cursor Select Color Primary=#C0C0C0
 Cursor Select Color Secondary=#FF0000
 Data Point Labels Color Fore=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Data Point Labels Color Back=#FFFF00
-OperPoint=True
+OperPoint=False
 OperPointOnly=False
 AutoScaleRanges=False
 FixedTimeStep=False
@@ -763,12 +749,12 @@ FFT_AutoScale_Harmonics="10"
 PrinterAutoTile=No
 PrinterBlackBorder=No
 MonMaxShow=3
-MonPageWidth=66
-MonPlotWidth=21
-MonExprXWidth=142
-MonExprYWidth=306
-MonRangeXWidth=90
-MonRangeYWidth=90
+MonPageWidth=81
+MonPlotWidth=25
+MonExprXWidth=159
+MonExprYWidth=339
+MonRangeXWidth=111
+MonRangeYWidth=111
 AnimateWait=None
 AnimateWaitTime=500
 AnimatePressAfter=0
@@ -912,7 +898,6 @@ Name="Main"
 
 [DC]
 WinID=3
-Window Placement=2,3, -1,-1, -9,-36, 60,60,2221,856
 Font=Height=-22,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -966,13 +951,6 @@ Data Point Labels Color Back=#FFFF00
 AutoScaleRanges=False
 PrinterAutoTile=No
 PrinterBlackBorder=No
-MonMaxShow=3
-MonPageWidth=81
-MonPlotWidth=25
-MonExprXWidth=159
-MonExprYWidth=289
-MonRangeXWidth=111
-MonRangeYWidth=111
 AnimateWait=None
 AnimateWaitTime=500
 AnimatePressAfter=0
@@ -1145,7 +1123,7 @@ Analysis=Transient
 Plt=1
 AliasID=1
 XExp=T
-YExp=v(3)
+YExp=v(1)
 XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARX,LINEARY

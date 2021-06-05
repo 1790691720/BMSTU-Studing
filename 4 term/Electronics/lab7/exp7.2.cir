@@ -4,7 +4,7 @@ Version=11.01
 Program=Micro-Cap
 Component Version=10.00
 Shape Version=11.00
-Screen=2560,1440
+Screen=1920,1080
 MCAPVersion=11.0.1.9
 Key ID=0
 NLCnt=15
@@ -57,7 +57,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=4865
-Used=51
+Used=58
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -69,7 +69,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=769
-Used=732
+Used=743
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -80,7 +80,7 @@ Name=NMOS
 Definition=NMOS
 Shape=NMOS
 Mask=4096
-Used=9
+Used=10
 memo=NMOS
 Label Offset=29,1,7,25
 PinCnt=4
@@ -90,7 +90,7 @@ Pin="Source",3,3,8,4
 Pin="Body",3,0,8,-1
 
 [Circuit]
-Window Placement=2,3, -1,-1, -9,-36, 0,0,1437,540
+Window Placement=2,3, -1,-1, -9,-38, 0,0,1217,465
 Default Object=Color=#000080
 Default Object Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -99,7 +99,7 @@ NodeVoltageFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in DC Analysis=2,3, -1,-1, -9,-36, 32,32,1669,553
+Window Placement in DC Analysis=2,3, -1,-1, -9,-38, 32,32,1687,571
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
@@ -135,8 +135,8 @@ V
 
 [Comp]
 Name=Battery
-Px=472,216
-Rot=1
+Px=472,264
+Rot=3
 
 [Attr]
 ON=14,31,PART
@@ -221,7 +221,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=0.25
+Scale=0.66666666666666663
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main2","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -367,9 +367,8 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=0,96
-Scale 3=0.25
-Px=526,172
+Scale 3=0.66666666666666663
+Px=507,159
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -475,7 +474,7 @@ ComponentCounts=True
 
 [DC]
 WinID=3
-Window Placement=2,3, -1,-1, -9,-36, 32,32,1669,553
+Window Placement=2,3, -1,-1, -9,-38, 32,32,1687,571
 Font=Height=-23,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -687,9 +686,9 @@ Seed=0
 
 [Limits]
 Analysis=DC
-I2Range=1
+I2Range=2,5,10
 I2=V1
-I1Range=1000,0,0.1
+I1Range=5,0,0.1
 I1=V2
 NPts=51
 Temp=27
@@ -707,7 +706,7 @@ Analysis=DC
 Plt=1
 AliasID=1
 XExp=DCINPUT1
-YExp=ID(M1)
+YExp=-ID(M1)
 XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARX,LINEARY
