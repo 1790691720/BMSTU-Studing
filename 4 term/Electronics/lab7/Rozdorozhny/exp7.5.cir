@@ -97,7 +97,7 @@ Name=Sine Source
 Definition=Sine source
 Shape=Sine_Source
 Mask=4865
-Used=6
+Used=7
 memo=Sine Source
 Label Offset=18,12,15,12
 PinCnt=2
@@ -109,7 +109,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor_Euro
 Mask=6401
-Used=1874
+Used=1877
 memo=Resistor
 Label Offset=11,-36,10,10
 PinCnt=2
@@ -121,7 +121,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=6913
-Used=1004
+Used=1006
 memo=Capacitor
 Label Offset=4,-38,12,12
 PinCnt=2
@@ -133,7 +133,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=4865
-Used=51
+Used=52
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -145,7 +145,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=769
-Used=732
+Used=733
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -278,7 +278,7 @@ Style=8192
 
 [Attr]
 ON=10,24,RESISTANCE
-V=220
+V=5000
 Style=8192
 
 [Attr]
@@ -325,8 +325,8 @@ V
 
 [Comp]
 Name=Battery
-Px=664,208
-Rot=3
+Px=664,160
+Rot=1
 
 [Attr]
 ON=-26,-27,PART
@@ -589,7 +589,7 @@ Scale 0=1
 Scale 1=1
 Scale 2=1
 Scale 3=0.5
-Px=169,219
+Px=431,456
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -796,6 +796,7 @@ Num Out Allow Dup Y Expr=False
 Num Out Low="TSTART"
 Num Out High="TMAX"
 Num Out Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Num Out Window Placement=2,3, -1,-1, -9,-36, 60,60,2221,856
 Num Out Format=3
 Num Out HideNonSelected=False
 AutoSaveWave=False

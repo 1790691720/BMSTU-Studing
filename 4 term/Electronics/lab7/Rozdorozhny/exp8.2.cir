@@ -117,7 +117,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=6913
-Used=1004
+Used=1006
 memo=Capacitor
 Label Offset=4,-38,12,12
 PinCnt=2
@@ -129,7 +129,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor_Euro
 Mask=6401
-Used=1874
+Used=1877
 memo=Resistor
 Label Offset=11,-36,10,10
 PinCnt=2
@@ -141,7 +141,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=769
-Used=732
+Used=733
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -187,7 +187,7 @@ Pin="Plus",6,0,-5,-6
 Pin="Minus",0,0,-20,-6
 
 [Circuit]
-Window Placement=2,3, -1,-1, -9,-36, 260,260,1696,837
+Window Placement=2,3, -1,-1, -9,-36, 260,221,1696,798
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -197,7 +197,7 @@ PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
 Window Placement in Transient Analysis=2,3, -1,-1, -9,-36, 26,0,900,468
-Window Placement in DC Analysis=2,3, -1,-1, -9,-36, 60,60,2221,856
+Window Placement in DC Analysis=2,3, -1,-1, -9,-36, 0,2,1893,798
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
@@ -404,8 +404,8 @@ Pxs=304,128,688,128
 
 [Comp]
 Name=Voltage Source
-Px=688,328
-Rot=1
+Px=688,376
+Rot=3
 
 [Attr]
 ON=-31,-27,PART
@@ -579,9 +579,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=0,48
+SB 3=0,96
 Scale 3=0.5
-Px=718,119
+Px=684,358
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -914,7 +914,7 @@ Name="Main"
 
 [DC]
 WinID=3
-Window Placement=2,3, -1,-1, -9,-36, 60,60,2221,856
+Window Placement=2,3, -1,-1, -9,-36, 0,2,1893,798
 Font=Height=-22,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
