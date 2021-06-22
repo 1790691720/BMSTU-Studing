@@ -382,7 +382,7 @@ Scale 0=1
 Scale 1=1
 Scale 2=1
 Scale 3=0.5
-Px=275,149
+Px=130,19
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -700,9 +700,23 @@ Name="Main"
 
 [AObject]
 Analysis=DC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=5,0.049134548193609115,5.0830564784053154,0.053884652049571026
+Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
+Format=3
+FormatY=3
+Branch=1
+
+[AObject]
+Analysis=DC
 Object=Line
 CBorder=#000080
-Pos=9791.9120533961523,7425.044091710758,329.79976442873971,943.56261022927686
+Pos=9791.9120533961523,7425.044091710758,341.57832744405181,384.93723849372384
 
 [Monte Carlo Options]
 Analysis=DC
