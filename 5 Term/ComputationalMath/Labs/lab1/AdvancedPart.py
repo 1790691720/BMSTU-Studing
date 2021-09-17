@@ -16,3 +16,5 @@ def L(x, x_nodes, y_nodes):
         result += y_nodes[i] * l_i(i, x, x_nodes)
 
     return result
+
+def Newton_Interpolation()
