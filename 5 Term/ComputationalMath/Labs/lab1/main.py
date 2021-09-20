@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 import BasePart as BasePart
+import AdvancedPart as AdvancedPart
 
 '''
 Start data
@@ -34,7 +35,7 @@ axes[0].set_xticks(np.arange(0, 1.1, 0.1))
 axes[0].set_yticks(np.arange(3, 4.1, 0.1))
 axes[0].plot(x_nodes, y_nodes, color="blue", linewidth=1.5, linestyle="-", label="f(x)")  # Source data
 axes[0].plot(x_nodes, y_nodes, 'o', color="blue", linewidth=1.5)  # Source data
-axes[0].plot(x,S_x,color="purple", linewidth=1.5, linestyle="-", label="S(x)")
+axes[0].plot(x, S_x, color="purple", linewidth=1.5, linestyle="-", label="S(x)")
 axes[0].legend(loc='upper right')
 axes[0].grid()
 plt.show()

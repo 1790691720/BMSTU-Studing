@@ -1,4 +1,6 @@
 #  Copyright (c) 2021. Petrakov Stanislav
+import numpy as np
+
 
 def l_i(i, x, x_nodes):
     result = 1
@@ -17,4 +19,6 @@ def L(x, x_nodes, y_nodes):
 
     return result
 
-def Newton_Interpolation()
+
+def tolerance_Z(input):
+    return input + np.random.normal(0, 0.01, len(input))
