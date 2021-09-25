@@ -26,6 +26,8 @@ mu = 0
 sigma = 0.01
 
 percent = 0.9
+
+np.random.seed(0)
 # endregion
 
 # region Calculates
@@ -87,10 +89,10 @@ plt.show()
 # Confidence curve of erroneous data set Lagrange X
 DrawSourceDataAndConfigPlot(xNodes, yNodes)
 
-plt.plot(x, ConfidenceCurvesLagrangeByX[0], color="red", linewidth=1.5, linestyle="-", label="h_u")
-plt.plot(x, ConfidenceCurvesLagrangeByX[2], color="orange", linewidth=1.5, linestyle="-", label="h_l")
-plt.plot(x, ConfidenceCurvesLagrangeByX[1], color="violet", linewidth=1.5, linestyle="--", label="h_m")
-plt.fill_between(x, ConfidenceCurvesLagrangeByX[0], ConfidenceCurvesLagrangeByX[2], alpha=0.1, color="blue")
+plt.plot(x, ConfidenceCurvesLagrangeByX[0], color="red", linewidth=1.5, linestyle="-", label="h_u", zorder=0)
+plt.plot(x, ConfidenceCurvesLagrangeByX[2], color="orange", linewidth=1.5, linestyle="-", label="h_l", zorder=0)
+plt.plot(x, ConfidenceCurvesLagrangeByX[1], color="violet", linewidth=1.5, linestyle="--", label="h_m", zorder=0)
+plt.fill_between(x, ConfidenceCurvesLagrangeByX[0], ConfidenceCurvesLagrangeByX[2], alpha=0.1, color="blue", zorder=0)
 
 plt.legend(loc='best')
 plt.savefig(fname=".\Plots\ConfidenceCurveLagrangeX.svg", format='svg', dpi=300)
@@ -99,10 +101,10 @@ plt.show()
 # Confidence curve of erroneous data set Lagrange Y
 DrawSourceDataAndConfigPlot(xNodes, yNodes)
 
-plt.plot(x, ConfidenceCurvesLagrangeByY[0], color="red", linewidth=1.5, linestyle="-", label="h_u")
-plt.plot(x, ConfidenceCurvesLagrangeByY[2], color="orange", linewidth=1.5, linestyle="-", label="h_l")
-plt.plot(x, ConfidenceCurvesLagrangeByY[1], color="violet", linewidth=1.5, linestyle="--", label="h_m")
-plt.fill_between(x, ConfidenceCurvesLagrangeByY[0], ConfidenceCurvesLagrangeByY[2], alpha=0.1, color="blue")
+plt.plot(x, ConfidenceCurvesLagrangeByY[0], color="red", linewidth=1.5, linestyle="-", label="h_u", zorder=0)
+plt.plot(x, ConfidenceCurvesLagrangeByY[2], color="orange", linewidth=1.5, linestyle="-", label="h_l", zorder=0)
+plt.plot(x, ConfidenceCurvesLagrangeByY[1], color="violet", linewidth=1.5, linestyle="--", label="h_m", zorder=0)
+plt.fill_between(x, ConfidenceCurvesLagrangeByY[0], ConfidenceCurvesLagrangeByY[2], alpha=0.1, color="blue", zorder=0)
 
 plt.legend(loc='best')
 plt.savefig(fname=".\Plots\ConfidenceCurveLagrangeY.svg", format='svg', dpi=300)
@@ -111,10 +113,11 @@ plt.show()
 # Confidence curve of erroneous data set cubic Spline X
 DrawSourceDataAndConfigPlot(xNodes, yNodes)
 
-plt.plot(x, ConfidenceCurvesCubicSplineByX[0], color="red", linewidth=1.5, linestyle="-", label="h_u")
-plt.plot(x, ConfidenceCurvesCubicSplineByX[2], color="orange", linewidth=1.5, linestyle="-", label="h_l")
-plt.plot(x, ConfidenceCurvesCubicSplineByX[1], color="violet", linewidth=1.5, linestyle="--", label="h_m")
-plt.fill_between(x, ConfidenceCurvesCubicSplineByX[0], ConfidenceCurvesCubicSplineByX[2], alpha=0.1, color="blue")
+plt.plot(x, ConfidenceCurvesCubicSplineByX[0], color="red", linewidth=1.5, linestyle="-", label="h_u", zorder=0)
+plt.plot(x, ConfidenceCurvesCubicSplineByX[2], color="orange", linewidth=1.5, linestyle="-", label="h_l", zorder=0)
+plt.plot(x, ConfidenceCurvesCubicSplineByX[1], color="violet", linewidth=1.5, linestyle="--", label="h_m", zorder=0)
+plt.fill_between(x, ConfidenceCurvesCubicSplineByX[0], ConfidenceCurvesCubicSplineByX[2], alpha=0.1, color="blue",
+                 zorder=0)
 
 plt.legend(loc='best')
 plt.savefig(fname=".\Plots\ConfidenceCurveCubicSplineX.svg", format='svg', dpi=300)
@@ -123,10 +126,11 @@ plt.show()
 # Confidence curve of erroneous data set cubic Spline Y
 DrawSourceDataAndConfigPlot(xNodes, yNodes)
 
-plt.plot(x, ConfidenceCurvesCubicSplineByY[0], color="red", linewidth=1.5, linestyle="-", label="h_u")
-plt.plot(x, ConfidenceCurvesCubicSplineByY[2], color="orange", linewidth=1.5, linestyle="-", label="h_l")
-plt.plot(x, ConfidenceCurvesCubicSplineByY[1], color="violet", linewidth=1.5, linestyle="--", label="h_m")
-plt.fill_between(x, ConfidenceCurvesCubicSplineByY[0], ConfidenceCurvesCubicSplineByY[2], alpha=0.1, color="blue")
+plt.plot(x, ConfidenceCurvesCubicSplineByY[0], color="red", linewidth=1.5, linestyle="-", label="h_u", zorder=0)
+plt.plot(x, ConfidenceCurvesCubicSplineByY[2], color="orange", linewidth=1.5, linestyle="-", label="h_l", zorder=0)
+plt.plot(x, ConfidenceCurvesCubicSplineByY[1], color="violet", linewidth=1.5, linestyle="--", label="h_m", zorder=0)
+plt.fill_between(x, ConfidenceCurvesCubicSplineByY[0], ConfidenceCurvesCubicSplineByY[2], alpha=0.1, color="blue",
+                 zorder=0)
 
 plt.legend(loc='best')
 plt.savefig(fname=".\Plots\ConfidenceCurveCubicSplineY.svg", format='svg', dpi=300)
