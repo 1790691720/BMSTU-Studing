@@ -60,11 +60,10 @@ def DCubicSpline(x, xNodes, yNodes):
     result = np.zeros(shape=(len(x)))
 
     for i in range(len(x)):
-        index = IndexForCubicSpline(i, xNodes)
+        index = IndexForCubicSpline(x[i], xNodes)
         b = cubicSplineCoefficients[index][1]
         c = cubicSplineCoefficients[index][2]
         d = cubicSplineCoefficients[index][3]
         xi = xNodes[index]
         result[i] = b + 2 * c * (x[i] - xi) + 3 * d * (x[i] - xi) ** 2
-
     return result

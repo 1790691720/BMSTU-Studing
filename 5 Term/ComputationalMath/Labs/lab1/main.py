@@ -36,6 +36,7 @@ np.random.seed(0)
 
 # Calculate cubic spline for base part of lab
 basePartCubicSpline = Base.CubicSpline(x, xNodes, yNodes)
+baseDPartCubicSpline = Base.DCubicSpline(x, xNodes, yNodes)
 
 # Calculate Erroneous data for 3(a)
 xErroneousData = Advanced.GenerateSetOfErroneousData(xNodes, numberOfSplines, mu, sigma)
@@ -69,12 +70,21 @@ ConfidenceCurvesCubicSplineByY = Advanced.DeterminationOfConfidenceCurves(errorC
 
 # region Graphs
 
-# Base part
+# Base part S(x)
 DrawSourceDataAndConfigPlot(xNodes, yNodes)
-plt.plot(x, basePartCubicSpline, color='purple', label="Cubic spline", zorder=0)
-
+plt.plot(x, basePartCubicSpline, color='purple', label="S(x)", zorder=0)
 plt.legend(loc='best')
 plt.savefig(fname=".\Plots\BasicCubicSpline.svg", format='svg', dpi=300)
+plt.show()
+
+#Base part S'(x)
+plt.figure(dpi=300)
+plt.grid()
+plt.xlabel('x')
+plt.ylabel('y', rotation=0)
+plt.plot(x, baseDPartCubicSpline, color='orange', label='S\'(x)', zorder=0)
+plt.legend(loc='best')
+plt.savefig(fname=".\Plots\BasicDCubicSpline.svg", format='svg', dpi=300)
 plt.show()
 
 # Advanced part
@@ -139,3 +149,4 @@ plt.savefig(fname=".\Plots\ConfidenceCurveCubicSplineY.svg", format='svg', dpi=3
 plt.show()
 
 # endregion
+
