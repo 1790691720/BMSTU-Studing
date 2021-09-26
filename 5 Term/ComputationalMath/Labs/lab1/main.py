@@ -77,7 +77,7 @@ plt.legend(loc='best')
 plt.savefig(fname=".\Plots\BasicCubicSpline.svg", format='svg', dpi=300)
 plt.show()
 
-#Base part S'(x)
+# Base part S'(x)
 plt.figure(dpi=300)
 plt.grid()
 plt.xlabel('x')
@@ -88,6 +88,13 @@ plt.savefig(fname=".\Plots\BasicDCubicSpline.svg", format='svg', dpi=300)
 plt.show()
 
 # Advanced part
+
+# Lagrange polynomial
+DrawSourceDataAndConfigPlot(xNodes, yNodes)
+plt.plot(x, Advanced.LagrangePolynomial(x, xNodes, yNodes), color='purple', label="L(x)", zorder=0)
+plt.legend(loc='best')
+plt.savefig(fname=".\Plots\LagrangePolynomial.svg", format='svg', dpi=300)
+plt.show()
 
 # Set of Lagrange polynomials
 DrawSourceDataAndConfigPlot(xNodes, yNodes)
@@ -149,4 +156,3 @@ plt.savefig(fname=".\Plots\ConfidenceCurveCubicSplineY.svg", format='svg', dpi=3
 plt.show()
 
 # endregion
-
