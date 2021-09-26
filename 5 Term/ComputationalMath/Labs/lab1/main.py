@@ -8,6 +8,8 @@ def DrawSourceDataAndConfigPlot(xNodes, yNodes):
     plt.figure(dpi=300)
     plt.scatter(xNodes, yNodes, marker='o', color="blue", label="Source data", zorder=1)  # Source data
     plt.grid()
+    plt.xlabel('x')
+    plt.ylabel('y', rotation=0)
     return None
 
 
@@ -89,9 +91,9 @@ plt.show()
 # Confidence curve of erroneous data set Lagrange X
 DrawSourceDataAndConfigPlot(xNodes, yNodes)
 
-plt.plot(x, ConfidenceCurvesLagrangeByX[0], color="red", linewidth=1.5, linestyle="-", label="h_u", zorder=0)
-plt.plot(x, ConfidenceCurvesLagrangeByX[2], color="orange", linewidth=1.5, linestyle="-", label="h_l", zorder=0)
-plt.plot(x, ConfidenceCurvesLagrangeByX[1], color="violet", linewidth=1.5, linestyle="--", label="h_m", zorder=0)
+plt.plot(x, ConfidenceCurvesLagrangeByX[0], color="red", linewidth=.5, linestyle="-", label="h_u", zorder=0)
+plt.plot(x, ConfidenceCurvesLagrangeByX[2], color="orange", linewidth=.5, linestyle="-", label="h_l", zorder=0)
+plt.plot(x, ConfidenceCurvesLagrangeByX[1], color="violet", linewidth=.5, linestyle="--", label="h_m", zorder=0)
 plt.fill_between(x, ConfidenceCurvesLagrangeByX[0], ConfidenceCurvesLagrangeByX[2], alpha=0.1, color="blue", zorder=0)
 
 plt.legend(loc='best')
@@ -101,9 +103,9 @@ plt.show()
 # Confidence curve of erroneous data set Lagrange Y
 DrawSourceDataAndConfigPlot(xNodes, yNodes)
 
-plt.plot(x, ConfidenceCurvesLagrangeByY[0], color="red", linewidth=1.5, linestyle="-", label="h_u", zorder=0)
-plt.plot(x, ConfidenceCurvesLagrangeByY[2], color="orange", linewidth=1.5, linestyle="-", label="h_l", zorder=0)
-plt.plot(x, ConfidenceCurvesLagrangeByY[1], color="violet", linewidth=1.5, linestyle="--", label="h_m", zorder=0)
+plt.plot(x, ConfidenceCurvesLagrangeByY[0], color="red", linewidth=.5, linestyle="-", label="h_u", zorder=0)
+plt.plot(x, ConfidenceCurvesLagrangeByY[2], color="orange", linewidth=.5, linestyle="-", label="h_l", zorder=0)
+plt.plot(x, ConfidenceCurvesLagrangeByY[1], color="violet", linewidth=.5, linestyle="--", label="h_m", zorder=0)
 plt.fill_between(x, ConfidenceCurvesLagrangeByY[0], ConfidenceCurvesLagrangeByY[2], alpha=0.1, color="blue", zorder=0)
 
 plt.legend(loc='best')
@@ -113,9 +115,9 @@ plt.show()
 # Confidence curve of erroneous data set cubic Spline X
 DrawSourceDataAndConfigPlot(xNodes, yNodes)
 
-plt.plot(x, ConfidenceCurvesCubicSplineByX[0], color="red", linewidth=1.5, linestyle="-", label="h_u", zorder=0)
-plt.plot(x, ConfidenceCurvesCubicSplineByX[2], color="orange", linewidth=1.5, linestyle="-", label="h_l", zorder=0)
-plt.plot(x, ConfidenceCurvesCubicSplineByX[1], color="violet", linewidth=1.5, linestyle="--", label="h_m", zorder=0)
+plt.plot(x, ConfidenceCurvesCubicSplineByX[0], color="red", linewidth=.5, linestyle="-", label="h_u", zorder=0)
+plt.plot(x, ConfidenceCurvesCubicSplineByX[2], color="orange", linewidth=.5, linestyle="-", label="h_l", zorder=0)
+plt.plot(x, ConfidenceCurvesCubicSplineByX[1], color="violet", linewidth=.5, linestyle="--", label="h_m", zorder=0)
 plt.fill_between(x, ConfidenceCurvesCubicSplineByX[0], ConfidenceCurvesCubicSplineByX[2], alpha=0.1, color="blue",
                  zorder=0)
 
@@ -126,9 +128,9 @@ plt.show()
 # Confidence curve of erroneous data set cubic Spline Y
 DrawSourceDataAndConfigPlot(xNodes, yNodes)
 
-plt.plot(x, ConfidenceCurvesCubicSplineByY[0], color="red", linewidth=1.5, linestyle="-", label="h_u", zorder=0)
-plt.plot(x, ConfidenceCurvesCubicSplineByY[2], color="orange", linewidth=1.5, linestyle="-", label="h_l", zorder=0)
-plt.plot(x, ConfidenceCurvesCubicSplineByY[1], color="violet", linewidth=1.5, linestyle="--", label="h_m", zorder=0)
+plt.plot(x, ConfidenceCurvesCubicSplineByY[0], color="red", linewidth=.5, linestyle="-", label="h_u", zorder=0)
+plt.plot(x, ConfidenceCurvesCubicSplineByY[2], color="orange", linewidth=.5, linestyle="-", label="h_l", zorder=0)
+plt.plot(x, ConfidenceCurvesCubicSplineByY[1], color="violet", linewidth=.5, linestyle="--", label="h_m", zorder=0)
 plt.fill_between(x, ConfidenceCurvesCubicSplineByY[0], ConfidenceCurvesCubicSplineByY[2], alpha=0.1, color="blue",
                  zorder=0)
 
