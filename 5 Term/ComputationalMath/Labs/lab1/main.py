@@ -1,7 +1,8 @@
-import numpy as np
 import matplotlib.pyplot as plt
-import BasePart as Base
+import numpy as np
+
 import AdvancedPart as Advanced
+import BasePart as Base
 
 
 def DrawSourceDataAndConfigPlot(xNodes, yNodes):
@@ -127,6 +128,15 @@ plt.fill_between(x, ConfidenceCurvesLagrangeByY[0], ConfidenceCurvesLagrangeByY[
 
 plt.legend(loc='best')
 plt.savefig(fname=".\Plots\ConfidenceCurveLagrangeY.svg", format='svg', dpi=300)
+plt.show()
+
+# Set of Cubic splines
+DrawSourceDataAndConfigPlot(xNodes, yNodes)
+for ySet in errorCubicSplinesOnX:
+    plt.plot(x, ySet, linewidth=0.5, zorder=0)
+
+plt.legend(loc='best')
+plt.savefig(fname=".\Plots\SetOfCubicSplines.svg", format='svg', dpi=300)
 plt.show()
 
 # Confidence curve of erroneous data set cubic Spline X
