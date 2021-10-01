@@ -97,13 +97,22 @@ plt.legend(loc='best')
 plt.savefig(fname=".\Plots\LagrangePolynomial.svg", format='svg', dpi=300)
 plt.show()
 
-# Set of Lagrange polynomials
+# Set of Lagrange polynomials with error on X
 DrawSourceDataAndConfigPlot(xNodes, yNodes)
 for ySet in errorLagrangianPolynomialsOnX:
     plt.plot(x, ySet, linewidth=0.5, zorder=0)
 
 plt.legend(loc='best')
-plt.savefig(fname=".\Plots\SetOfLagrangePolynomials.svg", format='svg', dpi=300)
+plt.savefig(fname=".\Plots\SetOfLagrangePolynomialsOnX.svg", format='svg', dpi=300)
+plt.show()
+
+# Set of Lagrange polynomials with error on Y
+DrawSourceDataAndConfigPlot(xNodes, yNodes)
+for ySet in errorLagrangianPolynomialsOnY:
+    plt.plot(x, ySet, linewidth=0.5, zorder=0)
+
+plt.legend(loc='best')
+plt.savefig(fname=".\Plots\SetOfLagrangePolynomialsOnY.svg", format='svg', dpi=300)
 plt.show()
 
 # Confidence curve of erroneous data set Lagrange X
@@ -130,13 +139,22 @@ plt.legend(loc='best')
 plt.savefig(fname=".\Plots\ConfidenceCurveLagrangeY.svg", format='svg', dpi=300)
 plt.show()
 
-# Set of Cubic splines
+# Set of Cubic splines with error on X
 DrawSourceDataAndConfigPlot(xNodes, yNodes)
 for ySet in errorCubicSplinesOnX:
     plt.plot(x, ySet, linewidth=0.5, zorder=0)
 
 plt.legend(loc='best')
-plt.savefig(fname=".\Plots\SetOfCubicSplines.svg", format='svg', dpi=300)
+plt.savefig(fname=".\Plots\SetOfCubicSplinesOnX.svg", format='svg', dpi=300)
+plt.show()
+
+# Set of Cubic splines with error on Y
+DrawSourceDataAndConfigPlot(xNodes, yNodes)
+for ySet in errorCubicSplinesOnY:
+    plt.plot(x, ySet, linewidth=0.5, zorder=0)
+
+plt.legend(loc='best')
+plt.savefig(fname=".\Plots\SetOfCubicSplinesOnY.svg", format='svg', dpi=300)
 plt.show()
 
 # Confidence curve of erroneous data set cubic Spline X
