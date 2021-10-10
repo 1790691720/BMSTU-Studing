@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+		<title>Запрос 2</title>
+  		<meta charset="UTF-8">
+	</head>
+
+	<body>
+		<h1>Введите диапазон дат</h1>
+		<form method="post" class="form_request2">
+			<input  type="date" name="date_min" autofocus placeholder="01-01-2000" required>
+			<input  type="date" name="date_max" autofocus placeholder="31-12-2000" required>
+      			<button type="submit" class="inline_button">Поиск</button>
+		</form>
+		<form action="{{ url_for('requests.requests_index') }}">
+      			<button type="submit" class="small_button">Вернуться</button>
+    		</form>
+	</body>
+</html>
