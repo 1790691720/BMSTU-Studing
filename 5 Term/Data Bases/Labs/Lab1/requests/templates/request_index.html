@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+		<title>Работа с запросами</title>
+  		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Выберите запрос</h1>
+		<form action="{{ url_for('requests.requests_averageTime') }}">
+      			<button type="submit">Запрос 1</button>
+    		</form>
+		<form action="{{ url_for('requests.requests_betweenDates') }}">
+      			<button type="submit">Запрос 2</button>
+    		</form>
+		<form action="{{ url_for('index') }}">
+      			<button type="submit" class="small_button">Вернуться</button>
+    		</form>
+	</body>
+</html>
