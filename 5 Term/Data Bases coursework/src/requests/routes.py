@@ -32,7 +32,7 @@ class ItemTableRequest2(Table):
 
 class ItemTableRequest3(Table):
     OrderStatus = Col('OrderStatus')
-    countOrderStatus = Col('countOrderStatus')
+    countOrderStatus = Col('COUNT(OrderStatus)')
 
 
 class ItemTableRequest4(Table):
@@ -62,11 +62,11 @@ def requests_request1():
     else:
         year = request.form.get('year')
         month = request.form.get('month')
-        result = SQLserver.request('1_request.sql', year=year,month=month)
+        result = SQLserver.request('1_request.sql', year=year, month=month)
         table = ItemTableRequest1(result)
         HTMLtable = table.__html__()
-        file = open(r'.\requests\templates\request_result_child.html', 'w')
-        file.write('{% extends \'request_result_main.html\' %}{% block child %}<div class="table">')
+        file = open(r'.\requests\templates\request_result_child.html', 'w', encoding="utf-8")
+        file.write('{% extends \'request_result_main.html\' %}{% block child %}<div>')
         file.write(HTMLtable)
         file.write('</div>{% endblock %}')
         file.close()
@@ -97,6 +97,9 @@ def requests_request3():
     else:
         numberParam = request.form.get('numberParam')
         result = SQLserver.request('3_request.sql', lastDays=numberParam)
+        for temp in result:
+            temp['countOrderStatus'] = temp['COUNT(OrderStatus)']
+            del temp['COUNT(OrderStatus)']
         table = ItemTableRequest3(result)
         HTMLtable = table.__html__()
         file = open(r'.\requests\templates\request_result_child.html', 'w')
@@ -130,7 +133,10 @@ def requests_request5():
         return render_template('request_5.html')
     else:
         numberParam = request.form.get('numberParam')
-        result = SQLserver.request('5_request.sql', lastDays=numberParam)
+        result = SQLserver.request('5_request.sql', numberParam=numberParam)
+        for temp in result:
+            temp['OrderSum'] = temp['SUM(OrderSum)']
+            del temp['SUM(OrderSum)']
         table = ItemTableRequest5(result)
         HTMLtable = table.__html__()
         file = open(r'.\requests\templates\request_result_child.html', 'w')
@@ -141,7 +147,7 @@ def requests_request5():
     return render_template('request_result_child.html')
 
 
-@requests_app.route('/request6', methods=['GET', 'POST']) # TODO: хз что как параметры
+@requests_app.route('/request6', methods=['GET', 'POST'])  # TODO: хз что как параметры
 def requests_request6():
     if request.method == 'GET':
         return render_template('request_6.html')

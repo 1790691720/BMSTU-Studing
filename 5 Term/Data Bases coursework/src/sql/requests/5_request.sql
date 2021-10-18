@@ -1,4 +1,4 @@
 SELECT idCustomer, SUM(OrderSum)
 FROM customerorder
-WHERE OrderStatus = 1
+WHERE OrderStatus = $numberParam
 GROUP BY idCustomer

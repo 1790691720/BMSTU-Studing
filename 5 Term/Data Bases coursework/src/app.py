@@ -8,10 +8,10 @@ from sql.SQLmaster import SQLmaster
 
 app = Flask(__name__)
 
-dbconfig = json.load(open('./sql/configDataBase.json', 'r'))
-app.config['DB_CONFIG'] = dbconfig
 
-SQLserver = SQLmaster(dbconfig)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+
+
 
 app.register_blueprint(requests_app, url_prefix='/requests')
 app.register_blueprint(reports_app, url_prefix='/reports')

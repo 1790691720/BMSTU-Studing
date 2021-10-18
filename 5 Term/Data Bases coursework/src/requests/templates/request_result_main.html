@@ -9,5 +9,8 @@
 <body>
 <h1>Результат выполнения запроса</h1>
 {% block child %}{% endblock %}
+<form action="{{ url_for('requests.requests_index') }}">
+<button type="submit" class="small_button">Вернуться</button>
+</form>
 </body>
 </html>
