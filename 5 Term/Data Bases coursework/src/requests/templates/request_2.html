@@ -9,7 +9,7 @@
 	<body>
 		<h1>Сведенья за заказы за последние N дней</h1>
 		<form method="post" class="form_request1">
-			<input  type="number" name="numberParam" min=0 autofocus placeholder="0123456789" required>
+			<input  type="number" name="lastDays" min=0 autofocus placeholder="0123456789" required>
       			<button type="submit" class="inline_button">Поиск</button>
 		</form>
 		<form action="{{ url_for('requests.requests_index') }}">

@@ -11,7 +11,7 @@ SQLserver = SQLmaster(json.load(open('sql/configDataBase.json', 'r')))
 
 
 class ItemTableRequest1(Table):
-    idCustomer = Col('idCustomer')
+    idCustomer = Col('Идентификатор')
     Name = Col('Name')
     City = Col('City')
     Telephone = Col('Telephone')
@@ -55,7 +55,7 @@ def requests_index():
     return render_template('request_index.html')
 
 
-@requests_app.route('/request1', methods=['GET', 'POST'])  # TODO: переделать  HTML
+@requests_app.route('/request1', methods=['GET', 'POST'])
 def requests_request1():
     if request.method == 'GET':
         return render_template('request_1.html')
@@ -78,12 +78,12 @@ def requests_request2():
     if request.method == 'GET':
         return render_template('request_2.html')
     else:
-        numberParam = request.form.get('numberParam')
-        result = SQLserver.request('2_request.sql', lastDays=numberParam)
+        lastDays = request.form.get('lastDays')
+        result = SQLserver.request('2_request.sql', lastDays=lastDays)
         table = ItemTableRequest2(result)
         HTMLtable = table.__html__()
         file = open(r'.\requests\templates\request_result_child.html', 'w')
-        file.write('{% extends \'request_result_main.html\' %}{% block child %}<div class="table">')
+        file.write('{% extends \'request_result_main.html\' %}{% block child %}<div>')
         file.write(HTMLtable)
         file.write('</div>{% endblock %}')
         file.close()
@@ -95,15 +95,15 @@ def requests_request3():
     if request.method == 'GET':
         return render_template('request_3.html')
     else:
-        numberParam = request.form.get('numberParam')
-        result = SQLserver.request('3_request.sql', lastDays=numberParam)
+        lastDays = request.form.get('lastDays')
+        result = SQLserver.request('3_request.sql', lastDays=lastDays)
         for temp in result:
             temp['countOrderStatus'] = temp['COUNT(OrderStatus)']
             del temp['COUNT(OrderStatus)']
         table = ItemTableRequest3(result)
         HTMLtable = table.__html__()
         file = open(r'.\requests\templates\request_result_child.html', 'w')
-        file.write('{% extends \'request_result_main.html\' %}{% block child %}<div class="table">')
+        file.write('{% extends \'request_result_main.html\' %}{% block child %}<div>')
         file.write(HTMLtable)
         file.write('</div>{% endblock %}')
         file.close()
@@ -120,7 +120,7 @@ def requests_request4():
         table = ItemTableRequest4(result)
         HTMLtable = table.__html__()
         file = open(r'.\requests\templates\request_result_child.html', 'w')
-        file.write('{% extends \'request_result_main.html\' %}{% block child %}<div class="table">')
+        file.write('{% extends \'request_result_main.html\' %}{% block child %}<div>')
         file.write(HTMLtable)
         file.write('</div>{% endblock %}')
         file.close()
@@ -132,33 +132,36 @@ def requests_request5():
     if request.method == 'GET':
         return render_template('request_5.html')
     else:
-        numberParam = request.form.get('numberParam')
-        result = SQLserver.request('5_request.sql', numberParam=numberParam)
+        orderStatus = request.form.get('orderStatus')
+        result = SQLserver.request('5_request.sql', orderStatus=orderStatus)
         for temp in result:
             temp['OrderSum'] = temp['SUM(OrderSum)']
             del temp['SUM(OrderSum)']
         table = ItemTableRequest5(result)
         HTMLtable = table.__html__()
         file = open(r'.\requests\templates\request_result_child.html', 'w')
-        file.write('{% extends \'request_result_main.html\' %}{% block child %}<div class="table">')
+        file.write('{% extends \'request_result_main.html\' %}{% block child %}<div>')
         file.write(HTMLtable)
         file.write('</div>{% endblock %}')
         file.close()
     return render_template('request_result_child.html')
 
 
-@requests_app.route('/request6', methods=['GET', 'POST'])  # TODO: хз что как параметры
+@requests_app.route('/request6', methods=['GET', 'POST'])
 def requests_request6():
     if request.method == 'GET':
         return render_template('request_6.html')
     else:
-        date_min = request.form.get('date_min')
-        date_max = request.form.get('date_max')
-        result = SQLserver.request('request2.sql', firstDate=date_min, secondDate=date_max)
+        year = request.form.get('year')
+        orderStatus = request.form.get('orderStatus')
+        result = SQLserver.request('6_request.sql', year=year, orderStatus=orderStatus)
+        for temp in result:
+            temp['OrderSum'] = temp['MAX(OrderSum)']
+            del temp['MAX(OrderSum)']
         table = ItemTableRequest6(result)
         HTMLtable = table.__html__()
         file = open(r'.\requests\templates\request_result_child.html', 'w')
-        file.write('{% extends \'request_result_main.html\' %}{% block child %}<div class="table">')
+        file.write('{% extends \'request_result_main.html\' %}{% block child %}<div>')
         file.write(HTMLtable)
         file.write('</div>{% endblock %}')
         file.close()
