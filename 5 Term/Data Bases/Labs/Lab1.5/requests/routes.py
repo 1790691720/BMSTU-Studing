@@ -1,6 +1,6 @@
 import json
 
-from flask import Blueprint, render_template, request, current_app
+from flask import Blueprint, render_template, request
 from flask_table import Table, Col
 
 from access import group_permission_decorator

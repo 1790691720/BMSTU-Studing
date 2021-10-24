@@ -1,11 +1,17 @@
 {
   "Пользователь": [
-    "auth", "requests", ""
+    "auth",
+    "requests",
+    ""
   ],
   "Администратор": [
-    "auth", "requests", "reports", ""
+    "auth",
+    "requests",
+    "reports",
+    ""
   ],
   "Гость": [
-    "auth", ""
+    "auth",
+    ""
   ]
 }

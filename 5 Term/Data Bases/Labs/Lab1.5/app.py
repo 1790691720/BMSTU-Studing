@@ -12,9 +12,11 @@ app = Flask(__name__)
 app.config['ACCESS_CONFIG'] = json.load(open('config/access_config.json', 'r', encoding="utf-8"))
 app.config['SECRET_KEY'] = 'Secret'
 app.config['TEMPLATES_AUTO_RELOAD'] = True
+
 app.register_blueprint(requests_app, url_prefix='/requests')
 app.register_blueprint(auth_app, url_prefix='/auth')
 app.register_blueprint(reports_app, url_prefix='/reports')
+
 
 @app.route('/')
 @group_permission_decorator
@@ -27,13 +29,16 @@ def index():
 def exit():
     return render_template('exit.html')
 
+
 @app.errorhandler(404)
 def not_found_error(error):
     return render_template('error404.html'), 404
 
+
 @app.errorhandler(500)
 def internal_error(error):
     return render_template('error500.html'), 500
+
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5001)

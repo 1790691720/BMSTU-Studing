@@ -15,17 +15,7 @@ class SQLmaster:
         if cursor is None:
             raise ValueError('Cursor is None')
         elif cursor:
-            # cursor.execute(request)
-            # resulting = []
-            # q = []
-            # for i in cursor.description:
-            #    q.append(i[0])
-            # resulting.append(q)
-            # for row in cursor.fetchall():
-            #    for qwe in range(len(q)):
-            #       resulting.append(dict(q[qwe],row))
-            #     resulting.append(row)
             cursorDict = self.db_connect.conn.cursor(pymysql.cursors.DictCursor)
             cursorDict.execute(request)
-            resulting=cursorDict.fetchall()
+            resulting = cursorDict.fetchall()
             return resulting

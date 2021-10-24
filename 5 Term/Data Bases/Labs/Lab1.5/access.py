@@ -29,6 +29,6 @@ def group_permission_decorator(f):
     def wrapper(*args, **kwargs):
         if group_permission_validation():
             return f(*args, **kwargs)
-        return render_template('permission_denied.html')  # TODO: заглушка с возвращение на страницу авторизацией, что нет доступа
+        return render_template('permission_denied.html')
 
     return wrapper

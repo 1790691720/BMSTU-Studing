@@ -8,14 +8,13 @@ from sql.SQLmaster import SQLmaster
 auth_app = Blueprint('auth', __name__, template_folder='templates')
 SQLserver = SQLmaster(json.load(open('config/db_config.json', 'r')))
 
-LevelToName = {'0':'Пользователь',
-       '1': 'Администратор'}
+LevelToName = {'0': 'Пользователь',
+               '1': 'Администратор'}
 
 
 @auth_app.route('/', methods=['GET', 'POST'])
 @group_permission_decorator
 def auth_index():
-    session.clear()
     if request.method == 'GET':
         return render_template('auth_index.html')
     else:
@@ -26,13 +25,13 @@ def auth_index():
 
         for LoginPass in result:
             if login == LoginPass['Login'] and password == LoginPass['Password']:
-                print(LoginPass['AccessLevel'])
                 session['group_name'] = LevelToName[f"{LoginPass['AccessLevel']}"]
                 return render_template('auth_successfully.html', name=session['group_name'])
         return render_template('auth_failed.html')
+
 
 @auth_app.route('/unauth')
 @group_permission_decorator
 def auth_unauth():
     session.clear()
-    return render_template('auth_unauth.html', name='unauthorized')
+    return render_template('auth_unauth.html', name='Гость')
