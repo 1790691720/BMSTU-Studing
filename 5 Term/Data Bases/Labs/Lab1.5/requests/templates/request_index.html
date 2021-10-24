@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+		<title>Работа с запросами</title>
+  		<meta charset="UTF-8">
+	</head>
+
+	<body>
+		<div class="div_like_belt_1">
+			<p class="article_1">Выберите запрос</p>
+		</div>
+		<div class="div_like_button_2">
+			<a href="{{ url_for('requests.requests_averageTime') }}">Все тесты, время выполнения которых больше заданного</a>
+		</div>
+		<div class="div_like_button_2">
+			<a href="{{ url_for('requests.requests_betweenDates') }}">Планы тестирования между датами</a>
+		</div>
+		<div class="div_like_button_2">
+			<a href="{{ url_for('index') }}" class="a_yellow">Вернуться</a>
+		</div>
+	</body>
+</html>
