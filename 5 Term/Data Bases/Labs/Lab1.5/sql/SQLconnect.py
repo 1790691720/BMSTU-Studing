@@ -3,12 +3,10 @@ from pymysql.err import OperationalError
 
 
 class SQLconnect:
-
     def __init__(self, config: dict):
         self.config = config
         self.cursor = None
         self.conn = None
-
         try:
             self.conn = connect(**self.config)
             self.cursor = self.conn.cursor()
