@@ -7,7 +7,7 @@ from sql.SQLprovider import SQLProvider
 class SQLmaster:
     def __init__(self, dbconfig):
         self.db_connect = SQLconnect(dbconfig)
-        self.db_request = SQLProvider(r'.\sql\requests')
+        self.db_request = SQLProvider(r'.\sql\requests')  # Сюда путь до папки с запросами
 
     def request(self, filename, **kwargs) -> dict:
         cursor = self.db_connect.cursor
@@ -17,5 +17,5 @@ class SQLmaster:
         elif cursor:
             cursorDict = self.db_connect.conn.cursor(pymysql.cursors.DictCursor)
             cursorDict.execute(request)
-            resulting=cursorDict.fetchall()
+            resulting = cursorDict.fetchall()
             return resulting

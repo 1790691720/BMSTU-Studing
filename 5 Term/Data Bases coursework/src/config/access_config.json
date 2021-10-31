@@ -1,0 +1,33 @@
+{
+  "Посетитель": [
+    "index",
+    "exit",
+    "auth.auth_index"
+  ],
+  "Заказчик": [
+    "index",
+    "exit",
+    "auth.auth_unauth",
+    "requests.requests_index",
+    "requests.requests.requests_idCustomer"
+  ],
+  "Администратор": [
+    "index",
+    "exit",
+    "auth.auth_unauth",
+    "requests.requests_index",
+    "requests.requests_allUsers"
+  ],
+  "Директор": [
+    "index",
+    "exit",
+    "auth.auth_unauth",
+    "requests.requests_index",
+    "requests.requests_betweenDates"
+  ],
+  "Работник склада": [
+    "index",
+    "exit",
+    "auth.auth_index"
+  ]
+}
