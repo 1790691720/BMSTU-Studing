@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+		<title>Работа с запросами</title>
+  		<meta charset="UTF-8">
+	</head>
+
+	<body>
+		<div class="div_like_belt_1">
+			<p class="article_1">Выберите запрос</p>
+		</div>
+        <!--Admin-->
+
+        <div class="div_like_button_2">
+			<a href="{{ url_for('requests.requests_allUsers') }}">А: Список пользователей</a>
+		</div>
+
+        <!--Customer-->
+		
+        <div class="div_like_button_2">
+			<a href="{{ url_for('requests.requests_idCustomer') }}">З: Список заказов покупателя</a>
+		</div>
+
+        <!--Director-->
+
+        <div class="div_like_button_2">
+			<a href="{{ url_for('requests.requests_ordersBetweenDates') }}">Д: Заказы в заданном промежутке дат</a>
+		</div>
+        <div class="div_like_button_2">
+			<a href="{{ url_for('requests.requests_ordersWithMinSum') }}">Д: Заказы с минимальной суммой</a>
+		</div>
+
+        <!--Worker-->
+        <div class="div_like_button_2">
+			<a href="{{ url_for('requests.requests_ProductsWithLesserQuantity') }}">Р: Все продукты, количество которых меньше чем ...</a>
+		</div>
+
+		<div class="div_like_button_2">
+			<a href="{{ url_for('index') }}" class="a_yellow">Вернуться</a>
+		</div>
+	</body>
+</html>

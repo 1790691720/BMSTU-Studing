@@ -215,3 +215,10 @@ th, td {
     margin: auto;
     display: block;
 }
+
+select {
+	background-color:#0000B8; font-size:30px; text-align:center;
+    color:#FFFFFF; padding-top: 20px;
+    padding-bottom: 20px; font-family:Arial; display: block;
+	width: 500px; height:90px; margin:auto;
+}
