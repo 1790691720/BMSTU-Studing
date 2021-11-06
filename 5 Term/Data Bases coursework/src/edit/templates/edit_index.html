@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-		<title>Работа с запросами</title>
+		<title>Работа с редактированием</title>
   		<meta charset="UTF-8">
 	</head>
 
 	<body>
 		<div class="div_like_belt_1">
-			<p class="article_1">Выберите запрос</p>
+			<p class="article_1">Выберите вариант редактирования</p>
 		</div>
         <!--Admin-->
 
@@ -18,5 +18,9 @@
 
         <!--Worker-->
 
+
+        <div class="div_like_button_2">
+			<a href="{{ url_for('index') }}" class="a_yellow">Вернуться</a>
+		</div>
 	</body>
 </html>

@@ -1,10 +1,10 @@
 {% extends 'edit_users_base.html' %}{% block child %}<div class="article_3"><table>
-<thead><tr><th>Номер заказа</th><th>Артикул</th><th>Количество</th><th>Сумма заказа</th><th>Дата заказа</th></tr></thead>
+<thead><tr><th>id</th><th>Логин</th><th>Пароль</th><th>Уровень доступа</th><th> </th><th> </th></tr></thead>
 <tbody>
-<tr><td>1</td><td>1</td><td>50</td><td>1000</td><td>2020-02-05</td></tr>
-<tr><td>2</td><td>2</td><td>25</td><td>1000</td><td>2020-02-05</td></tr>
-<tr><td>3</td><td>3</td><td>10</td><td>600</td><td>2021-02-15</td></tr>
-<tr><td>4</td><td>3</td><td>10</td><td>600</td><td>2021-03-15</td></tr>
-<tr><td>5</td><td>4</td><td>10</td><td>500</td><td>2021-09-20</td></tr>
+<tr><td>1</td><td>Developer</td><td>Developer</td><td>0</td><td><a href="/edit/users/1">Редактировать</a></td><td><a href="/edit/users/delete/1">Удалить</a></td></tr>
+<tr><td>2</td><td>Administrator</td><td>Administrator</td><td>1</td><td><a href="/edit/users/2">Редактировать</a></td><td><a href="/edit/users/delete/2">Удалить</a></td></tr>
+<tr><td>3</td><td>Director</td><td>Director</td><td>2</td><td><a href="/edit/users/3">Редактировать</a></td><td><a href="/edit/users/delete/3">Удалить</a></td></tr>
+<tr><td>4</td><td>Worker</td><td>Worker</td><td>3</td><td><a href="/edit/users/4">Редактировать</a></td><td><a href="/edit/users/delete/4">Удалить</a></td></tr>
+<tr><td>5</td><td>Customer</td><td>Customer</td><td>4</td><td><a href="/edit/users/5">Редактировать</a></td><td><a href="/edit/users/delete/5">Удалить</a></td></tr>
 </tbody>
 </table></div>{% endblock %}
