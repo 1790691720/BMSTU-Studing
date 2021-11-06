@@ -11,6 +11,8 @@ edit_app = Blueprint('edit', __name__, template_folder='templates')
 SQLserver = SQLmaster(json.load(open('config/db_config.json', 'r')))
 
 
+
+
 class ExternalURLCol(Col):
     def __init__(self, name, url_attr, **kwargs):
         self.url_attr = url_attr
@@ -23,10 +25,10 @@ class ExternalURLCol(Col):
 
 
 class ItemTableEditUsers(Table):
-    idLogin = Col('idLogin')
-    Login = Col('Login')
-    PasswordL = Col('Password')
-    AccessLevel = Col('AccessLevel')
+    idLogin = Col('id')
+    Login = Col('Логин')
+    PasswordL = Col('Пароль')
+    AccessLevel = Col('Уровень доступа')
     Link = ExternalURLCol(' ', url_attr='url', attr='name')
 
 
@@ -52,7 +54,20 @@ def edit_users():
         print()
     table = ItemTableEditUsers(result)
 
-    return table.__html__()  # TODO делать красивую страницу
+
+
+    HTMLtable = table.__html__()
+    file = open(r'.\requests\templates\edit_users_child.html', 'w', encoding='utf-8')
+
+    file.write('{% extends \'edit_users_base.html\' %}{% block child %}<div class="article_3">')
+    if HTMLtable == "<p>No Items</p>":
+        file.write('<p class="article_2">По данному запросу результатов не найдено</p>')
+    else:
+        file.write(HTMLtable)
+    file.write('</div>{% endblock %}')
+    file.close()
+
+    return render_template('edit_users_child.html')  # TODO делать красивую страницу
 
 
 @edit_app.route('/users/<user>')
