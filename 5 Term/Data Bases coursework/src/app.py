@@ -4,6 +4,7 @@ from flask import Flask, render_template, session
 
 from access import group_permission_decorator
 from auth.routes import auth_app
+from edit.routes import edit_app
 from requests.routes import requests_app
 
 app = Flask(__name__)
@@ -14,6 +15,7 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 app.register_blueprint(requests_app, url_prefix='/requests')
 app.register_blueprint(auth_app, url_prefix='/auth')
+app.register_blueprint(edit_app, url_prefix='/edit')
 
 
 @app.route('/')
