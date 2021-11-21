@@ -51,6 +51,8 @@ if __name__ == '__main__':
 
     plt.figure(figsize=(14, 7))
     plt.grid()
+    plt.xlabel('t')
+    plt.ylabel('n', rotation=0)
     plt.scatter(resultX, resultY, marker='.')
-    plt.savefig('.\Plots\Neural.svg', format='svg')
+    plt.savefig('.\Plots\GraphNeural.svg', format='svg')
     plt.show()
