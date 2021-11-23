@@ -1,0 +1,23 @@
+{
+  "Пользователь": [
+    "index",
+    "exit",
+    "auth.auth_unauth",
+    "requests.requests_index",
+    "requests.requests_averageTime"
+
+  ],
+    "Super Пользователь": [
+    "index",
+    "exit",
+    "auth.auth_unauth",
+    "requests.requests_index",
+    "requests.requests_betweenDates"
+
+  ],
+  "Гость": [
+    "index",
+    "exit",
+    "auth.auth_index"
+  ]
+}
