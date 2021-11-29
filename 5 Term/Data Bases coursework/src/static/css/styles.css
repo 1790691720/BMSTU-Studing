@@ -134,7 +134,8 @@ button.clear:hover {
 }
 
 button.cell {
-    width: 450px;
+
+    width: -moz-available;
     border-style: solid;
     border-color: black;
     margin-bottom: 10px;
@@ -219,6 +220,14 @@ th, td {
     margin-bottom: 0;
 }
 
+.article_6 {
+    font-size: 30px;
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
 .article_succeed {
     background-color: darkgreen;
     font-size: 40px;
@@ -268,6 +277,20 @@ select {
     font-family: Arial;
     display: block;
     width: 500px;
+    height: 90px;
+    margin: auto;
+}
+
+.select_basket{
+    background-color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Arial;
+    display: block;
+    width: -moz-available;
     height: 90px;
     margin: auto;
 }

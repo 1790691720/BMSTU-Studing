@@ -4,6 +4,7 @@ from flask import Flask, render_template, session
 
 from access import verifyUserDecorator
 from auth.routes import authApp
+from basket.routes import basketApp
 from edit.routes import editApp
 from requests.routes import requestsApp
 
@@ -17,8 +18,7 @@ mainApp.config['TEMPLATES_AUTO_RELOAD'] = True
 mainApp.register_blueprint(authApp, url_prefix='/auth')
 mainApp.register_blueprint(requestsApp, url_prefix='/requests')
 mainApp.register_blueprint(editApp, url_prefix='/edit')
-
-
+mainApp.register_blueprint(basketApp, url_prefix='/basket')
 @mainApp.route('/')
 @verifyUserDecorator
 def Index():
