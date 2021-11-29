@@ -11,7 +11,9 @@
     <p class="article_1">Главное меню</p>
 </div>
 
+{% if name != 'Посетитель' %}
 <p class="article_2">Вы авторизованы как {{name}}</p>
+{% endif %}
 
 {% if name == 'Посетитель' %}
 <div class="div_like_button_1">
