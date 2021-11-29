@@ -1,123 +1,64 @@
 import json
 
-from flask import Blueprint, render_template, request
-from flask_table import Table, Col
+from flask import Blueprint, render_template, request, session
 
-from access import group_permission_decorator
-from sql.SQLmaster import SQLmaster
+from access import verifyUserDecorator
+from requests.tableClasses import createResultPage, ItemTableCustomerOrders, ItemTableOrder, \
+    ItemTableProductsWithLesserQuantity
+from sql.SqlMaster import SqlMaster
 
-requests_app = Blueprint('requests', __name__, template_folder='templates')
-SQLserver = SQLmaster(json.load(open('config/db_config.json', 'r')))
+requestsApp = Blueprint('requests', __name__, template_folder='templates')
 
-LevelToName = {'0': 'Разработчик',
-               '1': 'Администратор',
-               '2': 'Директор',
-               '3': 'Работник склада',
-               '4': 'Покупатель'}
-NameToLevel = {'Разработчик': '0',
-               'Администратор': '1',
-               'Директор': '2',
-               'Работник склада': '3',
-               'Покупатель': '4'}
+SqlMaster = SqlMaster(json.load(open('config/dataBaseConfig.json', 'r', encoding="utf-8")), r'./requests/requests')
 
-
-class ItemTableAllUsers(Table):
-    Login = Col('Логин')
-    AccessLevel = Col('Уровень доступа')
-
-
-class ItemTableCustomerOrders(Table):
-    idOrder = Col('Номер заказа')
-    idProduct = Col('Артикул')
-    OrderQuantity = Col('Количество')
-    OrderSum = Col('Сумма заказа')
-    OrderDate = Col('Дата заказа')
-    OrderStatus = Col('Статус')
-    OrderStatusDate = Col('Дата последнего изменения статуса')
-
-class ItemTableOrdersBetweenDates(Table):
-    idOrder = Col('Номер заказа')
-    idProduct = Col('Артикул')
-    OrderQuantity = Col('Количество')
-    OrderSum = Col('Сумма заказа')
-    OrderDate = Col('Дата заказа')
-
-class ItemTableOrdersWithMinSum(Table):
-    idOrder = Col('Номер заказа')
-    idProduct = Col('Артикул')
-    OrderQuantity = Col('Количество')
-    OrderSum = Col('Сумма заказа')
-    OrderDate = Col('Дата заказа')
-
-class ItemTableProductsWithLesserQuantity(Table):
-    idProduct = Col('Артикул')
-    Name = Col('Продукт')
-    ActualQuantity = Col('Актуальное количество')
-    FixationDate = Col('Дата фиксации')
-    ReservedProduct = Col('Зарезервировано продукта')
-    RevervationDate = Col('Дата резервации')
-
-def request_execute(table):
-    HTMLtable = table.__html__()
-    file = open(r'.\requests\templates\request_result_child.html', 'w', encoding='utf-8')
-
-    file.write('{% extends \'request_result_base.html\' %}{% block child %}<div class="article_3">')
-    if HTMLtable == "<p>No Items</p>":
-        file.write('<p class="article_2">По данному запросу результатов не найдено</p>')
-    else:
-        file.write(HTMLtable)
-    file.write('</div>{% endblock %}')
-    file.close()
+LevelToName = {
+    '0': 'Разработчик',
+    '1': 'Администратор',
+    '2': 'Директор',
+    '3': 'Работник склада',
+    '4': 'Покупатель'
+}
+NameToLevel = {
+    'Разработчик': '0',
+    'Администратор': '1',
+    'Директор': '2',
+    'Работник склада': '3',
+    'Покупатель': '4'
+}
+NumberStatusToName = {
+    0: 'Создан',
+    1: 'Сборка',
+    2: 'Отправлен',
+    3: 'Завершен'
+}
 
 
 # region General
-@requests_app.route('/')
-@group_permission_decorator
-def requests_index():
-    return render_template('request_index.html')  # TODO: показывать только разрешенные запросы
+@requestsApp.route('/')
+@verifyUserDecorator
+def requestsIndex():
+    return render_template('requestIndex.html', name=session.get('groupName'))
 
 
 # endregion
 
-# region Admin
-@requests_app.route('/AllUsers', methods=['GET', 'POST'])
-@group_permission_decorator
-def requests_allUsers():
+# region Director
+@requestsApp.route('/CustomersOrders', methods=['GET', 'POST'])
+@verifyUserDecorator
+def requestsCustomersOrders():
+    customerNames = SqlMaster.MakeRequest('CustomerNames.sql')
     if request.method == 'GET':
-        return render_template('request_allUsers.html')
-    else:
-        accessLevel = request.form.get('accessLevel')
-        if accessLevel == 'Все':
-            result = SQLserver.request('requests_allUsers.sql')
-            title = f'Все пользователи'
-        else:
-            result = SQLserver.request('requests_usersWithId.sql', accessLevel=NameToLevel[accessLevel])
-            title = f'Пользователи с уровнем допуска {accessLevel}'
-        table = ItemTableAllUsers(result)
-        request_execute(table)
-        return render_template('request_result_child.html', url_back='./allUsers',
-                               title=title)
-
-
-# endregion
-
-# region Customer
-@requests_app.route('/idCustomer', methods=['GET', 'POST'])
-@group_permission_decorator
-def requests_idCustomer():
-    customerNames = SQLserver.request('requests_CustomerNames.sql')
-    if request.method == 'GET':
-        file = open(r'.\requests\templates\request_idCustomer_child.html', 'w', encoding='utf-8')
+        file = open(r'.\requests\templates\requestCustomersOrdersChild.html', 'w', encoding='utf-8')
 
         file.write(
-            '{% extends \'request_idCustomer_base.html\' %}{% block child %}<div><select name="customerName">')
+            '{% extends \'requestCustomersOrdersBase.html\' %}{% block child %}<div class="article_3"><select name="customerName">')
         for name in customerNames:
             temp = name['Name']
             file.write(f'<option>{temp}</option>')
         file.write('</select></div>{% endblock %}')
         file.close()
 
-        return render_template('request_idCustomer_child.html')
+        return render_template('requestCustomersOrdersChild.html')
     else:
         customerName = request.form.get('customerName')
         title = f'Заказы заказчика {customerName}'
@@ -125,66 +66,66 @@ def requests_idCustomer():
             if name['Name'] == customerName:
                 customerName = int(name['idCustomer'])
                 break
-        result = SQLserver.request('requests_customerOrders.sql',
-                                   customerName=customerName)
+        result = SqlMaster.MakeRequest('CustomerOrders.sql',
+                                       customerName=customerName, allOrders=0)
         for i in range(len(result)):
             result[i]['idOrder'] = i + 1
+            result[i]['OrderStatus'] = NumberStatusToName[result[i]['OrderStatus']]
         table = ItemTableCustomerOrders(result)
-        request_execute(table)
-        return render_template('request_result_child.html', url_back='./idCustomer',
+        createResultPage(table)
+        return render_template('requestResultChild.html', url_back='./CustomersOrders',
                                title=title)
 
 
 # endregion
 
-# region Director
-@requests_app.route('/OrdersBetweenDates', methods=['GET', 'POST'])
-@group_permission_decorator
-def requests_ordersBetweenDates():
+# region Customer
+@requestsApp.route('/Order', methods=['GET', 'POST'])
+@verifyUserDecorator
+def requestsOrder():
     if request.method == 'GET':
-        return render_template('request_ordersBetweenDates.html')
+        result = SqlMaster.MakeRequest('CustomerOrders.sql',
+                                       customerName='0', allOrders=1)
+
+        file = open(r'.\requests\templates\requestOrderChild.html', 'w', encoding='utf-8')
+        file.write(
+            '{% extends \'requestOrderBase.html\' %}{% block child %}<div class="article_3"><select name="idOrder">')
+        for id in result:
+            idOrder = id['idOrder']
+            file.write(f'<option>{idOrder}</option>')
+        file.write('</select></div>{% endblock %}')
+        file.close()
+
+        return render_template('requestOrderChild.html')
     else:
-        dateMin = request.form.get('dateMin')
-        dateMax = request.form.get('dateMax')
-        result = SQLserver.request('requests_ordersBetweenDates.sql', dateMin=dateMin, dateMax=dateMax)
+        idOrder = request.form.get('idOrder')
+        title = f'Товары заказа №{idOrder}'
+        result = SqlMaster.MakeRequest('OrderProducts.sql',
+                                       idOrder=int(idOrder))
+        for i in range(len(result)):
+            result[i]['idOrderProducts'] = i + 1
 
-        table = ItemTableOrdersBetweenDates(result)
-        request_execute(table)
-        return render_template('request_result_child.html', url_back='./OrdersBetweenDates',
-                               title=f"Заказы между {dateMin} и {dateMax}")
+        table = ItemTableOrder(result)
+        createResultPage(table)
+        return render_template('requestResultChild.html', url_back='./Order',
+                               title=title)
 
-@requests_app.route('/OrdersWithMinSum', methods=['GET', 'POST'])
-@group_permission_decorator
-def requests_ordersWithMinSum():
-    if request.method == 'GET':
-        return render_template('request_ordersWithMinSum.html')
-    else:
-        sumMin = request.form.get('sumMin')
-        result = SQLserver.request('request_ordersWithMinSum.sql', sumMin=sumMin)
-
-        table = ItemTableOrdersWithMinSum(result)
-        request_execute(table)
-        return render_template('request_result_child.html', url_back='./request_ordersWithMinSum',
-                               title=f"Заказы с минимальной суммой {sumMin}")
 
 # endregion
 
-
-
-
 # region Worker
 
-@requests_app.route('/ProductsWithLesserQuantity', methods=['GET', 'POST'])
-@group_permission_decorator
+@requestsApp.route('/ProductsWithLesserQuantity', methods=['GET', 'POST'])
+@verifyUserDecorator
 def requests_ProductsWithLesserQuantity():
     if request.method == 'GET':
-        return render_template('request_ProductsWithLesserQuantity.html')
+        return render_template('requestProductsWithLesserQuantity.html')
     else:
         quantityProduct = request.form.get('quantityProduct')
-        result = SQLserver.request('request_ProductsWithLesserQuantity.sql', quantityProduct=quantityProduct)
+        result = SqlMaster.MakeRequest('ProductsWithLesserQuantity.sql', quantityProduct=quantityProduct)
 
         table = ItemTableProductsWithLesserQuantity(result)
-        request_execute(table)
-        return render_template('request_result_child.html', url_back='./ProductsWithLesserQuantity',
+        createResultPage(table)
+        return render_template('requestResultChild.html', url_back='./ProductsWithLesserQuantity',
                                title=f"Все продукты, количество которых меньше чем {quantityProduct}")
 # endregion

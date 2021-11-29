@@ -1,40 +1,42 @@
 import json
 
-from flask import Blueprint, render_template, request, session
+from flask import Blueprint, request, render_template, session
 
-from access import group_permission_decorator
-from sql.SQLmaster import SQLmaster
+from access import verifyUserDecorator
+from sql.SqlMaster import SqlMaster
 
-auth_app = Blueprint('auth', __name__, template_folder='templates')
-SQLserver = SQLmaster(json.load(open('config/db_config.json', 'r')))
+authApp = Blueprint('auth', __name__, template_folder='templates')
+SqlMaster = SqlMaster(json.load(open('config/dataBaseConfig.json', 'r', encoding="utf-8")), r'./auth/requests')
 
-LevelToName = {'0': 'Разработчик',
-               '1': 'Администратор',
-               '2': 'Директор',
-               '3': 'Работник склада',
-               '4': 'Покупатель'}
+LevelToName = {
+    '0': 'Разработчик',
+    '1': 'Администратор',
+    '2': 'Директор',
+    '3': 'Работник склада',
+    '4': 'Заказчик'
+}
 
 
-@auth_app.route('/', methods=['GET', 'POST'])
-@group_permission_decorator
-def auth_index():
+@authApp.route('/', methods=['GET', 'POST'])
+@verifyUserDecorator
+def authIndex():
     if request.method == 'GET':
-        return render_template('auth_index.html')
+        return render_template('authIndex.html')
     else:
         login = request.form.get('login')
         password = request.form.get('password')
 
-        result = SQLserver.request('auth_LoginPass.sql', Login=login, PasswordL=password)
+        result = SqlMaster.MakeRequest('CheckForLoginAndPassword.sql', Login=login, PasswordL=password)
 
         if len(result) == 0:
-            return render_template('auth_failed.html')
+            return render_template('authFailed.html')
         else:
-            session['group_name'] = LevelToName[f"{result[0]['AccessLevel']}"]
-            return render_template('auth_successfully.html', name=session['group_name'])
+            session['groupName'] = LevelToName[f"{result[0]['AccessLevel']}"]
+            return render_template('authSuccessfully.html', name=session['groupName'])
 
 
-@auth_app.route('/unauth')
-@group_permission_decorator
-def auth_unauth():
+@authApp.route('/unauth')
+@verifyUserDecorator
+def authDeauthorize():
     session.clear()
-    return render_template('auth_unauth.html', name='Посетитель')
+    return render_template('authDeauthorize.html', name='Посетитель')

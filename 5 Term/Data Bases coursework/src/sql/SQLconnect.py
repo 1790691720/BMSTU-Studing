@@ -2,8 +2,16 @@ from pymysql import connect
 from pymysql.err import OperationalError
 
 
-class SQLconnect:
+class SqlConnect:
+    """
+    Class to create connection to SQL database
+    """
     def __init__(self, config: dict):
+        """
+        Constructor for SqlConnect
+
+        :param config: config for SQL database
+        """
         self.config = config
         self.cursor = None
         self.conn = None
