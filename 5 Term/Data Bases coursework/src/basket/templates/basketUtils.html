@@ -1,4 +1,4 @@
-{% macro render_item(product, allProducts=None, basket=None, isNotBought = True) %}
+{% macro renderItem(product, allProducts=None, basket=None, isNotBought = True) %}
 <div style="border-style: solid; border-color:#0000B8; margin: 5px">
     {% if isNotBought %}
     <p class="article_5">Артикул: {{ product['idProduct'] }}</p>

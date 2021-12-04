@@ -13,8 +13,23 @@ SqlMaster = SqlMaster(json.load(open('config/dataBaseConfig.json', 'r')), r'./ba
 # @verifyUserAccess
 def basketIndex():
     if request.method == 'GET':
+        customerNames = SqlMaster.MakeRequest('CustomerNames.sql')
+
+        return render_template("basketIndex.html", customerNames=customerNames)
+    else:
+        idCustomer = int(request.form.get('customerId'))
+        session['idCustomer'] = idCustomer
+        print(url_for("basket.basketMain"))
+        return redirect(url_for("basket.basketMain"))
+
+
+@basketApp.route('/Main', methods=['GET', 'POST'])
+# @verifyUserAccess
+def basketMain():
+    if request.method == 'GET':
         products = SqlMaster.MakeRequest('AllProducts.sql')
         basketId = session.get('basket', [])
+        CustomerName = SqlMaster.MakeRequest("CustomerName.sql", idCustomer=session.get('idCustomer'))[0]['Name']
         totalSum = 0
         for product in products:
             product['curQuantity'] = product['ActualQuantity']
@@ -24,9 +39,8 @@ def basketIndex():
                     totalSum += product['PricePerUnit'] * basketProduct[1]
                     break
 
-        customerNames = SqlMaster.MakeRequest('CustomerNames.sql')
-        return render_template('basketIndex.html',
-                               customerNames=customerNames,
+        return render_template('basketMain.html',
+                               CustomerName=CustomerName,
                                totalSum=totalSum,
                                basket=basketId,
                                products=products,
@@ -74,7 +88,7 @@ def basketIndex():
                     if int(currentProduct['idProduct']) == basketItem[0]:
                         allSum = int(currentProduct['PricePerUnit']) * basketItem[1]
 
-            SqlMaster.MakeUpdateInsert('AddOrder.sql', idCustomer=request.form.get('customerId'),
+            SqlMaster.MakeUpdateInsert('AddOrder.sql', idCustomer=session.get('idCustomer'),
                                        OrderDate=datetime.date.today(), OrderSum=allSum,
                                        OrderStatus=0, OrderStatusDate=datetime.date.today())
 
@@ -87,8 +101,10 @@ def basketIndex():
                                                    Sum=int(currentProduct['PricePerUnit']) * basketItem[1])
                         SqlMaster.MakeUpdateInsert('UpdateProduct.sql', idProduct=basketItem[0],
                                                    ActualQuantity=int(currentProduct['ActualQuantity']) - basketItem[1],
-                                                   ReservedProduct=int(currentProduct['ReservedProduct']) + basketItem[1])
+                                                   ReservedProduct=int(currentProduct['ReservedProduct']) + basketItem[
+                                                       1])
             basketId = []
+            return render_template("basketResult.html")
 
         session['basket'] = basketId
-        return redirect(url_for('basket.basketIndex'))
+        return redirect(url_for('basket.basketMain'))
